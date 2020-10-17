@@ -8,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'ICF Connect';
-  colUsers: any;
+  Users: any;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.getColUsers();
+    this.getUsers();
   }
 
-  getColUsers() {
-    this.http.get('https://localhost:5001/api/colusers').subscribe(response => {
-      this.colUsers = response;
+  getUsers() {
+    this.http.get('https://localhost:5001/api/users').subscribe(response => {
+      this.Users = response;
     }, error => {
       console.log(error);
     });

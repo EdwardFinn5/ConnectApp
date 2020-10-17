@@ -10,7 +10,7 @@ namespace API.Data
         }
 
         public DbSet<College> Colleges { get; set; }
-        public DbSet<ColUser> ColUsers { get; set; }
+        public DbSet<AppUser> Users { get; set; }
         public DbSet<EmpUser> EmpUsers { get; set; }
         public DbSet<HsUser> HsUsers { get; set; }
     }
