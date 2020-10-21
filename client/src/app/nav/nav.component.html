@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  
+    <div class="container"style="margin-left: 25px margin-right: 25px margin-bottom: 20px">
+      <img src='../../assets/ICF_Logo.jpg' class="logo" height="40" width="40" style="margin-right: 20px"/>  
+  
+  
+  <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> -->
+    <a class="navbar-brand" href="#">ICF Connect</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+      data-target="#navbarCollapse" aria-controls="navbarCollapse" 
+      aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse show" id="navbarCollapse" style>
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Search Talent</a>
+        </li> -->
+        
+        <li class="nav-item dropdown" *ngIf="accountService.currentUser$ | async">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Colleges</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Majors</a>
+              <a class="dropdown-item" href="#">Athletics</a>
+              <a class="dropdown-item" href="#">Arts</a>
+              <a class="dropdown-item" href="#">Scholarships</a>
+            </div>
+          </li>
+
+        <li class="nav-item dropdown" *ngIf="accountService.currentUser$ | async" >
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Talent</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Talent</a>
+              <a class="dropdown-item" href="#">Lists</a>
+              <a class="dropdown-item" href="#">Messages</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" *ngIf="accountService.currentUser$ | async" >
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Jobs</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Companies</a>
+              <a class="dropdown-item" href="#">Jobs</a>
+              <a class="dropdown-item" href="#">Messages</a>
+            </div>
+          </li>
+          <!-- <li class="nav-item" *ngIf="accountService.currentUser$ | async" >
+            <a class="nav-link" (click)="logout()" href="#">Logout</a>
+          </li> -->
+      </ul>
+
+      <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
+        <a class="dropdown-toggle text-light" dropdownToggle>Welcome user</a>
+        <div class="dropdown-menu mt-3" *dropdownMenu>
+          <a class="dropdown-item">Edit Profile</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" (click)="logout()">Logout</a>
+        </div>
+      </div>
+
+      <form *ngIf="(accountService.currentUser$ | async) === null" #loginForm="ngForm"  class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" 
+        autocomplete="off">
+        <input 
+            name="username"
+            [(ngModel)]="model.username"
+            class="form-control mr-sm-2" 
+            type="text" 
+            placeholder="Username">
+        <input 
+            name="password"
+            [(ngModel)]="model.password"
+            class="form-control mr-sm-2" 
+            type="password" 
+            placeholder="Password">
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Login</button>
+      </form>
+    </div>
+    </div>
+  </nav>
