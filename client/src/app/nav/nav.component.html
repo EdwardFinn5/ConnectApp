@@ -5,7 +5,7 @@
   
   
   <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> -->
-    <a class="navbar-brand" href="#">ICF Connect</a>
+    <a class="navbar-brand" routerLink="/">ICF Connect</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" 
       data-target="#navbarCollapse" aria-controls="navbarCollapse" 
@@ -18,8 +18,9 @@
           <a class="nav-link" href="#">Search Talent</a>
         </li> -->
         
-        <li class="nav-item dropdown" *ngIf="accountService.currentUser$ | async">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Colleges</a>
+        <!-- <li class="nav-item dropdown" *ngIf="accountService.currentUser$ | async"> -->
+        <li class="nav-item dropdown" >
+            <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colleges</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="#">Majors</a>
               <a class="dropdown-item" href="#">Athletics</a>
@@ -28,21 +29,24 @@
             </div>
           </li>
 
-        <li class="nav-item dropdown" *ngIf="accountService.currentUser$ | async" >
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Talent</a>
+        <!-- <li class="nav-item dropdown" *ngIf="accountService.currentUser$ | async" > -->
+        <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Talent</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Talent</a>
-              <a class="dropdown-item" href="#">Lists</a>
-              <a class="dropdown-item" href="#">Messages</a>
+              <a class="dropdown-item" routerLink='/talent'>Search Talent</a>
+              <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>Matches</a>
+              <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/lists'>Lists</a>
+              <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a>
             </div>
           </li>
 
-          <li class="nav-item dropdown" *ngIf="accountService.currentUser$ | async" >
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Jobs</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Internships/Jobs</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Companies</a>
-              <a class="dropdown-item" href="#">Jobs</a>
-              <a class="dropdown-item" href="#">Messages</a>
+              <a class="dropdown-item" routerLink='/jobs'>Search Internships/Jobs</a>
+              <a *ngIf="accountService.currentUser$ | async" $ class="dropdown-item" href="#">Companies</a>
+              <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" href="#">Jobs</a>
+              <a *ngIf="accountService.currentUser$ | async" class="dropdown-item" href="#">Messages</a>
             </div>
           </li>
           <!-- <li class="nav-item" *ngIf="accountService.currentUser$ | async" >
@@ -50,8 +54,8 @@
           </li> -->
       </ul>
 
-      <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
-        <a class="dropdown-toggle text-light" dropdownToggle>Welcome user</a>
+      <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
+        <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | titlecase}}</a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
           <a class="dropdown-item">Edit Profile</a>
           <div class="dropdown-divider"></div>
@@ -73,7 +77,7 @@
             class="form-control mr-sm-2" 
             type="password" 
             placeholder="Password">
-        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Login</button>
+        <button class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
       </form>
     </div>
     </div>

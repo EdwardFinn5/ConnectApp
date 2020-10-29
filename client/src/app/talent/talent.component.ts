@@ -2,11 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-jobs',
-  templateUrl: './jobs.component.html',
-  styleUrls: ['./jobs.component.css']
+  selector: 'app-talent',
+  templateUrl: './talent.component.html',
+  styleUrls: ['./talent.component.css']
 })
-export class JobsComponent implements OnInit {
+export class TalentComponent implements OnInit {
   registerMode = false;
 
   constructor() { }
