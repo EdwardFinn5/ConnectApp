@@ -1,0 +1,19 @@
+
+<ng-container class="ml-4" *ngIf="error">
+    <h4 class="ml-3 mr-3">Refreshing the page will make the error disappear!</h4>
+
+    <h5 class='text-danger ml-3 mr-3'>Error: {{error.message}}</h5>
+    <p class="font-weight-bold ml-3 mr-3">Note: if you are seeing this then Angular is probably not to blame</p>
+    <p class="ml-3">What to do next?</p>
+    <ol>
+        <li class="ml-3">Open the chrome dev tools</li>
+        <li class="ml-3">Inspect the network tab</li>
+        <li class="ml-3">Check the failing request</li>
+        <li class="ml-3">Examine the request URL = make sure this is correct</li>
+        <li class="ml-3">Reproduce the error in Postman - if we see the same response, then the issue is not with Angular</li>
+    </ol>
+    <p class="ml-3">Following is the stack trace - this is where your investigation should start!</p>
+    <ng-container class="ml-3">
+    <code class="mt-5 mr-3 ml-3" style="background-color: whitesmoke;">{{error.details}}</code>
+    </ng-container>
+</ng-container>
