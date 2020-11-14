@@ -1,5 +1,6 @@
 using API.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace API.Data
 {
@@ -13,9 +14,15 @@ namespace API.Data
         public DbSet<Major> Majors { get; set; }
         public DbSet<CollegeMajor> CollegeMajors { get; set; }
         public DbSet<AppUser> Users { get; set; }
-        public DbSet<EmpUser> EmpUsers { get; set; }
-        public DbSet<HsUser> HsUsers { get; set; }
+        public DbSet<ColUser> ColUsers { get; set; }
+        public DbSet<MajorCat> MajorCats { get; set; }
+        public DbSet<CollegePrep> CollegePreps { get; set; }
+        public DbSet<HsPrep> HsPreps { get; set; }
+        public DbSet<EmpOpp> EmpOpps { get; set; }
+        public DbSet<Photo> Photos { get; set; }
+        public DbSet<ColPhoto> ColPhotos { get; set; }
 
+       
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CollegeMajor>()

@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace API.Entities
 {
@@ -14,12 +15,13 @@ namespace API.Entities
 
         [Required]
         [MaxLength(40)]
-        public string Location { get; set; }
+        public string CollegeLocation { get; set; }
 
-        [Required]
-        [MaxLength(80)]
-        public string CollegePicUrl { get; set; }
+        public string CollegeDescription { get; set; }
 
         public ICollection<CollegeMajor> CollegeMajors { get; set; }
+
+        public virtual ColUser ColUser { get; set; }
+        public int ColUserId { get; set; }
     }
 }

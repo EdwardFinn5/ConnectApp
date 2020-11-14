@@ -11,7 +11,7 @@ namespace API.Entities
         [Required]
         [MaxLength(80)]
         public string MajorCatName { get; set; }
-
+        
         public ICollection<Major> Majors { get; set; }
     }
 }
