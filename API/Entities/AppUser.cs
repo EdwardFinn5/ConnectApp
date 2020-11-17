@@ -25,7 +25,7 @@ namespace API.Entities
         public DateTime LastActive { get; set; } = DateTime.Now;
         public string AppUserType { get; set; }
         public bool Active { get; set; } = true;
-        public ICollection<CollegePrep> CollegePreps { get; set; }
+        public IList<CollegePrep> CollegePreps { get; set; }
         public ICollection<EmpOpp> EmpOpps { get; set; }
         // [ForeignKey("UserFk")]
         public ICollection<Photo> Photos { get; set; }

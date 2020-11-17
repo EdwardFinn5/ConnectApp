@@ -3,6 +3,7 @@ namespace API.DTOs
     public class CollegePrepDto
     {
         public int CollegePrepId { get; set; }
+        public bool IsActive { get; set; }
         public string ClassYear { get; set; }
         public string AcademicPlus { get; set; }
         public string WorkPlus { get; set; }
