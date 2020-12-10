@@ -12,6 +12,7 @@ export interface Member {
   academicPlus?: string;
   workPlus?: string;
   company?: string;
+  position?: string;
   fullName: string;
   nickName: string;
   email: string;

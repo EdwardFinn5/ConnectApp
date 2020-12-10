@@ -26,7 +26,7 @@ namespace API.Entities
         public string AppUserType { get; set; }
         public bool Active { get; set; } = true;
         public IList<CollegePrep> CollegePreps { get; set; }
-        public ICollection<EmpOpp> EmpOpps { get; set; }
+        public IList<EmpOpp> EmpOpps { get; set; }
         // [ForeignKey("UserFk")]
         public ICollection<Photo> Photos { get; set; }
     }

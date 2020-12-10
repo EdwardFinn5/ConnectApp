@@ -17,7 +17,7 @@ namespace API.Controllers
     {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
-                
+
         public UsersController(IUserRepository userRepository,
                                 IMapper mapper)
         {
@@ -25,20 +25,20 @@ namespace API.Controllers
             _userRepository = userRepository;
         }
 
-    [HttpGet]
+        [HttpGet]
 
-    public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
-    {
-        var users = await _userRepository.GetMembersAsync();
+        public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
+        {
+            var users = await _userRepository.GetMembersAsync();
 
-        return Ok(users);                         
+            return Ok(users);
+        }
+
+
+        [HttpGet("{username}")]
+        public async Task<ActionResult<MemberDto>> GetUser(string username)
+        {
+            return await _userRepository.GetMemberAsync(username);
+        }
     }
-
-
-    [HttpGet("{username}")]
-    public async Task<ActionResult<MemberDto>> GetUser(string username)
-    {
-        return await _userRepository.GetMemberAsync(username);
-    }
-}
 }

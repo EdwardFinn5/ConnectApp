@@ -18,6 +18,9 @@ namespace API.DTOs
         public string AcademicPlus { get; set; }
         public string WorkPlus { get; set; }
 
+        public string Company { get; set; }
+        public string Position { get; set; }
+
         public string FullName { get; set; }
 
         public string NickName { get; set; }

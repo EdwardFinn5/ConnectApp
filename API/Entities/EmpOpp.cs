@@ -8,6 +8,8 @@ namespace API.Entities
         public string Position { get; set; }
         public string Company { get; set; }
         public string PositionType { get; set; }
+
+        public bool IsActive { get; set; }
         public string PositionDescription { get; set; }
         public string PositionLocation { get; set; }
         public DateTime StartDate { get; set; }
