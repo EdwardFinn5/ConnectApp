@@ -1,1 +1,60 @@
-<p>member-detail works!</p>
+<div class="row" style="margin-left: 50px" *ngIf="member">
+    <div class="col-4">
+        <div class="card">
+            <img src="{{member.photoUrl || '.assets/user.png'}}" alt="{{member.nickName}}"
+                class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <div>
+                    <p> <strong>-- {{member.nickName}} --</strong>
+                        <br><strong>{{member.classYear}} {{member.major}} Major</strong>
+                        <br> from <br>
+                        <strong>{{member.hometown}}, Iowa </strong>
+                        <br> attending <br>
+                        <strong>Briar Cliff College in Sioux City</strong>
+                        <br> Profile Created: <br>
+                        <strong>{{member.created}}</strong>
+                        <br> Last Active: <br>
+                        <strong>{{member.lastActive}}</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group d-flex">
+                    <button class="btn btn-primary">Possible Fit</button>
+                    <button class="btn btn-success">Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading='About {{member.nickName}}'>
+                <h4>Academic Accomplishments</h4>
+                <p>{{member.academicPlus}}</p>
+                <h4>Work Experiences</h4>
+                <p>{{member.workPlus}}</p>
+                <h4>Dream Job</h4>
+                <p>{{member.workPlus}}</p>
+                <h4>Resume</h4>
+                <button>Resume</button>
+            </tab>
+            <tab heading='Extracurricular'>
+                <h4>Athletic Accomplishments</h4>
+                <p>Cheerleading and football</p>
+                <h4>Involvement in the Arts</h4>
+                <p>Dance <br>
+                Theatre</p>
+                <h4>Clubs and Organizations</h4>
+                <p>Student Government</p>
+                <p>Eagle Scout</p>
+            </tab>
+            <tab heading='Messages'>
+                <h4>Academic Accomplishments</h4>
+                <p>{{member.academicPlus}}</p>
+                <h4>Work Experiences</h4>
+                <p>{{member.workPlus}}</p>
+            </tab>
+        </tabset>
+    </div>
+</div>

@@ -14,10 +14,11 @@ namespace API.DTOs
         public string LogoUrl { get; set; }
         public string ClassYear { get; set; } 
         public string Major { get; set; } 
+        public string Hometown { get; set; } 
 
         public string AcademicPlus { get; set; }
         public string WorkPlus { get; set; }
-
+        public string DreamJob { get; set; }
         public string Company { get; set; }
         public string Position { get; set; }
 

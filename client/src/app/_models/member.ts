@@ -9,6 +9,7 @@ export interface Member {
   logoUrl?: string;
   classYear?: string;
   major?: string;
+  hometown?: string;
   academicPlus?: string;
   workPlus?: string;
   company?: string;

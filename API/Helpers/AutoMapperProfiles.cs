@@ -22,8 +22,15 @@ namespace API.Helpers
                     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).Position))
                 .ForMember(dest => dest.Major, opt => opt
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Major))
-                 .ForMember(dest => dest.WorkPlus, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).WorkPlus));
+                 .ForMember(dest => dest.Hometown, opt => opt
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Hometown))
+                .ForMember(dest => dest.AcademicPlus, opt => opt
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).AcademicPlus))
+                .ForMember(dest => dest.WorkPlus, opt => opt
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).WorkPlus))
+                .ForMember(dest => dest.DreamJob, opt => opt
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).DreamJob)); 
+
             CreateMap<Photo, PhotoDto>();
             CreateMap<CollegePrep, CollegePrepDto>();
             CreateMap<EmpOpp, EmpOppDto>();
