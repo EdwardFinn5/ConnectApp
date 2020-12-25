@@ -1,6 +1,6 @@
 [
   {
-    "ColUserName": "Dillard",
+    "ColUserName": "BriarAdmin",
     "FullName": "Nora Hull",
     "ColEmail": "norahull@neocent.com",
     "ColPhone": "(911) 551-3499",
@@ -11,7 +11,7 @@
     "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/46.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
@@ -20,23 +20,32 @@
         "CollegeId": 1,
         "CollegeName": "Briar Cliff University",
         "CollegeLocation": "Sioux City",
-        "CollegeDescription": "Ullamco velit magna cillum ipsum. Enim aliquip qui consequat elit consectetur esse dolor veniam pariatur exercitation fugiat in qui. Dolore nulla occaecat esse eiusmod sunt ullamco adipisicing qui incididunt nulla culpa irure eu deserunt. Voluptate eu esse labore duis pariatur sit reprehenderit aute. Sint consequat labore nisi duis nulla consequat exercitation sint. Veniam adipisicing quis Lorem mollit id excepteur ut pariatur enim eiusmod qui duis magna dolore. Ut tempor exercitation reprehenderit fugiat eiusmod nulla.\r\n"
+        "CollegeDescription": "Briar Cliff University is a four-year, Catholic-Franciscan liberal arts college located in Sioux City, Iowa. Briar Cliff is a community committed to higher education within a liberal arts and Catholic perspective. In the Franciscan tradition of service, caring and openness to all, Briar Cliff emphasizes quality education for its students, combining a broad intellectual background with career development. The University challenges its members to grow in self-awareness and in their relationships to others and to God.\r\n",
+        "CollegeStreet": "3303 Rebecca Street",
+        "CollegeState": "Iowa",
+        "CollegeZip": "51104",
+        "CollegePhone": "(800) 662-3303",
+        "CollegeWebsite": "http://www.briarcliff.edu/",
+        "CollegeVirtual": "https://www.futurechargers.briarcliff.edu/virtual-tours",
+        "CollegeYearFounded": "1930",
+        "CollegePresident": "Dr. Rachelle Karstens",
+        "CollegeEnrollment": "1,229"
       }
     ]
   },
   {
-    "ColUserName": "Fields",
-    "FullName": "Deleon Mays",
-    "ColEmail": "deleonmays@neocent.com",
-    "ColPhone": "(904) 432-3886",
+    "ColUserName": "BuenaAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Fields",
-    "Created": "2020-04-19",
-    "LastActive": "2020-05-12",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/6.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
@@ -44,534 +53,731 @@
       {
         "CollegeId": 2,
         "CollegeName": "Buena Vista University",
-        "CollegeLocation": "Central",
-        "CollegeDescription": "Consectetur dolore consectetur consequat tempor exercitation excepteur pariatur esse. Laboris dolor ut quis ad incididunt occaecat esse exercitation ad dolore et mollit. Duis excepteur nulla sunt aute anim culpa ipsum quis id id esse id in ad. Voluptate adipisicing consectetur reprehenderit sunt veniam consectetur incididunt esse eu id proident Lorem veniam.\r\n"
+        "CollegeLocation": "Storm Lake",
+        "CollegeDescription": "BVU’s traditional campus on the shores of Storm Lake hosts students in a variety of majors and pre-professional programs, including elementary, secondary, and special education; business and accounting; and biological and chemical sciences. The University’s degree-completion locations across the state, online, and graduate programs expand student potential with a pace and academic rigor designed for working adults and a variety of class formats that make scheduling even more convenient. With an average scholarship of more than 50 percent off tuition, BVU is an affordable option for all students.\r\n",
+        "CollegeStreet": "610 W 4th Street",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50588",
+        "CollegePhone": "(800) 383-9600",
+        "CollegeWebsite": "https://www.bvu.edu",
+        "CollegeVirtual": "https://www.bvu.edu/admissions/visit/virtual-tour",
+        "CollegeYearFounded": "1891",
+        "CollegePresident": "Dr. Brian Lenzmeier",
+        "CollegeEnrollment": "1,816"
       }
     ]
   },
   {
-    "ColUserName": "Schultz",
-    "FullName": "Hawkins Morrison",
-    "ColEmail": "hawkinsmorrison@neocent.com",
-    "ColPhone": "(927) 594-3816",
+    "ColUserName": "CentralAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Schultz",
-    "Created": "2020-02-27",
-    "LastActive": "2020-06-25",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/44.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Whitestone",
-        "CollegeDescription": "Ea eiusmod dolor anim id. Elit adipisicing ex cupidatat magna. Est nisi velit aliqua quis mollit nisi anim amet laboris aliquip ipsum consectetur quis.\r\n"
+        "CollegeId": 3,
+        "CollegeName": "Central College",
+        "CollegeLocation": "Waverly",
+        "CollegeDescription": "Founded in 1853, Central College is a private, residential four-year liberal arts college located in Pella, Iowa. It is known for its academic rigor, leadership and character development, global experiential learning, STEM (science, technology, engineering and math) and sustainability education, athletics and service. The Central College Dutch participate in NCAA Division III athletics and the college is a member of the American Rivers Conference. Central is an active part of the Greater Des Moines region and is located just minutes from Lake Red Rock, Iowa’s largest lake.\r\n",
+        "CollegeStreet": "812 University Street",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50219",
+        "CollegePhone": "(877) 462-3687",
+        "CollegeWebsite": "https://www.central.edu",
+        "CollegeVirtual": "https://central.edu/admission/visit-campus/video-tour/",
+        "CollegeYearFounded": "1853",
+        "CollegePresident": "Mr. Mark L. Putnam",
+        "CollegeEnrollment": "1,100"
       }
     ]
   },
   {
-    "ColUserName": "Hutchinson",
-    "FullName": "Velasquez Dale",
-    "ColEmail": "velasquezdale@neocent.com",
-    "ColPhone": "(971) 410-2295",
+    "ColUserName": "ClarkeAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Hutchinson",
-    "Created": "2020-04-06",
-    "LastActive": "2020-06-16",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/40.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Lynn",
-        "CollegeDescription": "Duis nisi aliqua proident ipsum duis ut incididunt commodo consectetur laborum et. Ea duis qui magna reprehenderit sint ut officia. Exercitation duis consequat est exercitation sunt.\r\n"
+        "CollegeId": 4,
+        "CollegeName": "Clarke University",
+        "CollegeLocation": "Dubuque",
+        "CollegeDescription": "Founded in 1843 by the Sisters of Charity of the Blessed Virgin Mary, Clarke University is located near the Mississippi River in Dubuque, Iowa. The University believes learning is lifelong and life-changing. Our community inspires intellectual curiosity, cultural engagement, professional preparedness, spiritual exploration, and a commitment to contributing to the common good in a global society. Academic offerings include 49 undergraduate majors and minors, 10 pre-professional programs, and six graduate degree programs.\r\n",
+        "CollegeStreet": "1550 Clarke Dr",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50219",
+        "CollegePhone": "(563) 588-6300",
+        "CollegeWebsite": "https://www.clarke.edu",
+        "CollegeVirtual": "https://www.clarke.edu/admission-aid/campus-tour/",
+        "CollegeYearFounded": "1843",
+        "CollegePresident": "Dr. Thom D. Chesney",
+        "CollegeEnrollment": "1,004"
       }
     ]
   },
   {
-    "ColUserName": "Melton",
-    "FullName": "Mcdowell Yang",
-    "ColEmail": "mcdowellyang@neocent.com",
-    "ColPhone": "(939) 597-3462",
+    "ColUserName": "CoeAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Melton",
-    "Created": "2019-07-28",
-    "LastActive": "2020-05-10",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/76.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Madrid",
-        "CollegeDescription": "Tempor commodo id irure in pariatur incididunt non mollit duis aliqua irure proident est. Enim in irure dolor sint esse magna aute Lorem mollit id nostrud dolore ipsum. Eiusmod ea voluptate deserunt et ad irure anim commodo do. Mollit esse proident exercitation pariatur dolore eu.\r\n"
+        "CollegeId": 5,
+        "CollegeName": "Coe College",
+        "CollegeLocation": "Cedar Rapids",
+        "CollegeDescription": "Coe College is ranked among the top 20 percent of all colleges and universities in the nation, and the #15 school in the nation for internships according to The Princeton Review. Founded in 1851, Coe is dedicated to providing students with a quality liberal arts education while preparing them for success in a global society. All students are provided with opportunities for real-world experience and skill development tailored to their personal goals. Every decision made at Coe is focused on the student experience and preparing students for success.\r\n",
+        "CollegeStreet": "100 Wartburg Blvd",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52402",
+        "CollegePhone": "(319 399-8500",
+        "CollegeWebsite": "http://www.coe.edu",
+        "CollegeVirtual": "https://www.coe.edu/admission/virtual-reality-experience",
+        "CollegeYearFounded": "1851",
+        "CollegePresident": "Dr. David McInally",
+        "CollegeEnrollment": "1,400"
       }
     ]
   },
   {
-    "ColUserName": "Mccray",
-    "FullName": "Stephanie Tucker",
-    "ColEmail": "stephanietucker@neocent.com",
-    "ColPhone": "(815) 523-3467",
+    "ColUserName": "CornellAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Mccray",
-    "Created": "2020-06-26",
-    "LastActive": "2020-05-13",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/53.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Sexton",
-        "CollegeDescription": "Ipsum veniam nostrud aute laboris amet anim dolore ut ipsum magna. Consectetur magna duis eiusmod ipsum. Esse ipsum laborum nisi velit quis adipisicing veniam in ex ipsum eu ex. Veniam duis excepteur qui ea labore do labore amet minim laborum.\r\n"
+        "CollegeId": 6,
+        "CollegeName": "Cornell College",
+        "CollegeLocation": "Mount Vernon",
+        "CollegeDescription": "Cornell College, a selective liberal arts college in Mount Vernon, Iowa, is recognized as one of the “Colleges That Change Lives.” Cornell is characterized by the immersion of its One Course At A Time curriculum, which allows students to focus on a single academic subject for an 18-day block. Since professors only teach one block at a time, students have more access to professors, and professors can teach students off-campus in whatever venue best fits the material. There are no slow intros, far-off exams or papers, or gaps between class sessions, mirroring the pace of working environments where employees are expected to handle tight deadlines and high expectations. With a student body from 47 states and 13 foreign countries, and renowned visiting speakers, faculty, and entertainers, Cornell offers the world from its hilltop campus.\r\n",
+        "CollegeStreet": "600 First Street SW",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52314",
+        "CollegePhone": "(800) 747-1112",
+        "CollegeWebsite": "https://www.cornellcollege.edu",
+        "CollegeVirtual": "https://www.cornellcollege.edu/admissions/visit-cornell2/index.shtml",
+        "CollegeYearFounded": "1853",
+        "CollegePresident": "Mr. Jonathan Brand",
+        "CollegeEnrollment": "1,000"
       }
     ]
   },
   {
-    "ColUserName": "Olsen",
-    "FullName": "Callahan Atkinson",
-    "ColEmail": "callahanatkinson@neocent.com",
-    "ColPhone": "(970) 587-3246",
+    "ColUserName": "DordtAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Olsen",
-    "Created": "2019-06-08",
-    "LastActive": "2020-06-29",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/5.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Driftwood",
-        "CollegeDescription": "Pariatur esse id commodo irure incididunt aute laborum id non ea. Fugiat velit et elit mollit deserunt. Velit ut excepteur exercitation incididunt eiusmod laboris aliqua ex ex nostrud. Sit consectetur dolor pariatur veniam irure. Nostrud incididunt magna duis et qui anim cupidatat esse dolore. Qui et qui veniam ipsum in deserunt ex esse eiusmod nisi.\r\n"
+        "CollegeId": 7,
+        "CollegeName": "Dordt University",
+        "CollegeLocation": "Sioux Center",
+        "CollegeDescription": "Dordt University is an institution of higher education committed to the Reformed Christian perspective. Our mission is to equip students, alumni, and the broader community to work effectively toward Christ-centered renewal in all aspects of contemporary life. As the Founder’s Vision states: We strive to fulfill our Founders Vision: “An education that is Christian not merely in the sense that devotional exercises are appended to the ordinary work of the college, but in the larger and deeper sense that all the class work, all of the students’ intellectual, emotional, and imaginative activities shall be permeated with the spirit and teaching of Christianity.”\r\n",
+        "CollegeStreet": "700 7th Street NE",
+        "CollegeState": "Iowa",
+        "CollegeZip": "51250",
+        "CollegePhone": "(800) 343-6738",
+        "CollegeWebsite": "https://www.dordt.edu",
+        "CollegeVirtual": "https://www.dordt.edu/admissions-aid/visit",
+        "CollegeYearFounded": "1955",
+        "CollegePresident": "Dr. Erik Hoekstra",
+        "CollegeEnrollment": "1,548"
       }
     ]
   },
   {
-    "ColUserName": "Woodard",
-    "FullName": "George Webb",
-    "ColEmail": "georgewebb@neocent.com",
-    "ColPhone": "(881) 558-3038",
+    "ColUserName": "DrakeAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Woodard",
-    "Created": "2019-11-23",
-    "LastActive": "2020-06-14",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/66.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Wawona",
-        "CollegeDescription": "Exercitation dolor ad eu nisi irure sint mollit enim ipsum aliquip reprehenderit. Ad qui dolore nulla sint velit. Culpa labore do non labore eu occaecat do non adipisicing. Ad in voluptate Lorem nisi pariatur sit nostrud pariatur proident sit. Elit voluptate dolore velit nostrud excepteur nostrud consequat sint ullamco ad enim Lorem mollit excepteur.\r\n"
+        "CollegeId": 8,
+        "CollegeName": "Drake University",
+        "CollegeLocation": "Des Moines",
+        "CollegeDescription": "Drake University, a mid-sized, private university in Des Moines, Iowa, is recognized as one of the top institutions of higher learning in the Midwest. The University is committed to providing every student with the life-defining opportunities that drive an exceptional future: 1) personal mentorship by professors in their field; 2) opportunities to learn through service locally and globally; 3) the flexibility to explore interests through a tuition-free, three-week January term course; and 4) high caliber internships, research experiences, and other professional preparation. The result is a highly-customized education that prepares graduates not just for that first, great job out of college, but for success throughout their lives.\r\n",
+        "CollegeStreet": "2507 University Ave",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50311",
+        "CollegePhone": "(515) 271-2011",
+        "CollegeWebsite": "https://www.drake.edu/",
+        "CollegeVirtual": "https://www.drake.edu/tour/",
+        "CollegeYearFounded": "1881",
+        "CollegePresident": "Earl “Marty” Martin",
+        "CollegeEnrollment": "3,098"
       }
     ]
   },
   {
-    "ColUserName": "Curtis",
-    "FullName": "Lynette Hooper",
-    "ColEmail": "lynettehooper@neocent.com",
-    "ColPhone": "(932) 508-3715",
+    "ColUserName": "GraceAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Curtis",
-    "Created": "2019-11-13",
-    "LastActive": "2020-06-24",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/10.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Gwynn",
-        "CollegeDescription": "Non est Lorem adipisicing adipisicing fugiat ad elit ipsum id. Ipsum irure sunt labore ut veniam tempor velit commodo dolor consequat. Eiusmod voluptate cupidatat officia eu fugiat voluptate.\r\n"
+        "CollegeId": 9,
+        "CollegeName": "Graceland University",
+        "CollegeLocation": "Lamoni",
+        "CollegeDescription": "Graceland University is a community dedicated to exceptional higher education. We are grounded in the liberal arts and dedicated to providing the progressive academic needs of the 21st century student.Founded in 1895, a private, four-year liberal arts university located in Lamoni, Iowa and features state-of-the-art performing arts and fitness facilities. Graceland University’s main, residential campus is located in Lamoni, Iowa, about an hour south of Des Moines, spanning 170 acres in the rolling hills of southern Iowa. The Independence, Missouri campus was established in 1998 and offers online and residential programs in our School of Nursing, the Gleazer School of Education, the C.H. Sandage School of Business and the Community of Christ Seminary. The Center for Graduate and Continuing Studies administers these programs.\r\n",
+        "CollegeStreet": "1 University Place",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50140",
+        "CollegePhone": "(641) 784 5000",
+        "CollegeWebsite": "https://www.graceland.edu",
+        "CollegeVirtual": "https://www.graceland.edu/admissions/lam-virtual-tour",
+        "CollegeYearFounded": "1895",
+        "CollegePresident": "Dr. Patricia Draves",
+        "CollegeEnrollment": "1,992"
       }
     ]
   },
   {
-    "ColUserName": "Giles",
-    "FullName": "Regina Byers",
-    "ColEmail": "reginabyers@neocent.com",
-    "ColPhone": "(968) 478-2792",
+    "ColUserName": "GrandviewAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Giles",
-    "Created": "2020-06-17",
-    "LastActive": "2020-06-13",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/84.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Ironton",
-        "CollegeDescription": "Occaecat ut nostrud dolor nulla reprehenderit aute labore et laboris in ut ad. Nisi est officia fugiat nisi nisi ex ut voluptate labore est amet velit nisi. Nisi adipisicing ipsum mollit tempor nostrud dolore anim officia officia. Ad anim est tempor eiusmod proident deserunt tempor eu anim dolor adipisicing. Ullamco incididunt tempor ut dolor voluptate magna ad sit id laborum amet exercitation.\r\n"
+        "CollegeId": 10,
+        "CollegeName": "Grand View University",
+        "CollegeLocation": "Des Moines",
+        "CollegeDescription": "At Grand View, you’ll find a modern, metropolitan campus where students unlock their potential. Built on a strong foundation, we are preparing students to change the world through successful careers and service to community. Grand View University offers a high-quality education to a diverse student body in a career-oriented curriculum. At Grand View, students find a winning combination of high-quality programs, experienced professors and caring individuals. Grand View stands out from other universities because of its partnerships with leading businesses in Des Moines, which has led to challenging internships and stellar job placement—for more than two decades nearly 100 percent of GV graduates have found jobs right after graduation.\r\n",
+        "CollegeStreet": "1200 Grandview Avenue",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50316",
+        "CollegePhone": "(515) 263-2800",
+        "CollegeWebsite": "https://www.grandview.edu",
+        "CollegeVirtual": "https://www.grandview.edu/about/community/visit-campus/virtual-tour",
+        "CollegeYearFounded": "1896",
+        "CollegePresident": "Mr. Kent Henning",
+        "CollegeEnrollment": "2,000"
       }
     ]
   },
   {
-    "ColUserName": "Reynolds",
-    "FullName": "Antoinette Newman",
-    "ColEmail": "antoinettenewman@neocent.com",
-    "ColPhone": "(809) 524-3019",
+    "ColUserName": "GrinnellAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Reynolds",
-    "Created": "2020-06-26",
-    "LastActive": "2020-06-04",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/18.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Elliott",
-        "CollegeDescription": "Aute id dolor ullamco enim. Reprehenderit aute velit excepteur cupidatat cupidatat tempor sunt non aliquip adipisicing nisi. Excepteur ut aute id magna culpa est qui pariatur culpa laboris culpa.\r\n"
+        "CollegeId": 11,
+        "CollegeName": "Grinnell College",
+        "CollegeLocation": "Grinnell",
+        "CollegeDescription": "Grinnell College is a highly selective, four-year, residential, liberal arts college in Grinnell, Iowa. Grinnell provides individually advised learning for intellectually engaged students to produce graduates prepared to navigate the world's complexities and responsibly contribute to the common good. Grinnell enrolls 1,700 students from around the world who earn B.A. degrees in a range of disciplines across the humanities, arts and sciences. What’s different about Grinnell? Grinnell requires only one class, the First-year Tutorial, outside the major. Students work closely with their faculty advisers to plan their individualized curriculum. Every student is offered the opportunity to participate in research with mentoring from faculty. Through service on committees related to academics and student life, students have a say in how things are done at Grinnell—this is self-governance in action.\r\n",
+        "CollegeStreet": "1115 8th Ave",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50112",
+        "CollegePhone": "(641) 269-4000",
+        "CollegeWebsite": "https://www.grinnell.edu",
+        "CollegeVirtual": "https://www.grinnell.edu/admission/visit",
+        "CollegeYearFounded": "1846",
+        "CollegePresident": "Dr. Anne Harris",
+        "CollegeEnrollment": "1,700"
       }
     ]
   },
   {
-    "ColUserName": "Hardin",
-    "FullName": "Opal Gray",
-    "ColEmail": "opalgray@neocent.com",
-    "ColPhone": "(832) 418-3145",
+    "ColUserName": "WesleyanAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Hardin",
-    "Created": "2019-08-18",
-    "LastActive": "2020-06-11",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/men/31.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Holcombe",
-        "CollegeDescription": "Enim deserunt consectetur consectetur enim aliqua laborum cupidatat enim occaecat fugiat incididunt. Sunt sint pariatur Lorem sint fugiat quis quis nulla labore. Exercitation fugiat veniam ullamco fugiat veniam sit id sint dolore laboris irure. Nisi elit sit reprehenderit amet voluptate est officia deserunt officia.\r\n"
+        "CollegeId": 12,
+        "CollegeName": "Iowa Wesleyan University",
+        "CollegeLocation": "Mount Pleasant",
+        "CollegeDescription": "Iowa Wesleyan University is the first & oldest co-educational independent university in the state of Iowa. As the regional, comprehensive university for Southeast Iowa, Iowa Wesleyan is a cultural and academic leader. IW is a transformational learning community whose passion is to educate, empower and inspire students to lead meaningful lives and careers. Iowa Wesleyan is committed to its core values of learning & community; faith & service; discovery & action; and courage & passion. The university provides undergraduate, adult and online education and promotes endeavors that advance Southeast Iowa and beyond.\r\n",
+        "CollegeStreet": "601 N Main Street",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52641",
+        "CollegePhone": "(319) 385-6202",
+        "CollegeWebsite": "https://www.iw.edu",
+        "CollegeVirtual": "https://www.iw.edu/visit/",
+        "CollegeYearFounded": "1842",
+        "CollegePresident": "Ms. Christine Plunkett",
+        "CollegeEnrollment": "570"
       }
     ]
   },
-
   {
-    "ColUserName": "Tracey",
-    "FullName": "Cross Mckenzie",
-    "ColEmail": "crossmckenzie@neocent.com",
-    "ColPhone": "(804) 585-3870",
+    "ColUserName": "LorasAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Tracey",
-    "Created": "2019-01-27",
-    "LastActive": "2020-05-13",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/38.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Hollymead",
-        "CollegeDescription": "Ipsum deserunt tempor quis sit exercitation magna elit nisi mollit fugiat consequat elit. Ex duis ullamco laboris cillum sint id voluptate laborum non aliqua. Ad nisi irure exercitation exercitation ipsum est mollit esse ad exercitation. Est voluptate cillum id adipisicing officia excepteur adipisicing adipisicing.\r\n"
+        "CollegeId": 13,
+        "CollegeName": "Loras College",
+        "CollegeLocation": "Dubuque",
+        "CollegeDescription": "Loras College, Iowa’s first college, develops active learners, reflective thinkers, ethical decision makers and responsible contributors in their diverse professional, social, and religious roles. Housed on a safe, scenic campus nestled high atop the majestic bluffs of the Mississippi River in Dubuque, Iowa, Loras offers an array of academic programs, extracurricular offerings and opportunities for personal growth.\r\n",
+        "CollegeStreet": "1450 Alta Vista Street",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52001",
+        "CollegePhone": "(563) 588-7100",
+        "CollegeWebsite": "https://www.loras.edu",
+        "CollegeVirtual": "https://www.loras.edu/admission/visitvideo/",
+        "CollegeYearFounded": "1839",
+        "CollegePresident": "Mr. Jim Collins",
+        "CollegeEnrollment": "1,397"
       }
     ]
   },
   {
-    "ColUserName": "Mara",
-    "FullName": "Judy Ware",
-    "ColEmail": "judyware@neocent.com",
-    "ColPhone": "(830) 475-2168",
+    "ColUserName": "LutherAdminf",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Mara",
-    "Created": "2019-12-09",
-    "LastActive": "2020-06-13",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/68.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Hartsville/Hartley",
-        "CollegeDescription": "Sunt laboris consequat aliqua exercitation enim sunt minim dolore ut eu. Veniam in esse tempor occaecat aute ea do voluptate officia incididunt in in. Enim proident magna cillum amet quis dolor exercitation laboris aute labore excepteur non. Veniam nostrud amet quis minim nulla pariatur excepteur culpa sit. Eu dolore irure minim dolor aliqua sint occaecat ea dolore laborum.\r\n"
+        "CollegeId": 14,
+        "CollegeName": "Luther College",
+        "CollegeLocation": "Decorah",
+        "CollegeDescription": "Founded in 1861 by Norwegian immigrants, Luther College is an independent, residential, liberal arts college affiliated with the Lutheran church (ELCA). The college seeks students of all beliefs and backgrounds. Luther offers more than 60 majors, minors, preprofessional, and special programs leading to the bachelor of arts degree. The college has a purposeful plan for learning that helps students grow in competence—and in wisdom. Learning at Luther is about engagement: faculty members who are passionate in their teaching and scholarship; students who are bright, active, and involved; and a college network characterized by personal attention, hands-on experiences, academic challenge, and community support.\r\n",
+        "CollegeStreet": "700 College Dr",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52101",
+        "CollegePhone": "(563) 387-1287",
+        "CollegeWebsite": "https://www.luther.edu",
+        "CollegeVirtual": "https://www.luther.edu/campus/tour/",
+        "CollegeYearFounded": "1861",
+        "CollegePresident": "Dr. Jenifer K. Ward",
+        "CollegeEnrollment": "2,053"
       }
     ]
   },
   {
-    "ColUserName": "Sheila",
-    "FullName": "Arlene Lopez",
-    "ColEmail": "arlenelopez@neocent.com",
-    "ColPhone": "(870) 453-3120",
+    "ColUserName": "MorningsideAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Sheila",
-    "Created": "2019-01-26",
-    "LastActive": "2020-06-19",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/2.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Bakersville",
-        "CollegeDescription": "Veniam sint pariatur nostrud incididunt excepteur cillum minim labore. Et ea qui reprehenderit duis proident irure anim commodo ipsum aute nostrud aliqua occaecat. Laboris qui culpa enim sunt velit dolor non velit quis proident excepteur eiusmod. Labore non officia proident minim et mollit labore proident sint dolore. Minim culpa esse consectetur tempor do tempor do nisi dolore. Velit sunt aute elit ut excepteur.\r\n"
+        "CollegeId": 15,
+        "CollegeName": "Morningside College",
+        "CollegeLocation": "Sioux City",
+        "CollegeDescription": "Morningside College is a private, four-year college located in Sioux City, Iowa, that provides an extraordinary, immersive experience that challenges students to explore their interests and ideas, engage in a hands-on education, build authentic community, foster natural curiosity, and make an impact in the world.               Morningside’s is known for helping students quickly become connected in its active campus setting. It is home to music, fine arts, 28 varsity sports, political opportunities, volunteer groups, and many more activities that have an outstanding legacy of achievement. The college also offers a variety of May Term and study abroad experiences that allow students to explore places and subjects they might not otherwise. Undergraduate students at Morningside find the 13:1 student-faculty ratio not only provides an exceptional education environment, but affords them unique opportunities to interact and research with professors. These practical, active learning opportunities and Morningside’s focus on helping students acquire the skills and develop a zeal to be ethical leaders, engaged citizens, and lifelong learners have led both the U.S. News & World Report and the Princeton Review to rank Morningside as one of the best colleges in the Midwest. Morningside also provides close to $20.7 million in scholarships and grants to 98.6% of undergraduate students.\r\n",
+        "CollegeStreet": "1501 Morningside Ave",
+        "CollegeState": "Iowa",
+        "CollegeZip": "51106",
+        "CollegePhone": "(712) 274-5000",
+        "CollegeWebsite": "https://www.morningside.edu",
+        "CollegeVirtual": "https://www.morningside.edu/admissions/undergraduate/visit/",
+        "CollegeYearFounded": "1894",
+        "CollegePresident": "Mr. John Reynders",
+        "CollegeEnrollment": "1,416"
       }
     ]
   },
   {
-    "ColUserName": "Arline",
-    "FullName": "Esperanza Torres",
-    "ColEmail": "esperanzatorres@neocent.com",
-    "ColPhone": "(814) 460-2882",
+    "ColUserName": "MtMercyAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Arline",
-    "Created": "2020-03-07",
-    "LastActive": "2020-06-01",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/50.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Edgar",
-        "CollegeDescription": "Ea nulla amet nulla ipsum elit laborum exercitation sit pariatur magna ut exercitation cupidatat. Exercitation eu ex velit esse consequat reprehenderit. Dolore sint labore velit mollit. Sint eiusmod excepteur incididunt cillum quis sit dolore voluptate consequat officia ad id irure. Adipisicing pariatur reprehenderit cillum minim nisi.\r\n"
+        "CollegeId": 16,
+        "CollegeName": "Mount Mercy University",
+        "CollegeLocation": "Cedar Rapids",
+        "CollegeDescription": "Housed on a hill nestled in Cedar Rapids’ historical Mound View neighborhood, Mount Mercy’s main campus is safe, charming, and full of life. The university’s 1,800+ undergraduate and graduate students come from around the globe, creating a vibrant, diverse, and open-minded campus community.The university’s accomplished faculty is easily accessible with a student/faculty ratio of 15:1. Students are often involved in faculty-led research and career-oriented internships with local, national, and global organizations.Focused on outcomes, 98% of MMU alumni are employed or in graduate school within nine months of graduation. With 74% of alumni residing in Iowa and 44% living in Linn County, students have a close-knit network of professionals to engage with.\r\n",
+        "CollegeStreet": "1330 Elmhurst Drive NE",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52402",
+        "CollegePhone": "(319) 363-8213",
+        "CollegeWebsite": "https://www.mtmercy.edu",
+        "CollegeVirtual": "https://www.mtmercy.edu/admissions-aid/undergraduate/visit-campus",
+        "CollegeYearFounded": "1928",
+        "CollegePresident": "Dr. Tim Laurent (Interim)",
+        "CollegeEnrollment": "1,835"
       }
     ]
   },
   {
-    "ColUserName": "Margaret",
-    "FullName": "Townsend Bradshaw",
-    "ColEmail": "townsendbradshaw@neocent.com",
-    "ColPhone": "(822) 426-2334",
+    "ColUserName": "NorthwesternAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Margaret",
-    "Created": "2019-04-02",
-    "LastActive": "2020-05-17",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/54.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Hackneyville",
-        "CollegeDescription": "Commodo ut magna cupidatat excepteur mollit voluptate Lorem minim Lorem. Duis consequat non ea est consectetur ad ipsum qui adipisicing mollit. Excepteur minim consequat ad esse in laborum nostrud et aliqua. Eiusmod nisi sunt laboris voluptate aute ut ex nostrud voluptate cupidatat Lorem dolore ut qui. Ex ex nostrud quis est irure qui aute nostrud nostrud laboris Lorem.\r\n"
+        "CollegeId": 17,
+        "CollegeName": "Northwestern College",
+        "CollegeLocation": "Orange City",
+        "CollegeDescription": "Northwestern College is a Christian academic community engaging students in courageous and faithful learning and living that empowers them to follow Christ and pursue God’s redeeming work in the world. Founded in 1882, Northwestern is a four-year Christian liberal arts college located in Orange City, Iowa. Committed to integrating faith and learning, Northwestern offers more than 80 undergraduate academic programs and seven online tracks for a Master of Education degree. Northwestern is also developing master's degree programs in physician assistant (PA) studies and athletic training, both of which are expected to start in May 2020. Students at Northwestern can participate in highly ranked study abroad programs, service opportunities locally and around the world, internships with college alumni and business partners, and research projects with college faculty. Students also can participate in 21 intercollegiate sports, numerous performing arts opportunities and more than 50 student clubs and organizations.\r\n",
+        "CollegeStreet": "101 7th St SW",
+        "CollegeState": "Iowa",
+        "CollegeZip": "51041",
+        "CollegePhone": "(712) 707-7000",
+        "CollegeWebsite": "https://www.nwciowa.edu",
+        "CollegeVirtual": "https://www.nwciowa.edu/virtual-nwc",
+        "CollegeYearFounded": "1882",
+        "CollegePresident": "Mr. Gregory E. Christy",
+        "CollegeEnrollment": "1,307"
       }
     ]
   },
   {
-    "ColUserName": "Cassandra",
-    "FullName": "Deanne Goff",
-    "ColEmail": "deannegoff@neocent.com",
-    "ColPhone": "(967) 550-3925",
+    "ColUserName": "SimpsonAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Cassandra",
-    "Created": "2020-06-17",
-    "LastActive": "2020-06-01",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/73.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Naomi",
-        "CollegeDescription": "Reprehenderit dolore culpa ullamco ut culpa amet est incididunt irure sit. Minim est id laboris proident et laboris exercitation cupidatat. Amet nostrud aute nostrud fugiat labore.\r\n"
+        "CollegeId": 18,
+        "CollegeName": "Simpson College",
+        "CollegeLocation": "Indianola",
+        "CollegeDescription": "Simpson College is a four-year, independent, selective, church-affiliated comprehensive liberal arts college located a few miles south of Des Moines, Iowa, in Indianola. Simpson is dedicated to excellence in higher education, including nurturing values which foster personal worth and individuality within a creative, diverse and just community, as well as graduating students who continue to grow as free, responsible and fulfilled individuals in the world of family, work, service and scholarship. Simpson is dedicated to the success of each student, however they define it.\r\n",
+        "CollegeStreet": "701 N C Street",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50125",
+        "CollegePhone": "(515) 961-6251",
+        "CollegeWebsite": "https://www.simpson.edu",
+        "CollegeVirtual": "https://simpson.edu/admission-aid/visit-simpson-college",
+        "CollegeYearFounded": "1860",
+        "CollegePresident": "Ms. Marsha Kelliher",
+        "CollegeEnrollment": "1,479"
       }
     ]
   },
   {
-    "ColUserName": "Carey",
-    "FullName": "Rice Calhoun",
-    "ColEmail": "ricecalhoun@neocent.com",
-    "ColPhone": "(895) 572-2597",
+    "ColUserName": "AmbroseAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Carey",
-    "Created": "2019-04-17",
-    "LastActive": "2020-05-08",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/87.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Loveland",
-        "CollegeDescription": "Quis minim voluptate enim eu ullamco minim cillum labore anim adipisicing ipsum irure. Labore veniam ex ad do ex duis officia ullamco consectetur. Occaecat aliqua consectetur tempor eu quis cupidatat non qui minim et anim exercitation officia.\r\n"
+        "CollegeId": 19,
+        "CollegeName": "St. Ambrose University",
+        "CollegeLocation": "Davenport",
+        "CollegeDescription": "St. Ambrose University, founded in 1882 and affiliated with the Diocese of Davenport, is independent, coeducational, and Catholic. It is recognized as a leading Midwestern university, consistently rated among the top universities in the region by major national ranking publications. Robust academic and co-curricular programs are offered in the liberal arts and sciences, education, business, the health sciences, and increasingly in STEM fields. St. Ambrose has a strong reputation for personal attention. The student-to-faculty ratio is 12 to 1, and no classes are taught by graduate assistants. In addition to strong academics, students enjoy a dynamic campus that features some of the nicest residence halls in the Midwest, a wide range of varsity and intramural sports, and more than 80 student clubs and organizations.\r\n",
+        "CollegeStreet": "518 Locust Street",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52803",
+        "CollegePhone": "(563) 333-6000",
+        "CollegeWebsite": "https://www.sau.edu",
+        "CollegeVirtual": "https://www.sau.edu/admissions/visit-sau",
+        "CollegeYearFounded": "1882",
+        "CollegePresident": "Dr. Joan Lescinski CSJ",
+        "CollegeEnrollment": "2,370"
       }
     ]
   },
   {
-    "ColUserName": "Lakisha",
-    "FullName": "Robertson Greer",
-    "ColEmail": "robertsongreer@neocent.com",
-    "ColPhone": "(980) 502-2336",
+    "ColUserName": "DubuqueAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Lakisha",
-    "Created": "2019-02-18",
-    "LastActive": "2020-05-13",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/59.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Loomis",
-        "CollegeDescription": "Nostrud proident duis qui quis consequat culpa amet anim cupidatat veniam voluptate. Ex qui deserunt elit eiusmod reprehenderit ad pariatur sit commodo est mollit anim occaecat Lorem. Nostrud ex consequat deserunt Lorem amet esse eiusmod cillum dolore pariatur quis deserunt. Elit magna deserunt et officia magna laborum in mollit incididunt enim elit.\r\n"
+        "CollegeId": 20,
+        "CollegeName": "University of Dubuque",
+        "CollegeLocation": "Dubuque",
+        "CollegeDescription": "The University of Dubuque (UD) is a private University affiliated with the Presbyterian Church (U.S.A.). It was founded in 1852 by Dutch immigrant Adrian Van Vliet to educate German-speaking ministers who could communicate with incoming immigrants. In 1902, new programs emerged to form what is now the University of Dubuque. Located in Iowa’s first city, Dubuque is home to the National Mississippi River Museum & Aquarium, the Dubuque Museum of Art, a variety of shops and restaurants, event venues, and more. The city of nearly 60,000 boasts miles of trails for walking, hiking, biking, and many Mississippi waterway and byway activities. Over the last 20 years, UD initiated a variety of initiatives to help increase enrollment, improve academic programs, and beautify the campus with contemporary building projects. Over the past 20 years, the University has invested over $250 million in new campus construction and renovations. During this period, UD’s enrollment has grown by over 400% with current student enrollment peaking to nearly 2,300. Representing 43 states and 22 countries, its student population puts UD on the map as one of the most diverse private colleges in Iowa.\r\n",
+        "CollegeStreet": "2000 University Ave",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52001",
+        "CollegePhone": "(563) 589-3000",
+        "CollegeWebsite": "https://www.dbq.edu/",
+        "CollegeVirtual": "https://www.dbq.edu/admission/scheduleavisit/",
+        "CollegeYearFounded": "1852",
+        "CollegePresident": "Dr. Jeffrey Bullock",
+        "CollegeEnrollment": "1,921"
       }
     ]
   },
   {
-    "ColUserName": "Gena",
-    "FullName": "Staci Rich",
-    "ColEmail": "stacirich@neocent.com",
-    "ColPhone": "(826) 402-3800",
+    "ColUserName": "UpperAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Gena",
-    "Created": "2019-11-18",
-    "LastActive": "2020-05-02",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/8.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Statenville",
-        "CollegeDescription": "Reprehenderit minim esse qui ut eu voluptate labore. Consectetur reprehenderit et proident consequat est in duis laboris magna. Ut ipsum officia deserunt eiusmod aliquip ad proident mollit. Laborum enim dolor enim tempor officia veniam ex excepteur Lorem cillum fugiat consequat amet. Dolor sint enim esse ad eiusmod occaecat enim velit cillum incididunt ad.\r\n"
+        "CollegeId": 21,
+        "CollegeName": "Upper Iowa University",
+        "CollegeLocation": "Fayette",
+        "CollegeDescription": "A private, nonprofit university founded in 1857, UIU provides more than 40 undergraduate/graduate degree programs to about 5,200 students worldwide. Students get a traditional college experience of excellent education, tradition, and innovation within a comfortable and welcoming campus environment in Fayette, Iowa. However, as a UIU education is an Education Built for Life, the University also has 21 U.S. locations-as well as a location in Hong Kong—with the evening classes, expert faculty, and supportive staff that students need to advance their career while still tending to family, job and other day-to-day responsibilities. UIU is also a recognized leader in online and self-paced education, so students never need to go far for an exceptional education.\r\n",
+        "CollegeStreet": "605 Washington Street",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52142",
+        "CollegePhone": "(800) 553-4150",
+        "CollegeWebsite": "https://www.uiu.edu",
+        "CollegeVirtual": "https://uiu.edu/locations/fayette/visit-us/",
+        "CollegeYearFounded": "1857",
+        "CollegePresident": "Dr. William R. Duffy II",
+        "CollegeEnrollment": "4,659"
       }
     ]
   },
   {
-    "ColUserName": "Marva",
-    "FullName": "Stanley Duran",
-    "ColEmail": "stanleyduran@neocent.com",
-    "ColPhone": "(918) 415-2612",
+    "ColUserName": "WartburgAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Marva",
-    "Created": "2019-09-25",
-    "LastActive": "2020-05-07",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/76.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Greensburg",
-        "CollegeDescription": "Aliquip velit est ex in voluptate laboris duis consequat quis laborum. Nulla consectetur incididunt cillum elit proident reprehenderit anim ea exercitation ea enim occaecat consectetur. Esse est proident nisi duis et exercitation commodo minim. Magna aute cupidatat officia nisi exercitation proident exercitation minim irure ex dolore voluptate Lorem adipisicing. Proident nostrud culpa tempor sunt enim.\r\n"
+        "CollegeId": 22,
+        "CollegeName": "Wartburg College",
+        "CollegeLocation": "Waverly",
+        "CollegeDescription": "A liberal arts college of the Evangelical Lutheran Church in America, Wartburg College is dedicated to challenging and nurturing students for lives of leadership and service as a spirited expression of their faith and learning. The college is characterized by vigorous academic expectations and community engagement within an environment of strong personal support. Vocation lives in the heart of a Wartburg education, and our students are uniquely equipped to find ways their passions intersect with the needs of the community and world. Wartburg encourages and values respectful conversations with people of diverse backgrounds and with differing spiritual perspectives.\r\n",
+        "CollegeStreet": "100 Wartburg Blvd",
+        "CollegeState": "Iowa",
+        "CollegeZip": "50677",
+        "CollegePhone": "(800) 772-2085",
+        "CollegeWebsite": "https://www.wartburg.edu",
+        "CollegeVirtual": "https://www.wartburg.edu/vtour/",
+        "CollegeYearFounded": "1852",
+        "CollegePresident": "Dr. Darrel D. Colson",
+        "CollegeEnrollment": "1,505"
       }
     ]
   },
   {
-    "ColUserName": "Belinda",
-    "FullName": "Wise Lowery",
-    "ColEmail": "wiselowery@neocent.com",
-    "ColPhone": "(917) 450-3204",
+    "ColUserName": "WilliamPennAdmin",
+    "FullName": "Nora Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
     "ColUserType": "College",
     "Active": true,
-    "NickName": "Belinda",
-    "Created": "2019-01-01",
-    "LastActive": "2020-06-29",
+    "NickName": "Dillard",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
     "Photos": [
       {
-        "ColUrl": "https://randomuser.me/api/portraits/women/30.jpg",
+        "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
     "College": [
       {
-        "CollegeId": 1,
-        "CollegeName": "Briar Cliff",
-        "CollegeLocation": "Nadine",
-        "CollegeDescription": "Est deserunt duis deserunt cillum eiusmod in do officia ex reprehenderit elit. Est duis officia enim amet ea qui commodo mollit cupidatat consequat. Proident exercitation cupidatat in eu adipisicing do eiusmod in incididunt nulla elit ut aliqua. Deserunt officia exercitation cupidatat cillum aliqua Lorem irure incididunt aute id cillum amet pariatur. Consectetur aute pariatur nulla nulla voluptate non qui exercitation anim minim. Id minim aliqua esse veniam amet est.\r\n"
+        "CollegeId": 23,
+        "CollegeName": "William Penn University",
+        "CollegeLocation": "Oskaloosa",
+        "CollegeDescription": "William Penn University is an inclusive and dynamic community where all students are valued, supported, and given the opportunity to reach their highest potential. Since 1873, our rich Quaker heritage gives us a foundation for a diverse student body with a deep understanding of acceptance. We foster a culture of willingness to change to meet the needs of our students. Innovative educational delivery options include traditional daytime courses, online and evening classes, and 8-week courses that provide opportunities for individuals to receive their education on their own terms.\r\n",
+        "CollegeStreet": "201 W Trueblood Ave",
+        "CollegeState": "Iowa",
+        "CollegeZip": "52577",
+        "CollegePhone": "(800) 779-7366",
+        "CollegeWebsite": "https://www.wmpenn.edu",
+        "CollegeVirtual": "https://www.wmpenn.edu/get-to-know-wpu/our-campus/virtual-tour/",
+        "CollegeYearFounded": "1873",
+        "CollegePresident": "Mr. John E.E. Ottosson",
+        "CollegeEnrollment": "1,311"
       }
     ]
   }

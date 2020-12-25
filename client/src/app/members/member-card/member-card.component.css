@@ -9,11 +9,20 @@
     transform: scale(1.0, 1.0);
     transition-duration: 500ms;
     transition-timing-function: ease-out;
-    object-fit: cover;
-    height: 230px;
-    width: 200px;
-    margin: 12px;
+    /* object-fit: cover; */
+    /* height: 230p;
+    width: 200px; */
+    /* width: 230px; */
+    height: 270px;
+    /* width: auto; */
+
 }
+
+/* .card img {
+    width: 100%;
+    height: auto;
+    
+} */
 
 /* .compimg {
     transform: scale(1.0, 1.0);
