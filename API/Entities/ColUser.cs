@@ -9,15 +9,14 @@ namespace API.Entities
     {
         [Key]
         public int ColUserId { get; set; }
-        
         [MaxLength(40)]
         public string ColUserName { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
-        
+
         [MaxLength(50)]
         public string FullName { get; set; }
-        
+
         [MaxLength(30)]
         public string NickName { get; set; }
 
@@ -32,14 +31,14 @@ namespace API.Entities
         [DataType(DataType.PhoneNumber)]
         public string ColPhone { get; set; }
 
-        public string ColUserType { get; set; }
+        public string ColUserType { get; set; } = "ColAdmin";
 
         public bool Active { get; set; } = true;
 
         public ICollection<ColPhoto> ColPhotos { get; set; }
 
-        public ICollection<College> Colleges { get; set; }
-        
-        public ICollection<HsPrep> HsPreps { get; set; }
+        public IList<College> Colleges { get; set; }
+
+        public IList<HsPrep> HsPreps { get; set; }
     }
 }

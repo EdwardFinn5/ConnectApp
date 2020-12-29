@@ -4,14 +4,16 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20201226203136_NewMigration")]
+    partial class NewMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -204,19 +206,10 @@ namespace API.Data.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Athletics")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ClassYear")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("College")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("DreamJob")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ExtraCurricular")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<float>("GPA")
@@ -261,9 +254,6 @@ namespace API.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Company")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyDescription")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Contact")
@@ -316,11 +306,11 @@ namespace API.Data.Migrations
                     b.Property<string>("DreamJob")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ExtraCurricular")
+                    b.Property<string>("ExtrCurricular")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("GPA")
-                        .HasColumnType("real");
+                    b.Property<string>("GPA")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("GradDate")
                         .HasColumnType("datetime2");
@@ -330,9 +320,6 @@ namespace API.Data.Migrations
 
                     b.Property<string>("HsName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
 
                     b.Property<string>("ProposedMajor")
                         .HasColumnType("nvarchar(max)");

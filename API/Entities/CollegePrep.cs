@@ -9,7 +9,12 @@ namespace API.Entities
         public int CollegePrepId { get; set; }
 
         public string ClassYear { get; set; }
-        public bool IsActive { get; set; }
+        public string College { get; set; }
+        public string Athletics { get; set; }
+        
+        public string ExtraCurricular { get; set; }
+        
+        public bool IsActive { get; set; } = true;
         public DateTime GradDate { get; set; }
 
         public string AcademicPlus { get; set; }

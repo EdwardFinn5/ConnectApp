@@ -22,12 +22,12 @@ namespace API.Data
         public DbSet<Photo> Photos { get; set; }
         public DbSet<ColPhoto> ColPhotos { get; set; }
 
-       
+    
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CollegeMajor>()
                 .HasKey(cm => new { cm.CollegeId, cm.MajorId });
-               
+            
             modelBuilder.Entity<CollegeMajor>()
                 .HasOne(cm => cm.College)
                 .WithMany(c => c.CollegeMajors)

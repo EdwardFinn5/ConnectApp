@@ -13,7 +13,7 @@ namespace API.Helpers
                 .ForMember(dest => dest.PhotoUrl, opt => opt
                     .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMain).StudentUrl))
                 .ForMember(dest => dest.LogoUrl, opt => opt
-                    .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMain).LogoUrl))
+                    .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMainLogo).LogoUrl))
                 .ForMember(dest => dest.ClassYear, opt => opt
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).ClassYear))
                 .ForMember(dest => dest.Company, opt => opt
@@ -29,7 +29,7 @@ namespace API.Helpers
                 .ForMember(dest => dest.WorkPlus, opt => opt
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).WorkPlus))
                 .ForMember(dest => dest.DreamJob, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).DreamJob)); 
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).DreamJob));
 
             CreateMap<Photo, PhotoDto>();
             CreateMap<CollegePrep, CollegePrepDto>();

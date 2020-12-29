@@ -18,6 +18,7 @@
     "College": [
       {
         "CollegeId": 1,
+        "IsActive": true,
         "CollegeName": "Briar Cliff University",
         "CollegeLocation": "Sioux City",
         "CollegeDescription": "Briar Cliff University is a four-year, Catholic-Franciscan liberal arts college located in Sioux City, Iowa. Briar Cliff is a community committed to higher education within a liberal arts and Catholic perspective. In the Franciscan tradition of service, caring and openness to all, Briar Cliff emphasizes quality education for its students, combining a broad intellectual background with career development. The University challenges its members to grow in self-awareness and in their relationships to others and to God.\r\n",
@@ -52,6 +53,7 @@
     "College": [
       {
         "CollegeId": 2,
+        "IsActive": true,
         "CollegeName": "Buena Vista University",
         "CollegeLocation": "Storm Lake",
         "CollegeDescription": "BVU’s traditional campus on the shores of Storm Lake hosts students in a variety of majors and pre-professional programs, including elementary, secondary, and special education; business and accounting; and biological and chemical sciences. The University’s degree-completion locations across the state, online, and graduate programs expand student potential with a pace and academic rigor designed for working adults and a variety of class formats that make scheduling even more convenient. With an average scholarship of more than 50 percent off tuition, BVU is an affordable option for all students.\r\n",
@@ -86,6 +88,7 @@
     "College": [
       {
         "CollegeId": 3,
+        "IsActive": true,
         "CollegeName": "Central College",
         "CollegeLocation": "Waverly",
         "CollegeDescription": "Founded in 1853, Central College is a private, residential four-year liberal arts college located in Pella, Iowa. It is known for its academic rigor, leadership and character development, global experiential learning, STEM (science, technology, engineering and math) and sustainability education, athletics and service. The Central College Dutch participate in NCAA Division III athletics and the college is a member of the American Rivers Conference. Central is an active part of the Greater Des Moines region and is located just minutes from Lake Red Rock, Iowa’s largest lake.\r\n",
@@ -120,6 +123,7 @@
     "College": [
       {
         "CollegeId": 4,
+        "IsActive": true,
         "CollegeName": "Clarke University",
         "CollegeLocation": "Dubuque",
         "CollegeDescription": "Founded in 1843 by the Sisters of Charity of the Blessed Virgin Mary, Clarke University is located near the Mississippi River in Dubuque, Iowa. The University believes learning is lifelong and life-changing. Our community inspires intellectual curiosity, cultural engagement, professional preparedness, spiritual exploration, and a commitment to contributing to the common good in a global society. Academic offerings include 49 undergraduate majors and minors, 10 pre-professional programs, and six graduate degree programs.\r\n",
@@ -154,6 +158,7 @@
     "College": [
       {
         "CollegeId": 5,
+        "IsActive": true,
         "CollegeName": "Coe College",
         "CollegeLocation": "Cedar Rapids",
         "CollegeDescription": "Coe College is ranked among the top 20 percent of all colleges and universities in the nation, and the #15 school in the nation for internships according to The Princeton Review. Founded in 1851, Coe is dedicated to providing students with a quality liberal arts education while preparing them for success in a global society. All students are provided with opportunities for real-world experience and skill development tailored to their personal goals. Every decision made at Coe is focused on the student experience and preparing students for success.\r\n",
@@ -188,6 +193,7 @@
     "College": [
       {
         "CollegeId": 6,
+        "IsActive": true,
         "CollegeName": "Cornell College",
         "CollegeLocation": "Mount Vernon",
         "CollegeDescription": "Cornell College, a selective liberal arts college in Mount Vernon, Iowa, is recognized as one of the “Colleges That Change Lives.” Cornell is characterized by the immersion of its One Course At A Time curriculum, which allows students to focus on a single academic subject for an 18-day block. Since professors only teach one block at a time, students have more access to professors, and professors can teach students off-campus in whatever venue best fits the material. There are no slow intros, far-off exams or papers, or gaps between class sessions, mirroring the pace of working environments where employees are expected to handle tight deadlines and high expectations. With a student body from 47 states and 13 foreign countries, and renowned visiting speakers, faculty, and entertainers, Cornell offers the world from its hilltop campus.\r\n",
@@ -222,6 +228,7 @@
     "College": [
       {
         "CollegeId": 7,
+        "IsActive": true,
         "CollegeName": "Dordt University",
         "CollegeLocation": "Sioux Center",
         "CollegeDescription": "Dordt University is an institution of higher education committed to the Reformed Christian perspective. Our mission is to equip students, alumni, and the broader community to work effectively toward Christ-centered renewal in all aspects of contemporary life. As the Founder’s Vision states: We strive to fulfill our Founders Vision: “An education that is Christian not merely in the sense that devotional exercises are appended to the ordinary work of the college, but in the larger and deeper sense that all the class work, all of the students’ intellectual, emotional, and imaginative activities shall be permeated with the spirit and teaching of Christianity.”\r\n",
@@ -256,6 +263,7 @@
     "College": [
       {
         "CollegeId": 8,
+        "IsActive": true,
         "CollegeName": "Drake University",
         "CollegeLocation": "Des Moines",
         "CollegeDescription": "Drake University, a mid-sized, private university in Des Moines, Iowa, is recognized as one of the top institutions of higher learning in the Midwest. The University is committed to providing every student with the life-defining opportunities that drive an exceptional future: 1) personal mentorship by professors in their field; 2) opportunities to learn through service locally and globally; 3) the flexibility to explore interests through a tuition-free, three-week January term course; and 4) high caliber internships, research experiences, and other professional preparation. The result is a highly-customized education that prepares graduates not just for that first, great job out of college, but for success throughout their lives.\r\n",
@@ -290,6 +298,7 @@
     "College": [
       {
         "CollegeId": 9,
+        "IsActive": true,
         "CollegeName": "Graceland University",
         "CollegeLocation": "Lamoni",
         "CollegeDescription": "Graceland University is a community dedicated to exceptional higher education. We are grounded in the liberal arts and dedicated to providing the progressive academic needs of the 21st century student.Founded in 1895, a private, four-year liberal arts university located in Lamoni, Iowa and features state-of-the-art performing arts and fitness facilities. Graceland University’s main, residential campus is located in Lamoni, Iowa, about an hour south of Des Moines, spanning 170 acres in the rolling hills of southern Iowa. The Independence, Missouri campus was established in 1998 and offers online and residential programs in our School of Nursing, the Gleazer School of Education, the C.H. Sandage School of Business and the Community of Christ Seminary. The Center for Graduate and Continuing Studies administers these programs.\r\n",
@@ -324,6 +333,7 @@
     "College": [
       {
         "CollegeId": 10,
+        "IsActive": true,
         "CollegeName": "Grand View University",
         "CollegeLocation": "Des Moines",
         "CollegeDescription": "At Grand View, you’ll find a modern, metropolitan campus where students unlock their potential. Built on a strong foundation, we are preparing students to change the world through successful careers and service to community. Grand View University offers a high-quality education to a diverse student body in a career-oriented curriculum. At Grand View, students find a winning combination of high-quality programs, experienced professors and caring individuals. Grand View stands out from other universities because of its partnerships with leading businesses in Des Moines, which has led to challenging internships and stellar job placement—for more than two decades nearly 100 percent of GV graduates have found jobs right after graduation.\r\n",
@@ -358,6 +368,7 @@
     "College": [
       {
         "CollegeId": 11,
+        "IsActive": true,
         "CollegeName": "Grinnell College",
         "CollegeLocation": "Grinnell",
         "CollegeDescription": "Grinnell College is a highly selective, four-year, residential, liberal arts college in Grinnell, Iowa. Grinnell provides individually advised learning for intellectually engaged students to produce graduates prepared to navigate the world's complexities and responsibly contribute to the common good. Grinnell enrolls 1,700 students from around the world who earn B.A. degrees in a range of disciplines across the humanities, arts and sciences. What’s different about Grinnell? Grinnell requires only one class, the First-year Tutorial, outside the major. Students work closely with their faculty advisers to plan their individualized curriculum. Every student is offered the opportunity to participate in research with mentoring from faculty. Through service on committees related to academics and student life, students have a say in how things are done at Grinnell—this is self-governance in action.\r\n",
@@ -392,6 +403,7 @@
     "College": [
       {
         "CollegeId": 12,
+        "IsActive": true,
         "CollegeName": "Iowa Wesleyan University",
         "CollegeLocation": "Mount Pleasant",
         "CollegeDescription": "Iowa Wesleyan University is the first & oldest co-educational independent university in the state of Iowa. As the regional, comprehensive university for Southeast Iowa, Iowa Wesleyan is a cultural and academic leader. IW is a transformational learning community whose passion is to educate, empower and inspire students to lead meaningful lives and careers. Iowa Wesleyan is committed to its core values of learning & community; faith & service; discovery & action; and courage & passion. The university provides undergraduate, adult and online education and promotes endeavors that advance Southeast Iowa and beyond.\r\n",
@@ -426,6 +438,7 @@
     "College": [
       {
         "CollegeId": 13,
+        "IsActive": true,
         "CollegeName": "Loras College",
         "CollegeLocation": "Dubuque",
         "CollegeDescription": "Loras College, Iowa’s first college, develops active learners, reflective thinkers, ethical decision makers and responsible contributors in their diverse professional, social, and religious roles. Housed on a safe, scenic campus nestled high atop the majestic bluffs of the Mississippi River in Dubuque, Iowa, Loras offers an array of academic programs, extracurricular offerings and opportunities for personal growth.\r\n",
@@ -460,6 +473,7 @@
     "College": [
       {
         "CollegeId": 14,
+        "IsActive": true,
         "CollegeName": "Luther College",
         "CollegeLocation": "Decorah",
         "CollegeDescription": "Founded in 1861 by Norwegian immigrants, Luther College is an independent, residential, liberal arts college affiliated with the Lutheran church (ELCA). The college seeks students of all beliefs and backgrounds. Luther offers more than 60 majors, minors, preprofessional, and special programs leading to the bachelor of arts degree. The college has a purposeful plan for learning that helps students grow in competence—and in wisdom. Learning at Luther is about engagement: faculty members who are passionate in their teaching and scholarship; students who are bright, active, and involved; and a college network characterized by personal attention, hands-on experiences, academic challenge, and community support.\r\n",
@@ -494,6 +508,7 @@
     "College": [
       {
         "CollegeId": 15,
+        "IsActive": true,
         "CollegeName": "Morningside College",
         "CollegeLocation": "Sioux City",
         "CollegeDescription": "Morningside College is a private, four-year college located in Sioux City, Iowa, that provides an extraordinary, immersive experience that challenges students to explore their interests and ideas, engage in a hands-on education, build authentic community, foster natural curiosity, and make an impact in the world.               Morningside’s is known for helping students quickly become connected in its active campus setting. It is home to music, fine arts, 28 varsity sports, political opportunities, volunteer groups, and many more activities that have an outstanding legacy of achievement. The college also offers a variety of May Term and study abroad experiences that allow students to explore places and subjects they might not otherwise. Undergraduate students at Morningside find the 13:1 student-faculty ratio not only provides an exceptional education environment, but affords them unique opportunities to interact and research with professors. These practical, active learning opportunities and Morningside’s focus on helping students acquire the skills and develop a zeal to be ethical leaders, engaged citizens, and lifelong learners have led both the U.S. News & World Report and the Princeton Review to rank Morningside as one of the best colleges in the Midwest. Morningside also provides close to $20.7 million in scholarships and grants to 98.6% of undergraduate students.\r\n",
@@ -528,6 +543,7 @@
     "College": [
       {
         "CollegeId": 16,
+        "IsActive": true,
         "CollegeName": "Mount Mercy University",
         "CollegeLocation": "Cedar Rapids",
         "CollegeDescription": "Housed on a hill nestled in Cedar Rapids’ historical Mound View neighborhood, Mount Mercy’s main campus is safe, charming, and full of life. The university’s 1,800+ undergraduate and graduate students come from around the globe, creating a vibrant, diverse, and open-minded campus community.The university’s accomplished faculty is easily accessible with a student/faculty ratio of 15:1. Students are often involved in faculty-led research and career-oriented internships with local, national, and global organizations.Focused on outcomes, 98% of MMU alumni are employed or in graduate school within nine months of graduation. With 74% of alumni residing in Iowa and 44% living in Linn County, students have a close-knit network of professionals to engage with.\r\n",
@@ -562,6 +578,7 @@
     "College": [
       {
         "CollegeId": 17,
+        "IsActive": true,
         "CollegeName": "Northwestern College",
         "CollegeLocation": "Orange City",
         "CollegeDescription": "Northwestern College is a Christian academic community engaging students in courageous and faithful learning and living that empowers them to follow Christ and pursue God’s redeeming work in the world. Founded in 1882, Northwestern is a four-year Christian liberal arts college located in Orange City, Iowa. Committed to integrating faith and learning, Northwestern offers more than 80 undergraduate academic programs and seven online tracks for a Master of Education degree. Northwestern is also developing master's degree programs in physician assistant (PA) studies and athletic training, both of which are expected to start in May 2020. Students at Northwestern can participate in highly ranked study abroad programs, service opportunities locally and around the world, internships with college alumni and business partners, and research projects with college faculty. Students also can participate in 21 intercollegiate sports, numerous performing arts opportunities and more than 50 student clubs and organizations.\r\n",
@@ -596,6 +613,7 @@
     "College": [
       {
         "CollegeId": 18,
+        "IsActive": true,
         "CollegeName": "Simpson College",
         "CollegeLocation": "Indianola",
         "CollegeDescription": "Simpson College is a four-year, independent, selective, church-affiliated comprehensive liberal arts college located a few miles south of Des Moines, Iowa, in Indianola. Simpson is dedicated to excellence in higher education, including nurturing values which foster personal worth and individuality within a creative, diverse and just community, as well as graduating students who continue to grow as free, responsible and fulfilled individuals in the world of family, work, service and scholarship. Simpson is dedicated to the success of each student, however they define it.\r\n",
@@ -630,6 +648,7 @@
     "College": [
       {
         "CollegeId": 19,
+        "IsActive": true,
         "CollegeName": "St. Ambrose University",
         "CollegeLocation": "Davenport",
         "CollegeDescription": "St. Ambrose University, founded in 1882 and affiliated with the Diocese of Davenport, is independent, coeducational, and Catholic. It is recognized as a leading Midwestern university, consistently rated among the top universities in the region by major national ranking publications. Robust academic and co-curricular programs are offered in the liberal arts and sciences, education, business, the health sciences, and increasingly in STEM fields. St. Ambrose has a strong reputation for personal attention. The student-to-faculty ratio is 12 to 1, and no classes are taught by graduate assistants. In addition to strong academics, students enjoy a dynamic campus that features some of the nicest residence halls in the Midwest, a wide range of varsity and intramural sports, and more than 80 student clubs and organizations.\r\n",
@@ -664,6 +683,7 @@
     "College": [
       {
         "CollegeId": 20,
+        "IsActive": true,
         "CollegeName": "University of Dubuque",
         "CollegeLocation": "Dubuque",
         "CollegeDescription": "The University of Dubuque (UD) is a private University affiliated with the Presbyterian Church (U.S.A.). It was founded in 1852 by Dutch immigrant Adrian Van Vliet to educate German-speaking ministers who could communicate with incoming immigrants. In 1902, new programs emerged to form what is now the University of Dubuque. Located in Iowa’s first city, Dubuque is home to the National Mississippi River Museum & Aquarium, the Dubuque Museum of Art, a variety of shops and restaurants, event venues, and more. The city of nearly 60,000 boasts miles of trails for walking, hiking, biking, and many Mississippi waterway and byway activities. Over the last 20 years, UD initiated a variety of initiatives to help increase enrollment, improve academic programs, and beautify the campus with contemporary building projects. Over the past 20 years, the University has invested over $250 million in new campus construction and renovations. During this period, UD’s enrollment has grown by over 400% with current student enrollment peaking to nearly 2,300. Representing 43 states and 22 countries, its student population puts UD on the map as one of the most diverse private colleges in Iowa.\r\n",
@@ -698,6 +718,7 @@
     "College": [
       {
         "CollegeId": 21,
+        "IsActive": true,
         "CollegeName": "Upper Iowa University",
         "CollegeLocation": "Fayette",
         "CollegeDescription": "A private, nonprofit university founded in 1857, UIU provides more than 40 undergraduate/graduate degree programs to about 5,200 students worldwide. Students get a traditional college experience of excellent education, tradition, and innovation within a comfortable and welcoming campus environment in Fayette, Iowa. However, as a UIU education is an Education Built for Life, the University also has 21 U.S. locations-as well as a location in Hong Kong—with the evening classes, expert faculty, and supportive staff that students need to advance their career while still tending to family, job and other day-to-day responsibilities. UIU is also a recognized leader in online and self-paced education, so students never need to go far for an exceptional education.\r\n",
@@ -732,6 +753,7 @@
     "College": [
       {
         "CollegeId": 22,
+        "IsActive": true,
         "CollegeName": "Wartburg College",
         "CollegeLocation": "Waverly",
         "CollegeDescription": "A liberal arts college of the Evangelical Lutheran Church in America, Wartburg College is dedicated to challenging and nurturing students for lives of leadership and service as a spirited expression of their faith and learning. The college is characterized by vigorous academic expectations and community engagement within an environment of strong personal support. Vocation lives in the heart of a Wartburg education, and our students are uniquely equipped to find ways their passions intersect with the needs of the community and world. Wartburg encourages and values respectful conversations with people of diverse backgrounds and with differing spiritual perspectives.\r\n",
@@ -766,6 +788,7 @@
     "College": [
       {
         "CollegeId": 23,
+        "IsActive": true,
         "CollegeName": "William Penn University",
         "CollegeLocation": "Oskaloosa",
         "CollegeDescription": "William Penn University is an inclusive and dynamic community where all students are valued, supported, and given the opportunity to reach their highest potential. Since 1873, our rich Quaker heritage gives us a foundation for a diverse student body with a deep understanding of acceptance. We foster a culture of willingness to change to meet the needs of our students. Innovative educational delivery options include traditional daytime courses, online and evening classes, and 8-week courses that provide opportunities for individuals to receive their education on their own terms.\r\n",
@@ -778,6 +801,97 @@
         "CollegeYearFounded": "1873",
         "CollegePresident": "Mr. John E.E. Ottosson",
         "CollegeEnrollment": "1,311"
+      }
+    ]
+  },
+
+  {
+    "ColUserName": "Billy",
+    "FullName": "Billy Hull",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
+    "ColUserType": "ColLead",
+    "Active": true,
+    "NickName": "Billy",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
+    "Photos": [
+      {
+        "HsStudentUrl": "https://ak.picdn.net/shutterstock/videos/1013599640/thumb/1.jpg",
+        "IsMain": true
+      }
+    ],
+    "HsPrep": [
+      {
+        "IsActive": true,
+        "HsName": "Ames High School",
+        "HsLocation": "Ames, IA",
+        "ClassYear": "Junior",
+        "GradDate": "2022-06-28",
+        "GPA": 3.5,
+        "ProposedMajor": "Accounting",
+        "ExtraCurricular": "I played baseball two years and was in choir",
+        "DreamJob": "Partner at a Public Accounting firm"
+      }
+    ]
+  },
+  {
+    "ColUserName": "Sally",
+    "FullName": "Sally Smith",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
+    "ColUserType": "ColLead",
+    "Active": true,
+    "NickName": "Sally",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
+    "Photos": [
+      {
+        "HsStudentUrl": "https://c.stocksy.com/a/Auq700/z9/1871666.jpg",
+        "IsMain": true
+      }
+    ],
+    "HsPrep": [
+      {
+        "IsActive": true,
+        "HsName": "Johnston High School",
+        "HsLocation": "Johnston, IA",
+        "ClassYear": "Senior",
+        "GradDate": "2022-06-28",
+        "GPA": 4.0,
+        "ProposedMajor": "Finance",
+        "ExtraCurricular": "I played girls basketball two years and was in the band",
+        "DreamJob": "CEO of a large conglomerate"
+      }
+    ]
+  },
+  {
+    "ColUserName": "Joey",
+    "FullName": "Joey Stanford",
+    "ColEmail": "norahull@neocent.com",
+    "ColPhone": "(911) 551-3499",
+    "ColUserType": "ColLead",
+    "Active": true,
+    "NickName": "Joey",
+    "Created": "2019-02-12",
+    "LastActive": "2020-06-22",
+    "Photos": [
+      {
+        "HsStudentUrl": "https://c8.alamy.com/comp/2A9DX20/high-school-students-portrait-2A9DX20.jpg",
+        "IsMain": true
+      }
+    ],
+    "HsPrep": [
+      {
+        "IsActive": true,
+        "HsName": "Pleasant Valley High School",
+        "HsLocation": "Bettendorf, IA",
+        "ClassYear": "Junior",
+        "GradDate": "2022-06-28",
+        "GPA": 3.8,
+        "ProposedMajor": "Education",
+        "ExtraCurricular": "I was President of my class",
+        "DreamJob": "Superintendent"
       }
     ]
   }
