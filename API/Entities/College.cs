@@ -6,21 +6,29 @@ namespace API.Entities
 {
     public class College
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CollegeId { get; set; }
         
-        [Required]
-        [MaxLength(40)]
         public string CollegeName { get; set; }
 
-        [Required]
-        [MaxLength(40)]
         public string CollegeLocation { get; set; }
 
         public string CollegeDescription { get; set; }
+        public bool IsActive { get; set; } = true;
 
-        public ICollection<CollegeMajor> CollegeMajors { get; set; }
-
+        public string CollegeStreet { get; set; }
+        public string CollegeState { get; set; }
+        public string CollegeZip { get; set; }
+        public string CollegePhone { get; set; }
+        public string CollegeWebsite { get; set; }
+        public string CollegeVirtual { get; set; }
+        public string CollegeYearFounded { get; set; }
+        public string CollegePresident { get; set; }
+        public string CollegeEnrollment { get; set; }
+        
+        public IList<CollegeMajor> CollegeMajors { get; set; }
+        public IList<FactFeature> FactFeatures { get; set; }
+        
         public virtual ColUser ColUser { get; set; }
         public int ColUserId { get; set; }
     }

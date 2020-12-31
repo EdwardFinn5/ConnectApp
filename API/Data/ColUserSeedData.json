@@ -9,13 +9,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 1,
         "IsActive": true,
@@ -44,13 +44,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 2,
         "IsActive": true,
@@ -79,13 +79,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 3,
         "IsActive": true,
@@ -114,13 +114,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 4,
         "IsActive": true,
@@ -149,13 +149,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 5,
         "IsActive": true,
@@ -184,13 +184,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 6,
         "IsActive": true,
@@ -219,13 +219,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 7,
         "IsActive": true,
@@ -254,13 +254,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 8,
         "IsActive": true,
@@ -289,13 +289,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 9,
         "IsActive": true,
@@ -324,13 +324,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 10,
         "IsActive": true,
@@ -359,13 +359,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 11,
         "IsActive": true,
@@ -394,13 +394,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 12,
         "IsActive": true,
@@ -429,13 +429,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 13,
         "IsActive": true,
@@ -464,13 +464,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 14,
         "IsActive": true,
@@ -499,13 +499,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 15,
         "IsActive": true,
@@ -534,13 +534,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 16,
         "IsActive": true,
@@ -569,13 +569,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 17,
         "IsActive": true,
@@ -604,13 +604,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 18,
         "IsActive": true,
@@ -639,13 +639,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 19,
         "IsActive": true,
@@ -674,13 +674,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 20,
         "IsActive": true,
@@ -709,13 +709,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 21,
         "IsActive": true,
@@ -744,13 +744,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 22,
         "IsActive": true,
@@ -779,13 +779,13 @@
     "NickName": "Dillard",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "ColUrl": "https://www.briarcliff.edu/media/596012/social-post-4.jpg",
         "IsMain": true
       }
     ],
-    "College": [
+    "Colleges": [
       {
         "CollegeId": 23,
         "IsActive": true,
@@ -815,13 +815,13 @@
     "NickName": "Billy",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "HsStudentUrl": "https://ak.picdn.net/shutterstock/videos/1013599640/thumb/1.jpg",
         "IsMain": true
       }
     ],
-    "HsPrep": [
+    "HsPreps": [
       {
         "IsActive": true,
         "HsName": "Ames High School",
@@ -845,13 +845,13 @@
     "NickName": "Sally",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "HsStudentUrl": "https://c.stocksy.com/a/Auq700/z9/1871666.jpg",
         "IsMain": true
       }
     ],
-    "HsPrep": [
+    "HsPreps": [
       {
         "IsActive": true,
         "HsName": "Johnston High School",
@@ -875,13 +875,13 @@
     "NickName": "Joey",
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
-    "Photos": [
+    "ColPhotos": [
       {
         "HsStudentUrl": "https://c8.alamy.com/comp/2A9DX20/high-school-students-portrait-2A9DX20.jpg",
         "IsMain": true
       }
     ],
-    "HsPrep": [
+    "HsPreps": [
       {
         "IsActive": true,
         "HsName": "Pleasant Valley High School",

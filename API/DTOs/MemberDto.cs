@@ -12,7 +12,10 @@ namespace API.DTOs
 
         public string PhotoUrl { get; set; }
         public string LogoUrl { get; set; }
-        public string ClassYear { get; set; } 
+        public string ClassYear { get; set; }
+        public string College { get; set; }
+        
+         
         public string Major { get; set; } 
         public string Hometown { get; set; } 
 

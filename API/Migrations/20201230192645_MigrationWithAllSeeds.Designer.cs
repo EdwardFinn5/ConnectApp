@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace API.Data.Migrations
+namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201229145700_NewMigration2")]
-    partial class NewMigration2
+    [Migration("20201230192645_MigrationWithAllSeeds")]
+    partial class MigrationWithAllSeeds
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -109,16 +109,13 @@ namespace API.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ColEmail")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ColPhone")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ColUserName")
-                        .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ColUserType")
                         .HasColumnType("nvarchar(max)");
@@ -127,15 +124,13 @@ namespace API.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FullName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastActive")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NickName")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("PasswordHash")
                         .HasColumnType("varbinary(max)");
@@ -151,9 +146,7 @@ namespace API.Data.Migrations
             modelBuilder.Entity("API.Entities.College", b =>
                 {
                     b.Property<int>("CollegeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<int>("ColUserId")
                         .HasColumnType("int");
@@ -161,15 +154,41 @@ namespace API.Data.Migrations
                     b.Property<string>("CollegeDescription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CollegeEnrollment")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CollegeLocation")
-                        .IsRequired()
-                        .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CollegeName")
-                        .IsRequired()
-                        .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollegePhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollegePresident")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollegeState")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollegeStreet")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollegeVirtual")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollegeWebsite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollegeYearFounded")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CollegeZip")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.HasKey("CollegeId");
 
@@ -302,6 +321,24 @@ namespace API.Data.Migrations
                     b.ToTable("EmpOpps");
                 });
 
+            modelBuilder.Entity("API.Entities.FactFeature", b =>
+                {
+                    b.Property<int>("FactId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CollegeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FactBullet")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FactId");
+
+                    b.HasIndex("CollegeId");
+
+                    b.ToTable("FactFeatures");
+                });
+
             modelBuilder.Entity("API.Entities.HsPrep", b =>
                 {
                     b.Property<int>("HsPrepId")
@@ -349,17 +386,13 @@ namespace API.Data.Migrations
             modelBuilder.Entity("API.Entities.Major", b =>
                 {
                     b.Property<int>("MajorId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
-                    b.Property<int?>("MajorCatId")
+                    b.Property<int>("MajorCatId")
                         .HasColumnType("int");
 
                     b.Property<string>("MajorName")
-                        .IsRequired()
-                        .HasMaxLength(80)
-                        .HasColumnType("nvarchar(80)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MajorId");
 
@@ -371,14 +404,10 @@ namespace API.Data.Migrations
             modelBuilder.Entity("API.Entities.MajorCat", b =>
                 {
                     b.Property<int>("MajorCatId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("MajorCatName")
-                        .IsRequired()
-                        .HasMaxLength(80)
-                        .HasColumnType("nvarchar(80)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MajorCatId");
 
@@ -492,6 +521,17 @@ namespace API.Data.Migrations
                     b.Navigation("AppUser");
                 });
 
+            modelBuilder.Entity("API.Entities.FactFeature", b =>
+                {
+                    b.HasOne("API.Entities.College", "College")
+                        .WithMany("FactFeatures")
+                        .HasForeignKey("CollegeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("College");
+                });
+
             modelBuilder.Entity("API.Entities.HsPrep", b =>
                 {
                     b.HasOne("API.Entities.ColUser", "ColUser")
@@ -507,7 +547,9 @@ namespace API.Data.Migrations
                 {
                     b.HasOne("API.Entities.MajorCat", "MajorCat")
                         .WithMany("Majors")
-                        .HasForeignKey("MajorCatId");
+                        .HasForeignKey("MajorCatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("MajorCat");
                 });
@@ -544,6 +586,8 @@ namespace API.Data.Migrations
             modelBuilder.Entity("API.Entities.College", b =>
                 {
                     b.Navigation("CollegeMajors");
+
+                    b.Navigation("FactFeatures");
                 });
 
             modelBuilder.Entity("API.Entities.Major", b =>

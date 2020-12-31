@@ -1,0 +1,18 @@
+[
+  {
+    "CollegeId": 1,
+    "MajorId": 1
+  },
+  {
+    "CollegeId": 1,
+    "MajorId": 2
+  },
+  {
+    "CollegeId": 1,
+    "MajorId": 3
+  },
+  {
+    "CollegeId": 2,
+    "MajorId": 1
+  }
+]

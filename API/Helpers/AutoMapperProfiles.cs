@@ -28,6 +28,8 @@ namespace API.Helpers
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).AcademicPlus))
                 .ForMember(dest => dest.WorkPlus, opt => opt
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).WorkPlus))
+                .ForMember(dest => dest.College, opt => opt
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).College))    
                 .ForMember(dest => dest.DreamJob, opt => opt
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).DreamJob));
 

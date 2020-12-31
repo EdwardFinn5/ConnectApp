@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace API.Data.Migrations
+namespace API.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class MigrationWithAllSeeds : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,15 +13,15 @@ namespace API.Data.Migrations
                 {
                     ColUserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ColUserName = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: true),
+                    ColUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    FullName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    NickName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NickName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastActive = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ColEmail = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    ColPhone = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
+                    ColEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ColPhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ColUserType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Active = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -34,9 +34,8 @@ namespace API.Data.Migrations
                 name: "MajorCats",
                 columns: table => new
                 {
-                    MajorCatId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MajorCatName = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false)
+                    MajorCatId = table.Column<int>(type: "int", nullable: false),
+                    MajorCatName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -69,11 +68,20 @@ namespace API.Data.Migrations
                 name: "Colleges",
                 columns: table => new
                 {
-                    CollegeId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CollegeName = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
-                    CollegeLocation = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    CollegeId = table.Column<int>(type: "int", nullable: false),
+                    CollegeName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegeLocation = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CollegeDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    CollegeStreet = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegeState = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegeZip = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegePhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegeWebsite = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegeVirtual = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegeYearFounded = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegePresident = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegeEnrollment = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ColUserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -94,6 +102,7 @@ namespace API.Data.Migrations
                     ColPhotoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ColUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HsStudentUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsMain = table.Column<bool>(type: "bit", nullable: false),
@@ -117,13 +126,14 @@ namespace API.Data.Migrations
                 {
                     HsPrepId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
                     HsName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     HsLocation = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClassYear = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GradDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    GPA = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GPA = table.Column<float>(type: "real", nullable: false),
                     ProposedMajor = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ExtrCurricular = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ExtraCurricular = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DreamJob = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ColUserId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -142,10 +152,9 @@ namespace API.Data.Migrations
                 name: "Majors",
                 columns: table => new
                 {
-                    MajorId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MajorName = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
-                    MajorCatId = table.Column<int>(type: "int", nullable: true)
+                    MajorId = table.Column<int>(type: "int", nullable: false),
+                    MajorName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MajorCatId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -155,7 +164,7 @@ namespace API.Data.Migrations
                         column: x => x.MajorCatId,
                         principalTable: "MajorCats",
                         principalColumn: "MajorCatId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -165,6 +174,10 @@ namespace API.Data.Migrations
                     CollegePrepId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ClassYear = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    College = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Athletics = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ExtraCurricular = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
                     GradDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     AcademicPlus = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     WorkPlus = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -194,7 +207,9 @@ namespace API.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Position = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Company = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CompanyDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PositionType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
                     PositionDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PositionLocation = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -240,6 +255,25 @@ namespace API.Data.Migrations
                         column: x => x.AppUserId,
                         principalTable: "Users",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FactFeatures",
+                columns: table => new
+                {
+                    FactId = table.Column<int>(type: "int", nullable: false),
+                    FactBullet = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CollegeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FactFeatures", x => x.FactId);
+                    table.ForeignKey(
+                        name: "FK_FactFeatures_Colleges_CollegeId",
+                        column: x => x.CollegeId,
+                        principalTable: "Colleges",
+                        principalColumn: "CollegeId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -293,6 +327,11 @@ namespace API.Data.Migrations
                 column: "AppUserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_FactFeatures_CollegeId",
+                table: "FactFeatures",
+                column: "CollegeId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_HsPreps_ColUserId",
                 table: "HsPreps",
                 column: "ColUserId");
@@ -323,25 +362,28 @@ namespace API.Data.Migrations
                 name: "EmpOpps");
 
             migrationBuilder.DropTable(
+                name: "FactFeatures");
+
+            migrationBuilder.DropTable(
                 name: "HsPreps");
 
             migrationBuilder.DropTable(
                 name: "Photos");
 
             migrationBuilder.DropTable(
-                name: "Colleges");
+                name: "Majors");
 
             migrationBuilder.DropTable(
-                name: "Majors");
+                name: "Colleges");
 
             migrationBuilder.DropTable(
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "ColUsers");
+                name: "MajorCats");
 
             migrationBuilder.DropTable(
-                name: "MajorCats");
+                name: "ColUsers");
         }
     }
 }

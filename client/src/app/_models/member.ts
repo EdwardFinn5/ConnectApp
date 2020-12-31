@@ -10,6 +10,7 @@ export interface Member {
   classYear?: string;
   major?: string;
   hometown?: string;
+  college?: string;
   academicPlus?: string;
   workPlus?: string;
   company?: string;

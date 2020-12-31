@@ -21,13 +21,14 @@ namespace API.Data
         public DbSet<EmpOpp> EmpOpps { get; set; }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<ColPhoto> ColPhotos { get; set; }
+        public DbSet<FactFeature> FactFeatures { get; set; }
 
-    
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CollegeMajor>()
                 .HasKey(cm => new { cm.CollegeId, cm.MajorId });
-            
+
             modelBuilder.Entity<CollegeMajor>()
                 .HasOne(cm => cm.College)
                 .WithMany(c => c.CollegeMajors)
@@ -40,9 +41,17 @@ namespace API.Data
                 .HasForeignKey(cm => cm.MajorId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<MajorCat>()
-                .HasMany(mc => mc.Majors)
-                .WithOne(m => m.MajorCat);
+            modelBuilder.Entity<Major>()
+                .HasOne(m => m.MajorCat)
+                .WithMany(mc => mc.Majors)
+                .HasForeignKey(m => m.MajorCatId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<FactFeature>()
+                .HasOne(ff => ff.College)
+                .WithMany(c => c.FactFeatures)
+                .HasForeignKey(ff => ff.CollegeId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
