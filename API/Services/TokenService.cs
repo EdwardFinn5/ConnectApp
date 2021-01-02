@@ -40,6 +40,30 @@ namespace API.Services
 
             return tokenHandler.WriteToken(token);
         }
+
+        public string CreateColToken(ColUser colUser)
+        {
+             var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.NameId, colUser.ColUserName)
+            };
+
+            var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims), 
+                Expires = DateTime.Now.AddDays(7),
+                SigningCredentials = creds
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+
+            return tokenHandler.WriteToken(token);
+        }
+
     }
 
 }

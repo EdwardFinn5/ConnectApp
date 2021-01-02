@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ namespace API.Controllers
 
         // api/colUsers
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<ColUser>>> GetColUsers()
         {
             // var colUsers = _context.ColUsers.ToList(); these two lines become one
@@ -27,7 +29,9 @@ namespace API.Controllers
             return await _context.ColUsers.ToListAsync();
         }
 
+
         // api/colUsers/3
+        [Authorize]
         [HttpGet("{id}")]
         public  async Task<ActionResult<ColUser>> GetColUser(int id)
         {

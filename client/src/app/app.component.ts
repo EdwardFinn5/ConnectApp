@@ -10,17 +10,30 @@ import { AccountService } from './_services/account.service';
 })
 export class AppComponent implements OnInit {
   title = 'ICF Connect';
-  Users: any;
+  // Users: any; // taking this out for now
+  colUsers: any;
 
-  constructor(private accountService: AccountService) {}
+  // constructor(private accountService: AccountService) {}  //taking out for now
+
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.setCurrentUser();
+    // this.setCurrentUser();  // taking this out for now as I go through 2nd time
+    
+   this.getColUsers();
+  }
+
+  getColUsers() {
+    this.http.get('https://localhost:5001/api/colUsers').subscribe( response => {
+      this.colUsers = response;
+    }, error => {
+      console.log(error);
+    })
   }
 
   setCurrentUser() {
     const user: User = JSON.parse(localStorage.getItem('user'));
-    this.accountService.setCurrentUser(user);
+    // this.accountService.setCurrentUser(user);
   }
 
 }
