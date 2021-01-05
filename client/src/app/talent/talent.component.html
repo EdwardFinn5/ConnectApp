@@ -1,10 +1,19 @@
 <div class="container mt-5">
     <div style="text-align: center;">
-        <h1>Helping to meet your employment needs</h1>
-        <p class="lead"><strong>Sign up to discover talent at 23 private colleges and universities in Iowa!</strong><p>
+        <h1>Search Talent to Help Meet Your Employment Needs</h1>
+        <p class="lead"><strong>If you are one of ICF's donors at the Partnership level,
+            please sign up and login to discover talent
+            <br>
+            among the 35,000+ students who attend 23 of the private colleges and universities in Iowa!</strong><p>
         <div class="text-center">
-            <button (click)="registerToggle()" class="btn btn-primary btn-lg mr-2 shadow-sm">Register</button>
-            <button class="btn btn-info btn-lg shadow-sm">Learn more</button>
+            <!-- <button (click)="registerToggle()" class="btn btn-primary btn-lg shadow-sm mr-2">Sign Up</button> -->
+
+             <input type="button" class="btn btn-primary btn-lg shadow-sm mr-2" (click)="onRegisterBtn()" value="Sign Up"/>
+             <input type="button" class="btn btn-primary btn-lg shadow-sm ml-2" (click)="onLoginBtn()" value="Login"/>
+
+            <!-- <button (click)="registerToggle()" class="btn btn-primary btn-lg mr-2 shadow-sm">Login</button> -->
+
+            <!-- <button class="btn btn-info btn-lg shadow-sm">Learn more</button> -->
         </div>
     </div>
 

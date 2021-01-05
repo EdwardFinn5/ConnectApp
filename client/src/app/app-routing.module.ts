@@ -11,23 +11,36 @@ import { AuthGuard } from './_guards/auth.guard';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { ColuserLoginComponent } from './coluser-login/coluser-login.component';
+import { RegisterComponent } from './register/register.component';
+import { ColregisterComponent } from './colregister/colregister.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'jobs', component: JobsComponent},
-  {path: 'talent', component: TalentComponent},
-  {path: 'memberlist', component: MemberListComponent, canActivate: [AuthGuard]},
-  {path: 'members/:username', component: MemberDetailComponent},
-  {path: 'lists', component: ListsComponent},
-  {path: 'messages', component: MessagesComponent},
-  {path: 'errors', component: TestErrorsComponent},
-  {path: 'not-found', component: NotFoundComponent},
-  {path: 'server-error', component: ServerErrorComponent},
-  {path: '**', component: NotFoundComponent, pathMatch: 'full'}
+  { path: '', component: HomeComponent },
+  { path: 'jobs', component: JobsComponent },
+  { path: 'talent', component: TalentComponent },
+  // {
+  //   path: 'memberlist',
+  //   component: MemberListComponent,
+  //   canActivate: [AuthGuard],
+  // },
+  { path: 'members/:username', component: MemberDetailComponent },
+  { path: 'memberlist', component: MemberListComponent },
+  { path: 'userlogin', component: UserLoginComponent },
+  { path: 'coluserlogin', component: ColuserLoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'colregister', component: ColregisterComponent },
+  { path: 'lists', component: ListsComponent },
+  { path: 'messages', component: MessagesComponent },
+  { path: 'errors', component: TestErrorsComponent },
+  { path: 'not-found', component: NotFoundComponent },
+  { path: 'server-error', component: ServerErrorComponent },
+  { path: '**', component: NotFoundComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

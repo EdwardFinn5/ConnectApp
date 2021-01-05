@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   title = 'ICF Connect';
   // Users: any; // taking this out for now
   colUsers: any;
+  users: any;
 
   // constructor(private accountService: AccountService) {}  //taking out for now
 
@@ -19,8 +20,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // this.setCurrentUser();  // taking this out for now as I go through 2nd time
-    
    this.getColUsers();
+   this.getUsers();
+  }
+  getUsers() {
+    this.http.get('https://localhost:5001/api/users').subscribe( response => {
+      this.users = response;
+    }, error => {
+      console.log(error);
+    })
   }
 
   getColUsers() {

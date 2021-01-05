@@ -12,6 +12,7 @@ import { AccountService } from '../_services/account.service';
 })
 export class NavComponent implements OnInit {
   model: any = {};
+  loggedIn: boolean;
 
   constructor(
     public accountService: AccountService,
@@ -30,5 +31,9 @@ export class NavComponent implements OnInit {
   logout() {
     this.accountService.logout();
     this.router.navigateByUrl('/');
+  }
+
+  onLoginBtn() {
+    this.router.navigate(['/userlogin']);
   }
 }
