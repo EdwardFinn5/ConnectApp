@@ -1,19 +1,18 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AccountService } from '../_services/account.service';
+import { ColAccountService } from '../_services/colAccount.service';
 
 @Component({
-  selector: 'app-talent',
-  templateUrl: './talent.component.html',
-  styleUrls: ['./talent.component.css']
+  selector: 'app-hsstudent',
+  templateUrl: './hsstudent.component.html',
+  styleUrls: ['./hsstudent.component.css']
 })
-export class TalentComponent implements OnInit {
+export class HsStudentComponent implements OnInit {
   registerMode = false;
   model: any = {};
   loggedIn: boolean;
 
-  constructor(public accountService: AccountService,
+  constructor(public colAccountService: ColAccountService,
               private router: Router) { }
 
   ngOnInit(): void {
@@ -28,21 +27,22 @@ export class TalentComponent implements OnInit {
   }
 
   login() {
-    this.accountService.login(this.model).subscribe(response => {
+    this.colAccountService.login(this.model).subscribe(response => {
       this.router.navigateByUrl('/memberlist');
     })
   }
 
   logout() {
-    this.accountService.logout();
+    this.colAccountService.logout();
     this.router.navigateByUrl('/');
   }
 
   onLoginBtn() {
-    this.router.navigate(['/userlogin']);
+    this.router.navigate(['/coluserlogin']);
   }
 
   onRegisterBtn() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/colregister']);
   }
 }
+

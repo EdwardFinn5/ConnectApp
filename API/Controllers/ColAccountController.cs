@@ -21,65 +21,95 @@ namespace API.Controllers
             _context = context;
         }
 
-    [HttpPost("register")]
-    public async Task<ActionResult<ColUserDto>> Register(ColRegisterDto colRegisterDto)
-    {
-
-        if (await ColUserExists(colRegisterDto.ColUserName))
+        [HttpPost("registerHs")]
+        public async Task<ActionResult<ColUserDto>> RegisterHs(registerHsDto registerHsDto)
         {
-            return BadRequest("Username is taken");
+
+            if (await ColUserExists(registerHsDto.ColUserName))
+            {
+                return BadRequest("Username is taken");
+            }
+
+            using var hmac = new HMACSHA512();
+
+            var colUser = new ColUser
+            {
+                ColUserName = registerHsDto.ColUserName.ToLower(),
+                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerHsDto.Password)),
+                PasswordSalt = hmac.Key,
+                ColUserType = "ColLead"
+            };
+
+            _context.ColUsers.Add(colUser);
+            await _context.SaveChangesAsync();
+
+            return new ColUserDto
+            {
+                ColUserName = colUser.ColUserName,
+                Token = _tokenService.CreateColToken(colUser)
+            };
         }
 
-        using var hmac = new HMACSHA512();
-
-        var colUser = new ColUser
+        [HttpPost("registercollege")]
+        public async Task<ActionResult<ColUserDto>> RegisterCollege(RegisterCollegeDto registerCollegeDto)
         {
-            ColUserName = colRegisterDto.ColUserName.ToLower(),
-            PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(colRegisterDto.Password)),
-            PasswordSalt = hmac.Key
-        };
 
-        _context.ColUsers.Add(colUser);
-        await _context.SaveChangesAsync();
+            if (await ColUserExists(registerCollegeDto.ColUserName))
+            {
+                return BadRequest("Username is taken");
+            }
 
-        return new ColUserDto
-        {
-            ColUserName = colUser.ColUserName,
-            Token = _tokenService.CreateColToken(colUser)
-        };
-    }
+            using var hmac = new HMACSHA512();
 
-    [HttpPost("login")]
-    public async Task<ActionResult<ColUserDto>> Login(ColLoginDto colLoginDto)
-    {
+            var colUser = new ColUser
+            {
+                ColUserName = registerCollegeDto.ColUserName.ToLower(),
+                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerCollegeDto.Password)),
+                PasswordSalt = hmac.Key,
+                ColUserType = "College"
+            };
 
-        var colUser = await _context.ColUsers
-            .SingleOrDefaultAsync(x => x.ColUserName == colLoginDto.ColUserName);
+            _context.ColUsers.Add(colUser);
+            await _context.SaveChangesAsync();
 
-        if (colUser == null)
-        {
-            return Unauthorized("Invalid username");
+            return new ColUserDto
+            {
+                ColUserName = colUser.ColUserName,
+                Token = _tokenService.CreateColToken(colUser)
+            };
         }
 
-        using var hmac = new HMACSHA512(colUser.PasswordSalt);
-
-        var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(colLoginDto.Password));
-
-        for (var i = 0; i < computedHash.Length; i++)
+        [HttpPost("collogin")]
+        public async Task<ActionResult<ColUserDto>> ColLogin(ColLoginDto colLoginDto)
         {
-            if (computedHash[i] != colUser.PasswordHash[i]) return Unauthorized("Invalid password");
+
+            var colUser = await _context.ColUsers
+                .SingleOrDefaultAsync(x => x.ColUserName == colLoginDto.ColUserName);
+
+            if (colUser == null)
+            {
+                return Unauthorized("Invalid username");
+            }
+
+            using var hmac = new HMACSHA512(colUser.PasswordSalt);
+
+            var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(colLoginDto.Password));
+
+            for (var i = 0; i < computedHash.Length; i++)
+            {
+                if (computedHash[i] != colUser.PasswordHash[i]) return Unauthorized("Invalid password");
+            }
+
+            return new ColUserDto
+            {
+                ColUserName = colUser.ColUserName,
+                Token = _tokenService.CreateColToken(colUser)
+            };
+
         }
-
-       return new ColUserDto
+        private async Task<bool> ColUserExists(string colUserName)
         {
-            ColUserName = colUser.ColUserName,
-            Token = _tokenService.CreateColToken(colUser)
-        };
-
+            return await _context.ColUsers.AnyAsync(x => x.ColUserName == colUserName.ToLower());
+        }
     }
-    private async Task<bool> ColUserExists(string colUserName)
-    {
-        return await _context.ColUsers.AnyAsync(x => x.ColUserName == colUserName.ToLower());
-    }
-}
 }

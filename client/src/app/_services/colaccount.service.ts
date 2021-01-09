@@ -9,7 +9,7 @@ import { ColUser } from '../_models/coluser';
 @Injectable({
   providedIn: 'root',
 })
-export class ColaccountService {
+export class ColAccountService {
   baseUrl = environment.apiUrl;
   private currentUserSource = new ReplaySubject<ColUser>(1);
   currentUser$ = this.currentUserSource.asObservable();
@@ -21,10 +21,10 @@ export class ColaccountService {
   }
 
   register(model: any) {
-    return this.http.post(this.baseUrl + 'account/register', model).pipe(
+    return this.http.post(this.baseUrl + 'colaccount/register', model).pipe(
       map((colUser: ColUser) => {
         if (colUser) {
-          localStorage.setItem('user', JSON.stringify(colUser));
+          localStorage.setItem('colUser', JSON.stringify(colUser));
           this.currentUserSource.next(colUser);
         }
       })

@@ -20,10 +20,41 @@ namespace API.Controllers
             _context = context;
         }
 
-        [HttpPost("register")]
-        public async Task<ActionResult<UserDto>> Register(RegisterDTO registerDto)
+        [HttpPost("registerColPrep")]
+        public async Task<ActionResult<UserDto>> RegisterColPrep(RegisterColPrepDto registerColPrepDto)
         {
-            if (await UserExists(registerDto.Username))
+
+            if (await UserExists(registerColPrepDto.UserName))
+            {
+                return BadRequest("Username is taken");
+            }
+
+
+
+            using var hmac = new HMACSHA512();
+
+            var user = new AppUser
+            {
+                UserName = registerColPrepDto.UserName.ToLower(),
+                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerColPrepDto.Password)),
+                PasswordSalt = hmac.Key,
+                AppUserType = "ColStudent"
+            };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            return new UserDto
+            {
+                UserName = user.UserName,
+                Token = _tokenService.CreateToken(user)
+            };
+        }
+
+        [HttpPost("registerEmp")]
+        public async Task<ActionResult<UserDto>> RegisterEmp(RegisterEmpDto registerEmpDto)
+        {
+            if (await UserExists(registerEmpDto.UserName))
             {
                 return BadRequest("Username is taken");
             }
@@ -32,9 +63,10 @@ namespace API.Controllers
 
             var user = new AppUser
             {
-                UserName = registerDto.Username.ToLower(),
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),
-                PasswordSalt = hmac.Key
+                UserName = registerEmpDto.UserName.ToLower(),
+                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerEmpDto.Password)),
+                PasswordSalt = hmac.Key,
+                AppUserType = "EmpHr"
             };
 
             _context.Users.Add(user);
@@ -42,16 +74,17 @@ namespace API.Controllers
 
             return new UserDto
             {
-                Username = user.UserName,
+                UserName = user.UserName,
                 Token = _tokenService.CreateToken(user)
             };
         }
+
 
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
             var user = await _context.Users
-                .SingleOrDefaultAsync(x => x.UserName == loginDto.Username);
+                .SingleOrDefaultAsync(x => x.UserName == loginDto.UserName);
 
             if (user == null)
             {
@@ -72,7 +105,7 @@ namespace API.Controllers
 
             return new UserDto
             {
-                Username = user.UserName,
+                UserName = user.UserName,
                 Token = _tokenService.CreateToken(user)
             };
         }

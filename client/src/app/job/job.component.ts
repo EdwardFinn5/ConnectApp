@@ -4,20 +4,18 @@ import { Router } from '@angular/router';
 import { AccountService } from '../_services/account.service';
 
 @Component({
-  selector: 'app-talent',
-  templateUrl: './talent.component.html',
-  styleUrls: ['./talent.component.css']
+  selector: 'app-jobs',
+  templateUrl: './job.component.html',
+  styleUrls: ['./job.component.css'],
 })
-export class TalentComponent implements OnInit {
+export class JobComponent implements OnInit {
   registerMode = false;
   model: any = {};
   loggedIn: boolean;
 
-  constructor(public accountService: AccountService,
-              private router: Router) { }
+  constructor(public accountService: AccountService, private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   registerToggle() {
     this.registerMode = !this.registerMode;
@@ -28,9 +26,9 @@ export class TalentComponent implements OnInit {
   }
 
   login() {
-    this.accountService.login(this.model).subscribe(response => {
+    this.accountService.login(this.model).subscribe((response) => {
       this.router.navigateByUrl('/memberlist');
-    })
+    });
   }
 
   logout() {

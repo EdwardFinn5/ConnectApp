@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div style="text-align: center;">
+        <h1>Search High School Students</h1>
+        <p class="lead"><strong>If you are an Admissions Officer working at one of ICF's 23 member schools,  
+            <br>
+            please sign up and login to search high school students in Iowa who are potential students!</strong><p>
+        <div class="text-center">
+            <!-- <button (click)="registerToggle()" class="btn btn-primary btn-lg shadow-sm mr-2">Sign Up</button> -->
+
+             <input type="button" class="btn btn-primary btn-lg shadow-sm mr-2" (click)="onRegisterBtn()" value="Sign Up"/>
+             <input type="button" class="btn btn-primary btn-lg shadow-sm ml-2" (click)="onLoginBtn()" value="Login"/>
+
+            <!-- <button (click)="registerToggle()" class="btn btn-primary btn-lg mr-2 shadow-sm">Login</button> -->
+
+            <!-- <button class="btn btn-info btn-lg shadow-sm">Learn more</button> -->
+        </div>
+    </div>
+
+    <div *ngIf="registerMode" class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+               <app-register (cancelRegister)="cancelRegisterMode($event)" ></app-register>
+            </div>
+        </div>
+    </div>
+</div>
+
+

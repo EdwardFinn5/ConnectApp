@@ -31,7 +31,7 @@ namespace API.Controllers
 
 
         // api/colUsers/3
-        [Authorize]
+        // [Authorize]
         [HttpGet("{id}")]
         public  async Task<ActionResult<ColUser>> GetColUser(int id)
         {

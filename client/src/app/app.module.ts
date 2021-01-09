@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
-import { JobsComponent } from './jobs/jobs.component';
+import { JobComponent } from './job/job.component';
 import { RegisterComponent } from './register/register.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
@@ -23,14 +23,17 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { UserLoginComponent } from './user-login/user-login.component';
-import { ColuserLoginComponent } from './coluser-login/coluser-login.component';
-import { ColregisterComponent } from './colregister/colregister.component';
+import { ColUserLoginComponent } from './coluser-login/coluser-login.component';
+import { ColRegisterComponent } from './colregister/colregister.component';
+import { DonorComponent } from './donor/donor.component';
+import { HsStudentComponent } from './hsstudent/hsstudent.component';
+import { CollegeComponent } from './college/college.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    JobsComponent,
+    JobComponent,
     RegisterComponent,
     MemberListComponent,
     MemberDetailComponent,
@@ -43,8 +46,11 @@ import { ColregisterComponent } from './colregister/colregister.component';
     ServerErrorComponent,
     MemberCardComponent,
     UserLoginComponent,
-    ColuserLoginComponent,
-    ColregisterComponent,
+    ColUserLoginComponent,
+    ColRegisterComponent,
+    DonorComponent,
+    HsStudentComponent,
+    CollegeComponent,
   ],
   imports: [
     BrowserModule,
