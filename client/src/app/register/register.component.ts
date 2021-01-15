@@ -8,6 +8,7 @@ import { AccountService } from '../_services/account.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  // @Input() usersFromJobComponent: any;
   @Output() cancelRegister = new EventEmitter();
   model: any = {};
 
@@ -19,6 +20,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   register() {
+  //  this.cancelRegister.emit(false);
     this.accountService.register(this.model).subscribe(
       (response) => {
         console.log(response);
@@ -32,6 +34,7 @@ export class RegisterComponent implements OnInit {
   }
 
   cancel() {
+    console.log('cancelled')
     this.cancelRegister.emit(false);
   }
 }

@@ -14,6 +14,8 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
 import { UserLoginComponent } from './user-login/user-login.component';
 import { ColUserLoginComponent } from './coluser-login/coluser-login.component';
 import { RegisterComponent } from './register/register.component';
+import { HsRegisterComponent } from './hsregister/hsregister.component';
+import { EmpRegisterComponent } from './empregister/empregister.component';
 import { ColRegisterComponent } from './colregister/colregister.component';
 import { CollegeComponent } from './college/college.component';
 import { HsStudentComponent } from './hsstudent/hsstudent.component';
@@ -35,6 +37,8 @@ const routes: Routes = [
   { path: 'userlogin', component: UserLoginComponent },
   { path: 'coluserlogin', component: ColUserLoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'hsregister', component: HsRegisterComponent },
+  { path: 'empregister', component: EmpRegisterComponent },
   { path: 'colregister', component: ColRegisterComponent },
   { path: 'lists', component: ListsComponent },
   { path: 'messages', component: MessagesComponent },

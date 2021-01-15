@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { stringify } from '@angular/compiler/src/util';
 import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -17,20 +18,19 @@ export class AccountService {
   constructor(private http: HttpClient) { }
 
   login(model: any) {
-    return this.http.post(this.baseUrl + 'account/login', model)
-    // return this.http.post(this.baseUrl + 'account/login', model).pipe(
-    //   map((response: User) => {
-    //     const user = response;
-    //     if (user) {
-    //       localStorage.setItem('user', JSON.stringify(user));
-    //       this.currentUserSource.next(user);
-    //     }
-    //   })
-    // )
+    return this.http.post(this.baseUrl + 'account/login', model).pipe(
+      map((response: User) => {
+        const user = response;
+        if (user) {
+          localStorage.setItem('user', JSON.stringify(user));
+          this.currentUserSource.next(user);
+        }
+      })
+    )
   }
 
   register(model: any) {
-    return this.http.post(this.baseUrl + 'account/register', model).pipe(
+    return this.http.post(this.baseUrl + 'account/registercolprep', model).pipe(
       map((user: User) => {
         if (user) {
           localStorage.setItem('user', JSON.stringify(user));
@@ -46,6 +46,7 @@ export class AccountService {
 
   logout() {
     localStorage.removeItem('user');
+    localStorage.removeItem('loginStatus');
     this.currentUserSource.next(null);
   }
 }

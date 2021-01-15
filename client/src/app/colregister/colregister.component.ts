@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from '../_services/account.service';
+import { ColAccountService } from '../_services/colAccount.service';
 
 @Component({
   selector: 'app-colregister',
@@ -8,30 +9,32 @@ import { AccountService } from '../_services/account.service';
   styleUrls: ['./colregister.component.css']
 })
 export class ColRegisterComponent implements OnInit {
-@Output() cancelRegister = new EventEmitter();
+  @Output() cancelRegister = new EventEmitter();
   model: any = {};
 
   constructor(
-    private accountService: AccountService,
+    private colAccountService: ColAccountService,
     private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {}
 
   register() {
-    this.accountService.register(this.model).subscribe(
-      (response) => {
-        console.log(response);
-        this.cancel();
-      },
-      (error) => {
-        console.log(error);
-        this.toastr.error(error.error);
-      }
-    );
+    console.log(this.model)
+    // this.colAccountService.register(this.model).subscribe(
+    //   (response) => {
+    //     console.log(response);
+    //     this.cancel();
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //     this.toastr.error(error.error);
+    //   }
+    // );
   }
 
   cancel() {
+    console.log('cancelled')
     this.cancelRegister.emit(false);
   }
 }

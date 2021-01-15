@@ -43,6 +43,6 @@ export class TalentComponent implements OnInit {
   }
 
   onRegisterBtn() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/empregister']);
   }
 }

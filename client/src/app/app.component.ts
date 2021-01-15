@@ -16,32 +16,33 @@ export class AppComponent implements OnInit {
 
   // constructor(private accountService: AccountService) {}  //taking out for now
 
-  constructor(private http: HttpClient) {}
+  constructor(private accountService: AccountService) {}
 
   ngOnInit() {
     // this.setCurrentUser();  // taking this out for now as I go through 2nd time
-   this.getColUsers();
-   this.getUsers();
+  //  this.getColUsers();
+  //  this.getUsers();
+   this.setCurrentUser();
   }
-  getUsers() {
-    this.http.get('https://localhost:5001/api/users').subscribe( response => {
-      this.users = response;
-    }, error => {
-      console.log(error);
-    })
-  }
+  // getUsers() {
+  //   this.http.get('https://localhost:5001/api/users').subscribe( response => {
+  //     this.users = response;
+  //   }, error => {
+  //     console.log(error);
+  //   })
+  // }
 
-  getColUsers() {
-    this.http.get('https://localhost:5001/api/colUsers').subscribe( response => {
-      this.colUsers = response;
-    }, error => {
-      console.log(error);
-    })
-  }
+  // getColUsers() {
+  //   this.http.get('https://localhost:5001/api/colUsers').subscribe( response => {
+  //     this.colUsers = response;
+  //   }, error => {
+  //     console.log(error);
+  //   })
+  // }
 
   setCurrentUser() {
     const user: User = JSON.parse(localStorage.getItem('user'));
-    // this.accountService.setCurrentUser(user);
+    this.accountService.setCurrentUser(user);
   }
 
 }

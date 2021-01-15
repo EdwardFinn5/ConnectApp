@@ -32,6 +32,7 @@ export class CollegeComponent implements OnInit {
     })
   }
 
+
   logout() {
     this.colAccountService.logout();
     this.router.navigateByUrl('/');
@@ -42,7 +43,7 @@ export class CollegeComponent implements OnInit {
   }
 
   onRegisterBtn() {
-    this.router.navigate(['/colregister']);
+    this.router.navigate(['/hsregister']);
   }
 }
 

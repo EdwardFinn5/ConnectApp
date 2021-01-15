@@ -46,11 +46,12 @@ namespace API.Controllers
             return new ColUserDto
             {
                 ColUserName = colUser.ColUserName,
-                Token = _tokenService.CreateColToken(colUser)
+                Token = _tokenService.CreateColToken(colUser),
+                ColUserType = "ColLead"
             };
         }
 
-        [HttpPost("registercollege")]
+        [HttpPost("registerCollege")]
         public async Task<ActionResult<ColUserDto>> RegisterCollege(RegisterCollegeDto registerCollegeDto)
         {
 
@@ -79,7 +80,7 @@ namespace API.Controllers
             };
         }
 
-        [HttpPost("collogin")]
+        [HttpPost("colLogin")]
         public async Task<ActionResult<ColUserDto>> ColLogin(ColLoginDto colLoginDto)
         {
 

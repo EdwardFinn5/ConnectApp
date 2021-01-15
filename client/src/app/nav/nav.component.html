@@ -2,7 +2,7 @@
   
     <!-- <div class="container"style="margin-left: 25px margin-right: 25px margin-bottom: 20px"> -->
       <div class="container">
-      <img src='../../assets/ICF_Logo.jpg' class="logo" height="40" width="40" style="margin-right: 20px"/>  
+      <img src='../../assets/ICF_Logo.jpg' routerLink="/" class="logo" height="40" width="40" style="margin-right: 20px"/>  
     <a class="navbar-brand" routerLink="/">ICF Connect</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -59,9 +59,9 @@
           <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colleges</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/college'>Search Colleges</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>Matches</a>
+            <!-- <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>Matches</a>
             <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/lists'>Lists</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a>
+            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a> -->
           </div>
         </li>     
 
@@ -69,9 +69,9 @@
           <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HS Students</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/hsstudent'>Search HS Students</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>Matches</a>
+            <!-- <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>Matches</a>
             <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/lists'>Lists</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a>
+            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a> -->
           </div>
         </li>     
 
@@ -99,19 +99,20 @@
             <a *ngIf="accountService.currentUser$ | async" class="dropdown-item" href="#">Messages</a>
           </div>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Disabled</a>
-        </li> -->
       </ul>
 
+
+  
       <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-        <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | titlecase}}</a>
+      <div class="dropdown" style="font-size: 1.3em" dropdown>
+        <a class="dropdown-toggle text-light" dropdownToggle>Welcome </a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
           <a class="dropdown-item">Edit Profile</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" (click)="logout()">Logout</a>
         </div>
       </div> 
+    
 
 
 
@@ -178,5 +179,6 @@
 
 
     </div> 
+    </div>
     </div>
   </nav>

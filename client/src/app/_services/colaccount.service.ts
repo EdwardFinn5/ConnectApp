@@ -17,11 +17,11 @@ export class ColAccountService {
   constructor(private http: HttpClient) {}
 
   login(model: any) {
-    return this.http.post(this.baseUrl + 'colaccount/login', model);
+    return this.http.post(this.baseUrl + 'colaccount/collogin', model);
   }
 
   register(model: any) {
-    return this.http.post(this.baseUrl + 'colaccount/register', model).pipe(
+    return this.http.post(this.baseUrl + 'colaccount/registerhs', model).pipe(
       map((colUser: ColUser) => {
         if (colUser) {
           localStorage.setItem('colUser', JSON.stringify(colUser));

@@ -10,12 +10,17 @@ import { AccountService } from '../_services/account.service';
 })
 export class JobComponent implements OnInit {
   registerMode = false;
+  // users: any;
+
   model: any = {};
   loggedIn: boolean;
 
-  constructor(public accountService: AccountService, private router: Router) {}
+  constructor(public accountService: AccountService, 
+              private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.getUsers();
+  }
 
   registerToggle() {
     this.registerMode = !this.registerMode;
@@ -24,6 +29,12 @@ export class JobComponent implements OnInit {
   cancelRegisterMode(event: boolean) {
     this.registerMode = event;
   }
+
+  // getUsers() {
+  //   this.http.get('https://localhost:5001/api/users')
+  //     .subscribe(users => this.users = users);
+      
+  // }
 
   login() {
     this.accountService.login(this.model).subscribe((response) => {

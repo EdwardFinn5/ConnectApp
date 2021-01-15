@@ -7,7 +7,8 @@
             to discover jobs and internships to help match your career goals!</strong><p>
         <div class="text-center">
 
-            <input type="button" class="btn btn-primary btn-lg shadow-sm mr-2" (click)="onRegisterBtn()" value="Sign Up"/>
+            <!-- <input type="button" [usersFromJobComponent]="users" class="btn btn-primary btn-lg shadow-sm mr-2" (click)="onRegisterBtn()" value="Sign Up"/> -->
+            <button (click)="registerToggle()" class="btn btn-primary btn-l-g mr-2">Register</button>
              <input type="button" class="btn btn-primary btn-lg shadow-sm ml-2" (click)="onLoginBtn()" value="Login"/>
 
             <!-- <button class="btn btn-info btn-lg ">Learn more</button> -->
@@ -16,7 +17,8 @@
 
     <div *ngIf="registerMode" class="container">
         <div class="row justify-content-center">
-            <div class="col-4">
+            <div class="col-12">
+               <!-- <app-register [usersFromJobComponent]="users" (cancelRegister)="cancelRegisterMode($event)" ></app-register> -->
                <app-register (cancelRegister)="cancelRegisterMode($event)" ></app-register>
             </div>
         </div>

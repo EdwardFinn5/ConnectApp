@@ -28,6 +28,9 @@ import { ColRegisterComponent } from './colregister/colregister.component';
 import { DonorComponent } from './donor/donor.component';
 import { HsStudentComponent } from './hsstudent/hsstudent.component';
 import { CollegeComponent } from './college/college.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { EmpRegisterComponent } from './empregister/empregister.component';
+import { HsRegisterComponent } from './hsregister/hsregister.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,8 @@ import { CollegeComponent } from './college/college.component';
     DonorComponent,
     HsStudentComponent,
     CollegeComponent,
+    EmpRegisterComponent,
+    HsRegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,8 @@ import { CollegeComponent } from './college/college.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},

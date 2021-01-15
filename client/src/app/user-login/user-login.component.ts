@@ -14,15 +14,19 @@ export class UserLoginComponent implements OnInit {
   model: any = {}
   loggedIn: boolean;
 
-  constructor(private accountService: AccountService) { }
+  constructor(private accountService: AccountService,
+              private router: Router) { }
   
   ngOnInit(): void {
+  
+
   }
 
   login() {
     this.accountService.login(this.model).subscribe(response => {
       console.log(response);
       this.loggedIn = true;
+      this.router.navigateByUrl('/memberlist');
     }, error => {
       console.log(error);
     })
