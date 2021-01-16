@@ -7,7 +7,8 @@
         <div class="text-center">
             <!-- <button (click)="registerToggle()" class="btn btn-primary btn-lg shadow-sm mr-2">Sign Up</button> -->
 
-             <input type="button" class="btn btn-primary btn-lg shadow-sm mr-2" (click)="onRegisterBtn()" value="Sign Up"/>
+             <!-- <input type="button" class="btn btn-primary btn-lg shadow-sm mr-2" (click)="onRegisterBtn()" value="Sign Up"/> -->
+             <button (click)="registerToggle()" class="btn btn-primary btn-lg shadow-sm mr-2">Register</button>
              <input type="button" class="btn btn-primary btn-lg shadow-sm ml-2" (click)="onLoginBtn()" value="Login"/>
 
             <!-- <button (click)="registerToggle()" class="btn btn-primary btn-lg mr-2 shadow-sm">Login</button> -->
@@ -16,10 +17,10 @@
         </div>
     </div>
 
-    <div *ngIf="registerMode" class="container">
+    <div *ngIf="colRegisterMode" class="container">
         <div class="row justify-content-center">
-            <div class="col-4">
-               <app-register (cancelRegister)="cancelRegisterMode($event)" ></app-register>
+            <div class="col-12">
+               <app-colregister (cancelColRegister)="cancelColRegisterMode($event)" ></app-colregister>
             </div>
         </div>
     </div>

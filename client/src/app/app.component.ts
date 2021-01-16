@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { User } from './_models/user';
+import { ColUser } from './_models/colUser';
 import { AccountService } from './_services/account.service';
+import { ColAccountService } from './_services/colAccount.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +18,8 @@ export class AppComponent implements OnInit {
 
   // constructor(private accountService: AccountService) {}  //taking out for now
 
-  constructor(private accountService: AccountService) {}
+  constructor(private accountService: AccountService,
+                private colAccountService: ColAccountService) {}
 
   ngOnInit() {
     // this.setCurrentUser();  // taking this out for now as I go through 2nd time
@@ -43,6 +46,8 @@ export class AppComponent implements OnInit {
   setCurrentUser() {
     const user: User = JSON.parse(localStorage.getItem('user'));
     this.accountService.setCurrentUser(user);
+    const colUser: ColUser = JSON.parse(localStorage.getItem('colUser'));
+    this.colAccountService.setCurrentUser(colUser);
   }
 
 }

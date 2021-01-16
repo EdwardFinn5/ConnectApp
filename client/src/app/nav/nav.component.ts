@@ -35,6 +35,11 @@ export class NavComponent implements OnInit {
     this.router.navigateByUrl('/');
   }
 
+  colLogout() {
+    this.colAccountService.logout();
+    this.router.navigateByUrl('/');
+  }
+
 }
 
   // onLoginBtn() {

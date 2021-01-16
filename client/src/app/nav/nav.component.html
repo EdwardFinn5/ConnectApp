@@ -102,16 +102,29 @@
       </ul>
 
 
-  
-      <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
+     
+   <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
       <div class="dropdown" style="font-size: 1.3em" dropdown>
         <a class="dropdown-toggle text-light" dropdownToggle>Welcome </a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
           <a class="dropdown-item">Edit Profile</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="logout()">Logout</a>
+          <a class="dropdown-item" (click)="logout()">Logout user</a>
         </div>
       </div> 
+   </div>
+  
+
+      <div class="dropdown" *ngIf="(colAccountService.currentUser$ | async) as colUser" dropdown>
+        <div class="dropdown" style="font-size: 1.3em" dropdown>
+          <a class="dropdown-toggle text-light" dropdownToggle>Welcome </a>
+          <div class="dropdown-menu mt-3" *dropdownMenu>
+            <a class="dropdown-item">Edit Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="colLogout()">Logout coluser</a>
+          </div>
+        </div> 
+      </div>
     
 
 
@@ -179,6 +192,5 @@
 
 
     </div> 
-    </div>
     </div>
   </nav>

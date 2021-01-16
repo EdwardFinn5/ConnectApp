@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AccountService } from '../_services/account.service';
 
 @Component({
   selector: 'app-empregister',
@@ -6,10 +9,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./empregister.component.css']
 })
 export class EmpRegisterComponent implements OnInit {
+  @Output() cancelEmpRegister = new EventEmitter();
+  model: any = {};
 
-  constructor() { }
+  constructor(
+    private accountService: AccountService,
+    private toastr: ToastrService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
+
+  empRegister() {
+    //  this.cancelRegister.emit(false);
+      this.accountService.empRegister(this.model).subscribe(
+        (response) => {
+          console.log(response);
+          this.cancel();
+          this.router.navigateByUrl('/memberlist');
+        },
+        (error) => {
+          console.log(error);
+          this.toastr.error(error.error);
+        }
+      );
+    }
+
+    cancel() {
+      console.log('cancelled')
+      this.cancelEmpRegister.emit(false);
+    }
 
 }

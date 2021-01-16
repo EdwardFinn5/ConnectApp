@@ -8,7 +8,7 @@ import { ColAccountService } from '../_services/colAccount.service';
   styleUrls: ['./college.component.css']
 })
 export class CollegeComponent implements OnInit {
-  registerMode = false;
+  hsRegisterMode = false;
   model: any = {};
   loggedIn: boolean;
 
@@ -19,11 +19,11 @@ export class CollegeComponent implements OnInit {
   }
 
   registerToggle() {
-    this.registerMode = !this.registerMode;
+    this.hsRegisterMode = !this.hsRegisterMode;
   }
 
-  cancelRegisterMode(event: boolean) {
-    this.registerMode = event;
+  cancelHsRegisterMode(event: boolean) {
+    this.hsRegisterMode = event;
   }
 
   login() {

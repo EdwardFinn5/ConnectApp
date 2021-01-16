@@ -9,7 +9,7 @@ import { AccountService } from '../_services/account.service';
   styleUrls: ['./talent.component.css']
 })
 export class TalentComponent implements OnInit {
-  registerMode = false;
+  empRegisterMode = false;
   model: any = {};
   loggedIn: boolean;
 
@@ -20,11 +20,11 @@ export class TalentComponent implements OnInit {
   }
 
   registerToggle() {
-    this.registerMode = !this.registerMode;
+    this.empRegisterMode = !this.empRegisterMode;
   }
 
-  cancelRegisterMode(event: boolean) {
-    this.registerMode = event;
+  cancelEmpRegisterMode(event: boolean) {
+    this.empRegisterMode = event;
   }
 
   login() {

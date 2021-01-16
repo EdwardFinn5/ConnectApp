@@ -40,6 +40,17 @@ export class AccountService {
     )
   }
 
+  empRegister(model: any) {
+    return this.http.post(this.baseUrl + 'account/registeremp', model).pipe(
+      map((user: User) => {
+        if (user) {
+          localStorage.setItem('user', JSON.stringify(user));
+          this.currentUserSource.next(user);
+        }
+      })
+    )
+  }
+
   setCurrentUser(user: User) {
   this.currentUserSource.next(user);
   }

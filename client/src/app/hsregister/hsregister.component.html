@@ -1,1 +1,36 @@
-<p>hsregister works!</p>
+<h2>Login Form</h2> 
+  
+<form #EmpRegisterForm='ngForm'(ngSubmit)="hsRegister()" autocomplete="off">
+    <div class="imgcontainer"> 
+        <img src= '../../assets/ICF_Logo.jpg' alt="Avatar" class="avatar"> 
+<!-- "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"  -->
+
+    </div> 
+    <div class="form-group"> 
+        <label><b>Username</b></label> 
+        <input 
+            type="text" 
+            class="form-control"
+            placeholder="Enter Username" 
+            name="colUserName" 
+            [(ngModel)]="model.ColUserName"
+            > 
+
+        <label><b>Password</b></label> 
+        <input 
+            type="password" 
+            class="form-control"
+            placeholder="Enter Password" 
+            name="password" 
+            [(ngModel)]="model.Password"
+            > 
+
+        <button type="submit" style="font-size: 1.5em">Sign up</button> 
+        <input type="checkbox" checked="checked"> Remember me 
+    </div> 
+
+    <div class="container" style="background-color:#f1f1f1"> 
+        <button type="button" class="btn btn-secondary ml-1" (click)="cancel()">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span> 
+    </div> 
+</form> 

@@ -11,32 +11,52 @@ import { ColUser } from '../_models/coluser';
 })
 export class ColAccountService {
   baseUrl = environment.apiUrl;
-  private currentUserSource = new ReplaySubject<ColUser>(1);
-  currentUser$ = this.currentUserSource.asObservable();
+  private currentColUserSource = new ReplaySubject<ColUser>(1);
+  currentUser$ = this.currentColUserSource.asObservable();
 
   constructor(private http: HttpClient) {}
 
   login(model: any) {
-    return this.http.post(this.baseUrl + 'colaccount/collogin', model);
-  }
-
-  register(model: any) {
-    return this.http.post(this.baseUrl + 'colaccount/registerhs', model).pipe(
-      map((colUser: ColUser) => {
+    return this.http.post(this.baseUrl + 'colaccount/collogin', model).pipe(
+      map((response: ColUser) => {
+        const colUser = response;
         if (colUser) {
           localStorage.setItem('colUser', JSON.stringify(colUser));
-          this.currentUserSource.next(colUser);
+          this.currentColUserSource.next(colUser);
         }
       })
     );
   }
 
+  colRegister(model: any) {
+    return this.http.post(this.baseUrl + 'colaccount/registercollege', model).pipe(
+      map((colUser: ColUser) => {
+        if (colUser) {
+          localStorage.setItem('colUser', JSON.stringify(colUser));
+          this.currentColUserSource.next(colUser);
+        }
+      })
+    )
+  }
+
+  hsRegister(model: any) {
+    return this.http.post(this.baseUrl + 'colaccount/registerhs', model).pipe(
+      map((colUser: ColUser) => {
+        if (colUser) {
+          localStorage.setItem('colUser', JSON.stringify(colUser));
+          this.currentColUserSource.next(colUser);
+        }
+      })
+    )
+  }
+
   setCurrentUser(colUser: ColUser) {
-    this.currentUserSource.next(colUser);
+    this.currentColUserSource.next(colUser);
   }
 
   logout() {
     localStorage.removeItem('colUser');
-    this.currentUserSource.next(null);
+    localStorage.removeItem('loginStatus');
+    this.currentColUserSource.next(null);
   }
 }
