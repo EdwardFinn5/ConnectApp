@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ColAccountService } from '../_services/colAccount.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class CollegeComponent implements OnInit {
   loggedIn: boolean;
 
   constructor(public colAccountService: ColAccountService,
-              private router: Router) { }
+              private router: Router,
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -28,7 +30,10 @@ export class CollegeComponent implements OnInit {
 
   login() {
     this.colAccountService.login(this.model).subscribe(response => {
-      this.router.navigateByUrl('/memberlist');
+      this.router.navigateByUrl('/colmemberlist');
+    }, error => {
+      console.log(error);
+      this.toastr.error(error.eror);
     })
   }
 

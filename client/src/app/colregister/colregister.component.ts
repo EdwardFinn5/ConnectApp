@@ -26,7 +26,7 @@ export class ColRegisterComponent implements OnInit {
       (response) => {
         console.log(response);
         this.cancel();
-        this.router.navigateByUrl('/memberlist');
+        this.router.navigateByUrl('/colmemberlist');
       },
       (error) => {
         console.log(error);

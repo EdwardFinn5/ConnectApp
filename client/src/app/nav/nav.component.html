@@ -59,9 +59,9 @@
           <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colleges</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/college'>Search Colleges</a>
-            <!-- <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>Matches</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/lists'>Lists</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a> -->
+            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmemberlist'>List Matches</a>
+            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/collists'>Lists</a>
+            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmessages'>Messages</a>
           </div>
         </li>     
 
@@ -69,21 +69,27 @@
           <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HS Students</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/hsstudent'>Search HS Students</a>
-            <!-- <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>Matches</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/lists'>Lists</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a> -->
+            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmemberlist'>List Matches</a>
+            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/collists'>Lists</a>
+            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmessages'>Messages</a>
           </div>
         </li>     
 
-        <li class="nav-item">
-          <a class="nav-link active" routerLink='/memberlist'>Donors</a>
-        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Donors to ICF</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" routerLink='/donorlist'>List alphabeticaly</a>
+            <a class="dropdown-item" routerLink='/donorlist'>List by giving level</a>
+            <a class="dropdown-item" routerLink='/donorlist'>List by area campagin</a>
+          </div>
+        </li>     
 
+        <!-- <ng-container *ngIf="!colAccountService.currentUser$ | async" > -->
         <li class="nav-item dropdown">
           <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Talent</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/talent'>Search Talent</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>Matches</a>
+            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>List Matches</a>
             <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/lists'>Lists</a>
             <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a>
           </div>
@@ -94,18 +100,28 @@
           <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jobs/Internships</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/job'>Search Jobs/Internships</a>
-            <a *ngIf="accountService.currentUser$ | async" class="dropdown-item" href="#">Companies</a>
-            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" href="#">Jobs</a>
-            <a *ngIf="accountService.currentUser$ | async" class="dropdown-item" href="#">Messages</a>
+            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>List Matches</a>
+            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/lists'>Lists</a>
+            <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a>
           </div>
         </li>
+        <!-- </ng-container> -->
+
+        <!-- <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link active" [routerLink]="['/memberlist']">User</a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link active" [routerLink]="['/colmemberlist']">ColUser</a>
+        </li> -->
+      
       </ul>
 
 
      
    <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
       <div class="dropdown" style="font-size: 1.3em" dropdown>
-        <a class="dropdown-toggle text-light" dropdownToggle>Welcome </a>
+        <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.userName | titlecase}}</a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
           <a class="dropdown-item">Edit Profile</a>
           <div class="dropdown-divider"></div>
@@ -117,7 +133,7 @@
 
       <div class="dropdown" *ngIf="(colAccountService.currentUser$ | async) as colUser" dropdown>
         <div class="dropdown" style="font-size: 1.3em" dropdown>
-          <a class="dropdown-toggle text-light" dropdownToggle>Welcome </a>
+          <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{colUser.colUserName | titlecase}} </a>
           <div class="dropdown-menu mt-3" *dropdownMenu>
             <a class="dropdown-item">Edit Profile</a>
             <div class="dropdown-divider"></div>

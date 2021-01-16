@@ -25,12 +25,18 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { ColUserLoginComponent } from './coluser-login/coluser-login.component';
 import { ColRegisterComponent } from './colregister/colregister.component';
-import { DonorComponent } from './donor/donor.component';
 import { HsStudentComponent } from './hsstudent/hsstudent.component';
 import { CollegeComponent } from './college/college.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { EmpRegisterComponent } from './empregister/empregister.component';
 import { HsRegisterComponent } from './hsregister/hsregister.component';
+import { ColMemberListComponent } from './colmembers/colmember-list/colmember-list.component';
+import { ColMemberDetailComponent } from './colmembers/colmember-detail/colmember-detail.component';
+import { ColListsComponent } from './collists/collists.component';
+import { ColMessagesComponent } from './colmessages/colmessages.component';
+import { DonorCardComponent } from './donors/donor-card/donor-card.component';
+import { DonorDetailComponent } from './donors/donor-detail/donor-detail.component';
+import { DonorListComponent } from './donors/donor-list/donor-list.component';
 
 @NgModule({
   declarations: [
@@ -51,11 +57,17 @@ import { HsRegisterComponent } from './hsregister/hsregister.component';
     UserLoginComponent,
     ColUserLoginComponent,
     ColRegisterComponent,
-    DonorComponent,
     HsStudentComponent,
     CollegeComponent,
     EmpRegisterComponent,
     HsRegisterComponent,
+    ColMemberListComponent,
+    ColMemberDetailComponent,
+    ColListsComponent,
+    ColMessagesComponent,
+    DonorCardComponent,
+    DonorDetailComponent,
+    DonorListComponent,
   ],
   imports: [
     BrowserModule,
