@@ -31,9 +31,6 @@ export class HsStudentComponent implements OnInit {
   login() {
     this.colAccountService.login(this.model).subscribe(response => {
       this.router.navigateByUrl('/colmemberlist');
-    }, error => {
-      console.log(error);
-      this.toastr.error(error.eror);
     })
   }
 

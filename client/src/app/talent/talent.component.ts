@@ -32,9 +32,6 @@ export class TalentComponent implements OnInit {
   login() {
     this.accountService.login(this.model).subscribe(response => {
       this.router.navigateByUrl('/memberlist');
-    }, error => {
-      console.log(error);
-      this.toastr.error(error.eror);
     })
   }
 
