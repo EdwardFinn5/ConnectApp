@@ -1,12 +1,10 @@
-using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace API.Entities
+namespace API.DTOs
 {
-    public class College
+    public class CollegeDto
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CollegeId { get; set; }
         public string CollegeDescription { get; set; }
         public bool IsActive { get; set; } = true;
@@ -15,7 +13,7 @@ namespace API.Entities
         public string CollegeState { get; set; }
         public string CollegeZip { get; set; }
         public string CollegePhone { get; set; }
-        [DataType(DataType.EmailAddress)]
+        // [DataType(DataType.EmailAddress)]
         public string CollegeEmail { get; set; }
         public string CollegeWebsite { get; set; }
         public string CollegeVirtual { get; set; }
@@ -25,16 +23,8 @@ namespace API.Entities
         public decimal RoomAndBoard { get; set; }
         public decimal AverageAid { get; set; }
         public decimal NetPay { get; set; }
-        public IList<CollegeMajor> CollegeMajors { get; set; }
-        public IList<FactFeature> FactFeatures { get; set; }
+        // public IList<CollegeMajorDto> CollegeMajors { get; set; }
+        // public IList<FactFeatureDto> FactFeatures { get; set; }
         
-        public virtual ColUser ColUser { get; set; }
-        public int ColUserId { get; set; }
-
-        // public decimal GetNet()
-        // {
-        //     return NetPay.CalculateNetPay();
-        // }
-
     }
 }

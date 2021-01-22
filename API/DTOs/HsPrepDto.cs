@@ -1,11 +1,9 @@
 using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace API.Entities
+namespace API.DTOs
 {
-    public class HsPrep
+    public class HsPrepDto
     {
-        [Key]
         public int HsPrepId { get; set; }
         public bool IsActive { get; set; } = true;
         public DateTime GradDate { get; set; }
@@ -13,7 +11,5 @@ namespace API.Entities
         public string ProposedMajor { get; set; }
         public string ExtraCurricular { get; set; }
         public string DreamJob { get; set; }
-        public virtual ColUser ColUser { get; set; }
-        public int ColUserId { get; set; }
     }
 }

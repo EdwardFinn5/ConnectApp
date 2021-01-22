@@ -10,17 +10,22 @@ namespace API.Entities
         [Key]
         public int Id { get; set; }
 
+        [DataType(DataType.EmailAddress)]
         public string UserName { get; set; }
-
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
-
-        public string FullName { get; set; }
-
-        public string NickName { get; set; }
-
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string ClassYear { get; set; }
+        public DateTime GradDate { get; set; } = DateTime.Now;
+        public string Major { get; set; }
+        public string Hometown { get; set; }
+        public string College { get; set; }
+        public string Position { get; set; }
+        public string Company { get; set; }
+        public string PositionType { get; set; }
+        public string PositionLocation { get; set; }
+        public DateTime StartDate { get; set; } = DateTime.Now;
         public DateTime Created { get; set; } = DateTime.Now;
         public DateTime LastActive { get; set; } = DateTime.Now;
         public string AppUserType { get; set; }

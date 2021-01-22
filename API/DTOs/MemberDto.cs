@@ -14,8 +14,9 @@ namespace API.DTOs
         public string LogoUrl { get; set; }
         public string ClassYear { get; set; }
         public string College { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         
-         
         public string Major { get; set; } 
         public string Hometown { get; set; } 
 
@@ -24,10 +25,11 @@ namespace API.DTOs
         public string DreamJob { get; set; }
         public string Company { get; set; }
         public string Position { get; set; }
-
-        public string FullName { get; set; }
-
-        public string NickName { get; set; }
+        public string PositionLocation { get; set; }
+        public string PositionType { get; set; }
+        public DateTime StartDate { get; set; }
+        
+        
         // [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 

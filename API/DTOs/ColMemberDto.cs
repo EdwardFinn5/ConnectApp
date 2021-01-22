@@ -1,32 +1,31 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using API.Entities;
 
-namespace API.Entities
+namespace API.DTOs
 {
-    public class ColUser
+    public class ColMemberDto
     {
-        [Key]
         public int ColUserId { get; set; }
-        [DataType(DataType.EmailAddress)]
+        // [DataType(DataType.EmailAddress)]
         public string ColUserName { get; set; }
-        public byte[] PasswordHash { get; set; }
-        public byte[] PasswordSalt { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string ColUrl { get; set; }
+        public string HsStudentUrl { get; set; }
         public string HsName { get; set; }
         public string HsLocation { get; set; }
         public string ClassYear { get; set; }
         public string CollegeName { get; set; }
         public string CollegeLocation { get; set; }
         public string CollegeEnrollment { get; set; }
-        public DateTime Created { get; set; } = DateTime.Now;
-        public DateTime LastActive { get; set; } = DateTime.Now;
+        public DateTime Created { get; set; } 
+        public DateTime LastActive { get; set; } 
         public string ColUserType { get; set; }
         public bool Active { get; set; } = true;
-        public ICollection<ColPhoto> ColPhotos { get; set; }
-        public IList<College> Colleges { get; set; }
-        public IList<HsPrep> HsPreps { get; set; }
+        public ICollection<ColPhotoDto> ColPhotos { get; set; }
+        public IList<CollegeDto> Colleges { get; set; }
+        public IList<HsPrepDto> HsPreps { get; set; } 
     }
 }

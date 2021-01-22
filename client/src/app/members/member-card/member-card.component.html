@@ -1,6 +1,6 @@
 <div class="card mb-4">
     <div class="card-img-wrapper" *ngIf="member.appUserType == 'EmpHr'">
-        <img src="{{member.logoUrl}}" alt="{{member.nickName}}" class="card-img-top">
+        <img src="{{member.logoUrl || '../../assets/images/logo.PNG' }}" alt="{{member.firstName}}" class="card-img-top">
         <ul class="list-inline member-icons animate text-center">
             <li class="list-inline-item"><button  routerLink='/members/{{member.username}}' class="btn btn-primary">
                 <i class="fa fa-info"></i></button></li>
@@ -11,7 +11,7 @@
         </ul>
     </div>
     <div class="card-img-wrapper" *ngIf="member.appUserType == 'ColStudent'">
-        <img src="{{member.photoUrl}}" alt="{{member.nickName}}" class="card-img-top">
+        <img src="{{member.photoUrl || '../../assets/images/coluser.PNG' }}" alt="{{member.firstName}}" class="card-img-top">
         <ul class="list-inline member-icons animate text-center">
             <li class="list-inline-item"><button routerLink='/members/{{member.username}}' class="btn btn-primary">
                 <i class="fa fa-info"></i></button></li>
@@ -22,14 +22,25 @@
         </ul>
     </div>   
     <div class="card-body padding p-1">
-        <h6 class="card-title text-center mb-1"><i class="fa fa-user mr-2"></i>
-            {{member.nickName}}
+        <h6 *ngIf="member.appUserType == 'ColStudent'" class="card-title text-center mb-1"><i class="fa fa-user mr-2"></i>
+            <u><strong>{{member.firstName}}</strong></u>
         </h6>
+
+        <h6 *ngIf="member.appUserType == 'EmpHr'" class="card-title text-center mb-1"><i class="fa fa-user mr-2"></i>
+            <u><strong>{{member.company}}</strong></u>
+        </h6>
+
         <p *ngIf="member.appUserType == 'ColStudent'" class="card-text text-muted text-center">
-            {{member.classYear}} {{member.major}}
+            {{member.classYear}} {{member.major}} major
+            <br> 
+            from {{member.hometown}}
+            <br>
+            attending {{member.college}}
         </p>
         <p *ngIf="member.appUserType == 'EmpHr'" class="card-text text-muted text-center">
-            {{member.company}} {{member.position}}
+            {{member.positionType}} {{member.position}} position
+            <br>in {{member.positionLocation}} 
+            <br>Start date: {{member.startDate | date: "MM/dd/yyyy"}}
         </p>
         <!-- <p class="card-text text-muted text-center">{{member.workPlus}}</p> -->
     </div>
