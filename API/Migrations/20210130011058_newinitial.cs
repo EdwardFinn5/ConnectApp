@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace API.Migrations
 {
-    public partial class newinitialmigration : Migration
+    public partial class newinitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -21,9 +21,14 @@ namespace API.Migrations
                     HsName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     HsLocation = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClassYear = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HsGradDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CollegeName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CollegeLocation = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CollegeEnrollment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Tuition = table.Column<int>(type: "int", nullable: false),
+                    RoomAndBoard = table.Column<int>(type: "int", nullable: false),
+                    AverageAid = table.Column<int>(type: "int", nullable: false),
+                    NetPay = table.Column<int>(type: "int", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastActive = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ColUserType = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -60,7 +65,7 @@ namespace API.Migrations
                     ClassYear = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GradDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Major = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HomeTown = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Hometown = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     College = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Position = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Company = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -94,10 +99,8 @@ namespace API.Migrations
                     CollegeVirtual = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CollegeYearFounded = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CollegePresident = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Tuition = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    RoomAndBoard = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    AverageAid = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    NetPay = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    AdminContact = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AdminTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ColUserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -119,10 +122,12 @@ namespace API.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ColUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     HsStudentUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AdminUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsMainCol = table.Column<bool>(type: "bit", nullable: false),
                     IsMainHs = table.Column<bool>(type: "bit", nullable: false),
+                    IsMainAdmin = table.Column<bool>(type: "bit", nullable: false),
                     PublicId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ColUserId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -145,7 +150,7 @@ namespace API.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     GradDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    GPA = table.Column<float>(type: "real", nullable: false),
+                    GPA = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProposedMajor = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ExtraCurricular = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DreamJob = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -194,7 +199,7 @@ namespace API.Migrations
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     AcademicPlus = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     WorkPlus = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GPA = table.Column<float>(type: "real", nullable: false),
+                    GPA = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Resume = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DreamJob = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AppUserId = table.Column<int>(type: "int", nullable: false)
@@ -222,6 +227,7 @@ namespace API.Migrations
                     Contact = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ContactTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     HowToApply = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LookingFor = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ApplyEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AppUserId = table.Column<int>(type: "int", nullable: false)
                 },

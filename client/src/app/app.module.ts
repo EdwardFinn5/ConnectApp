@@ -11,6 +11,7 @@ import { JobComponent } from './job/job.component';
 import { RegisterComponent } from './register/register.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { ColMemberDetailComponent } from './colmembers/colmember-detail/colmember-detail.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HomeComponent } from './home/home.component';
@@ -31,12 +32,12 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { EmpRegisterComponent } from './empregister/empregister.component';
 import { HsRegisterComponent } from './hsregister/hsregister.component';
 import { ColMemberListComponent } from './colmembers/colmember-list/colmember-list.component';
-import { ColMemberDetailComponent } from './colmembers/colmember-detail/colmember-detail.component';
 import { ColListsComponent } from './collists/collists.component';
 import { ColMessagesComponent } from './colmessages/colmessages.component';
 import { DonorCardComponent } from './donors/donor-card/donor-card.component';
 import { DonorDetailComponent } from './donors/donor-detail/donor-detail.component';
 import { DonorListComponent } from './donors/donor-list/donor-list.component';
+import { ColmemberCardComponent } from './colmembers/colmember-card/colmember-card.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { DonorListComponent } from './donors/donor-list/donor-list.component';
     RegisterComponent,
     MemberListComponent,
     MemberDetailComponent,
+    ColMemberDetailComponent,
     ListsComponent,
     MessagesComponent,
     HomeComponent,
@@ -62,12 +64,12 @@ import { DonorListComponent } from './donors/donor-list/donor-list.component';
     EmpRegisterComponent,
     HsRegisterComponent,
     ColMemberListComponent,
-    ColMemberDetailComponent,
     ColListsComponent,
     ColMessagesComponent,
     DonorCardComponent,
     DonorDetailComponent,
     DonorListComponent,
+    ColmemberCardComponent,
   ],
   imports: [
     BrowserModule,

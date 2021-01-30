@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ColAccountService } from '../_services/colAccount.service';
 
 @Component({
@@ -10,7 +11,8 @@ export class ColUserLoginComponent implements OnInit {
   model: any = {}
   loggedIn: boolean;
 
-  constructor(private colAccountService: ColAccountService) { }
+  constructor(private colAccountService: ColAccountService,
+              private router: Router) { }
   
   ngOnInit(): void {
   }
@@ -19,6 +21,7 @@ export class ColUserLoginComponent implements OnInit {
     this.colAccountService.login(this.model).subscribe(response => {
       console.log(response);
       this.loggedIn = true;
+      this.router.navigateByUrl('/colmemberlist');
     }, error => {
       console.log(error);
     })

@@ -15,7 +15,7 @@ namespace API.Entities
         public bool IsActive { get; set; } = true;
         public string AcademicPlus { get; set; }
         public string WorkPlus { get; set; }
-        public float GPA { get; set; }
+        public string GPA { get; set; }
         public string Resume { get; set; }
         public string DreamJob { get; set; }
         public virtual AppUser AppUser { get; set; }

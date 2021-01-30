@@ -18,9 +18,14 @@ namespace API.Entities
         public string HsName { get; set; }
         public string HsLocation { get; set; }
         public string ClassYear { get; set; }
+        public DateTime HsGradDate { get; set; } = DateTime.Now;
         public string CollegeName { get; set; }
         public string CollegeLocation { get; set; }
         public string CollegeEnrollment { get; set; }
+        public int Tuition { get; set; }
+        public int RoomAndBoard { get; set; }
+        public int AverageAid { get; set; }
+        public int NetPay { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
         public DateTime LastActive { get; set; } = DateTime.Now;
         public string ColUserType { get; set; }

@@ -105,7 +105,8 @@ namespace API.Controllers
             return new ColUserDto
             {
                 ColUserName = colUser.ColUserName,
-                Token = _tokenService.CreateColToken(colUser)
+                Token = _tokenService.CreateColToken(colUser),
+                ColUserType = colUser.ColUserType
             };
 
         }

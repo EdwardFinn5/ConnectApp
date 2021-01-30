@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210120155404_2ndnewinitialmigration")]
-    partial class _2ndnewinitialmigration
+    [Migration("20210130011058_newinitial")]
+    partial class newinitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +19,7 @@ namespace API.Migrations
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0-rc.1.20451.13");
+                .HasAnnotation("ProductVersion", "5.0.2");
 
             modelBuilder.Entity("API.Entities.AppUser", b =>
                 {
@@ -97,6 +97,9 @@ namespace API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("AdminUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ColUrl")
                         .HasColumnType("nvarchar(max)");
 
@@ -111,6 +114,9 @@ namespace API.Migrations
 
                     b.Property<string>("HsStudentUrl")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsMainAdmin")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsMainCol")
                         .HasColumnType("bit");
@@ -138,6 +144,9 @@ namespace API.Migrations
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
+                    b.Property<int>("AverageAid")
+                        .HasColumnType("int");
+
                     b.Property<string>("ClassYear")
                         .HasColumnType("nvarchar(max)");
 
@@ -162,6 +171,9 @@ namespace API.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("HsGradDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("HsLocation")
                         .HasColumnType("nvarchar(max)");
 
@@ -174,11 +186,20 @@ namespace API.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("NetPay")
+                        .HasColumnType("int");
+
                     b.Property<byte[]>("PasswordHash")
                         .HasColumnType("varbinary(max)");
 
                     b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("varbinary(max)");
+
+                    b.Property<int>("RoomAndBoard")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Tuition")
+                        .HasColumnType("int");
 
                     b.HasKey("ColUserId");
 
@@ -190,8 +211,11 @@ namespace API.Migrations
                     b.Property<int>("CollegeId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("AverageAid")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("AdminContact")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AdminTitle")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ColUserId")
                         .HasColumnType("int");
@@ -231,15 +255,6 @@ namespace API.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
-
-                    b.Property<decimal>("NetPay")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("RoomAndBoard")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("Tuition")
-                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("CollegeId");
 
@@ -291,8 +306,8 @@ namespace API.Migrations
                     b.Property<string>("ExtraCurricular")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("GPA")
-                        .HasColumnType("real");
+                    b.Property<string>("GPA")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -338,6 +353,9 @@ namespace API.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LookingFor")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PositionDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -382,8 +400,8 @@ namespace API.Migrations
                     b.Property<string>("ExtraCurricular")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("GPA")
-                        .HasColumnType("real");
+                    b.Property<string>("GPA")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("GradDate")
                         .HasColumnType("datetime2");

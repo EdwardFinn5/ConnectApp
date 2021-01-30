@@ -1,9 +1,16 @@
 
 export interface CollegePrep {
     collegePrepId: number;
-    classYear: string;
-    academicPlus: string;
-    workPlus: string;
-    gpa: number;
-    major: string;
+    isActive: boolean;
+    bestEmail?: string;
+    bestPhone?: string;
+    athletics?: string;
+    extraCurricular?: string;
+    resume?: string;
+    classYear?: string;
+    academicPlus?: string;
+    workPlus?: string;
+    gpa?: string;
+    major?: string;
 }
+

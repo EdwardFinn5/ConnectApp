@@ -21,10 +21,8 @@ namespace API.Entities
         public string CollegeVirtual { get; set; }
         public string CollegeYearFounded { get; set; }
         public string CollegePresident { get; set; }
-        public decimal Tuition { get; set; }
-        public decimal RoomAndBoard { get; set; }
-        public decimal AverageAid { get; set; }
-        public decimal NetPay { get; set; }
+        public string AdminContact { get; set; }
+        public string AdminTitle { get; set; }
         public IList<CollegeMajor> CollegeMajors { get; set; }
         public IList<FactFeature> FactFeatures { get; set; }
         

@@ -9,6 +9,7 @@ namespace API.Entities
         public string CompanyDescription { get; set; }
         public string PositionType { get; set; }
         public string PositionDescription { get; set; }
+        public string LookingFor { get; set; }
 
     }
 }

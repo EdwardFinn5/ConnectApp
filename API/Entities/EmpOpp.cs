@@ -13,6 +13,7 @@ namespace API.Entities
         public string Contact { get; set; }
         public string ContactTitle { get; set; }
         public string HowToApply { get; set; }
+        public string LookingFor { get; set; }
         [DataType(DataType.EmailAddress)]
         public string ApplyEmail { get; set; }
         public virtual AppUser AppUser { get; set; }

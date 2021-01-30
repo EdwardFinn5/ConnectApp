@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [Authorize]
+    // [Authorize]
     public class ColUsersController : BaseApiController
     {
         private readonly IColUserRepository _colUserRepository;

@@ -55,8 +55,8 @@ const routes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [ColAuthGuard],
     children: [
-      { path: 'colmemberlist', component: MemberListComponent }, 
-      { path: 'colmemberdetail/:id', component: ColMemberDetailComponent },
+      { path: 'colmemberlist', component: ColMemberListComponent }, 
+      { path: 'colmemberdetail/:colusername', component: ColMemberDetailComponent },
       { path: 'collists', component: ColListsComponent },
       { path: 'colmessages', component: ColMessagesComponent },
     ]

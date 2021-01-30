@@ -7,9 +7,9 @@
     "CollegeLocation": "Sioux City, IA",
     "CollegeEnrollment": "1,229",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -38,6 +38,10 @@
         "CollegeWebsite": "http://www.briarcliff.edu/",
         "CollegeVirtual": "https://www.futurechargers.briarcliff.edu/virtual-tours",
         "CollegeYearFounded": "1930",
+        "Tuition": 30000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
         "CollegePresident": "Dr. Rachelle Karstens"
       }
     ]
@@ -50,9 +54,9 @@
     "CollegeLocation": "Storm Lake, IA",
     "CollegeEnrollment": "1,816",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -81,6 +85,10 @@
         "CollegeWebsite": "https://www.bvu.edu",
         "CollegeVirtual": "https://www.bvu.edu/admissions/visit/virtual-tour",
         "CollegeYearFounded": "1891",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Brian Lenzmeier"
       }
     ]
@@ -93,9 +101,9 @@
     "CollegeLocation": "Waverly, IA",
     "CollegeEnrollment": "1,100",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -124,6 +132,10 @@
         "CollegeWebsite": "https://www.central.edu",
         "CollegeVirtual": "https://central.edu/admission/visit-campus/video-tour/",
         "CollegeYearFounded": "1853",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Mr. Mark L. Putnam"
       }
     ]
@@ -136,9 +148,10 @@
     "CollegeLocation": "Dubuque, IA",
     "CollegeEnrollment": "1,004",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
+    "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",
@@ -166,6 +179,10 @@
         "CollegeWebsite": "https://www.clarke.edu",
         "CollegeVirtual": "https://www.clarke.edu/admission-aid/campus-tour/",
         "CollegeYearFounded": "1843",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Thom D. Chesney"
       }
     ]
@@ -178,9 +195,9 @@
     "CollegeLocation": "Cedar Rapids, IA",
     "CollegeEnrollment": "1,400",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -209,6 +226,10 @@
         "CollegeWebsite": "http://www.coe.edu",
         "CollegeVirtual": "https://www.coe.edu/admission/virtual-reality-experience",
         "CollegeYearFounded": "1851",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. David McInally"
       }
     ]
@@ -221,9 +242,9 @@
     "CollegeLocation": "Mount Vernon, IA",
     "CollegeEnrollment": "1,000",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -252,6 +273,10 @@
         "CollegeWebsite": "https://www.cornellcollege.edu",
         "CollegeVirtual": "https://www.cornellcollege.edu/admissions/visit-cornell2/index.shtml",
         "CollegeYearFounded": "1853",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Mr. Jonathan Brand"
       }
     ]
@@ -264,9 +289,9 @@
     "CollegeLocation": "Sioux Center, IA",
     "CollegeEnrollment": "1,548",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -295,6 +320,10 @@
         "CollegeWebsite": "https://www.dordt.edu",
         "CollegeVirtual": "https://www.dordt.edu/admissions-aid/visit",
         "CollegeYearFounded": "1955",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Erik Hoekstra"
       }
     ]
@@ -307,9 +336,9 @@
     "CollegeLocation": "Des Moines, IA",
     "CollegeEnrollment": "3,098",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -338,6 +367,10 @@
         "CollegeWebsite": "https://www.drake.edu/",
         "CollegeVirtual": "https://www.drake.edu/tour/",
         "CollegeYearFounded": "1881",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Earl “Marty” Martin"
       }
     ]
@@ -350,9 +383,9 @@
     "CollegeLocation": "Lamoni, IA",
     "CollegeEnrollment": "1,992",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -381,6 +414,10 @@
         "CollegeWebsite": "https://www.graceland.edu",
         "CollegeVirtual": "https://www.graceland.edu/admissions/lam-virtual-tour",
         "CollegeYearFounded": "1895",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Patricia Draves"
       }
     ]
@@ -393,9 +430,9 @@
     "CollegeLocation": "Des Moines, IA",
     "CollegeEnrollment": "2,000",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -424,6 +461,10 @@
         "CollegeWebsite": "https://www.grandview.edu",
         "CollegeVirtual": "https://www.grandview.edu/about/community/visit-campus/virtual-tour",
         "CollegeYearFounded": "1896",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Mr. Kent Henning"
       }
     ]
@@ -436,9 +477,9 @@
     "CollegeLocation": "Grinnell, IA",
     "CollegeEnrollment": "1,700",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -467,6 +508,10 @@
         "CollegeWebsite": "https://www.grinnell.edu",
         "CollegeVirtual": "https://www.grinnell.edu/admission/visit",
         "CollegeYearFounded": "1846",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Anne Harris"
       }
     ]
@@ -479,9 +524,9 @@
     "CollegeLocation": "Mount Pleasant, IA",
     "CollegeEnrollment": "570",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -510,6 +555,10 @@
         "CollegeWebsite": "https://www.iw.edu",
         "CollegeVirtual": "https://www.iw.edu/visit/",
         "CollegeYearFounded": "1842",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Ms. Christine Plunkett"
       }
     ]
@@ -522,9 +571,9 @@
     "CollegeLocation": "Dubuque, IA",
     "CollegeEnrollment": "1,397",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -553,6 +602,10 @@
         "CollegeWebsite": "https://www.loras.edu",
         "CollegeVirtual": "https://www.loras.edu/admission/visitvideo/",
         "CollegeYearFounded": "1839",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Mr. Jim Collins"
       }
     ]
@@ -565,9 +618,9 @@
     "CollegeLocation": "Decorah, IA",
     "CollegeEnrollment": "2,053",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -596,6 +649,10 @@
         "CollegeWebsite": "https://www.luther.edu",
         "CollegeVirtual": "https://www.luther.edu/campus/tour/",
         "CollegeYearFounded": "1861",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Jenifer K. Ward"
       }
     ]
@@ -608,9 +665,9 @@
     "CollegeLocation": "Sioux City, IA",
     "CollegeEnrollment": "1,416",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -639,6 +696,10 @@
         "CollegeWebsite": "https://www.morningside.edu",
         "CollegeVirtual": "https://www.morningside.edu/admissions/undergraduate/visit/",
         "CollegeYearFounded": "1894",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Mr. John Reynders"
       }
     ]
@@ -651,9 +712,9 @@
     "CollegeLocation": "Cedar Rapids, IA",
     "CollegeEnrollment": "1,835",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -682,6 +743,10 @@
         "CollegeWebsite": "https://www.mtmercy.edu",
         "CollegeVirtual": "https://www.mtmercy.edu/admissions-aid/undergraduate/visit-campus",
         "CollegeYearFounded": "1928",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Tim Laurent (Interim)"
       }
     ]
@@ -694,9 +759,9 @@
     "CollegeLocation": "Orange City, IA",
     "CollegeEnrollment": "1,307",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "NickName": "Dillard",
@@ -726,6 +791,10 @@
         "CollegeWebsite": "https://www.nwciowa.edu",
         "CollegeVirtual": "https://www.nwciowa.edu/virtual-nwc",
         "CollegeYearFounded": "1882",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Mr. Gregory E. Christy"
       }
     ]
@@ -738,9 +807,9 @@
     "CollegeLocation": "Indianola, IA",
     "CollegeEnrollment": "1,479",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -769,6 +838,10 @@
         "CollegeWebsite": "https://www.simpson.edu",
         "CollegeVirtual": "https://simpson.edu/admission-aid/visit-simpson-college",
         "CollegeYearFounded": "1860",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Ms. Marsha Kelliher"
       }
     ]
@@ -781,9 +854,9 @@
     "CollegeLocation": "Davenport, IA",
     "CollegeEnrollment": "2,370",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -812,6 +885,10 @@
         "CollegeWebsite": "https://www.sau.edu",
         "CollegeVirtual": "https://www.sau.edu/admissions/visit-sau",
         "CollegeYearFounded": "1882",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Joan Lescinski CSJ"
       }
     ]
@@ -824,9 +901,9 @@
     "CollegeLocation": "Dubuque, IA",
     "CollegeEnrollment": "1,921",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -855,6 +932,10 @@
         "CollegeWebsite": "https://www.dbq.edu/",
         "CollegeVirtual": "https://www.dbq.edu/admission/scheduleavisit/",
         "CollegeYearFounded": "1852",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Jeffrey Bullock"
       }
     ]
@@ -867,9 +948,9 @@
     "CollegeLocation": "Fayette, IA",
     "CollegeEnrollment": "4,659",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -898,6 +979,10 @@
         "CollegeWebsite": "https://www.uiu.edu",
         "CollegeVirtual": "https://uiu.edu/locations/fayette/visit-us/",
         "CollegeYearFounded": "1857",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. William R. Duffy II"
       }
     ]
@@ -910,9 +995,9 @@
     "CollegeLocation": "Waverly, IA",
     "CollegeEnrollment": "1,505",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -941,6 +1026,10 @@
         "CollegeWebsite": "https://www.wartburg.edu",
         "CollegeVirtual": "https://www.wartburg.edu/vtour/",
         "CollegeYearFounded": "1852",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Dr. Darrel D. Colson"
       }
     ]
@@ -953,9 +1042,9 @@
     "CollegeLocation": "Oskaloosa, IA",
     "CollegeEnrollment": "1,311",
     "Tuition": 30000,
-    "RoomAndBoard": 5000,
-    "AverageAid": 20000,
-    "NetPay": 10000,
+        "RoomAndBoard": 5000,
+        "AverageAid": 20000,
+        "NetPay": 10000,
     "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
@@ -984,91 +1073,11 @@
         "CollegeWebsite": "https://www.wmpenn.edu",
         "CollegeVirtual": "https://www.wmpenn.edu/get-to-know-wpu/our-campus/virtual-tour/",
         "CollegeYearFounded": "1873",
+        "Tuition": 30000.0,
+        "RoomAndBoard": 5000.0,
+        "AverageAid": 20000.0,
+        "NetPay": 10000.0,
         "CollegePresident": "Mr. John E.E. Ottosson"
-      }
-    ]
-  },
-  {
-    "ColUserName": "Billy@gmail.com",
-    "FirstName": "Billy",
-    "LastName": "Hull",
-    "HsName": "Ames High School",
-    "HsLocation": "Ames, IA",
-    "ClassYear": "Junior",
-    "HsGradDate": "2022-06-28",
-    "ColUserType": "ColLead",
-    "Active": true,
-    "Created": "2019-02-12",
-    "LastActive": "2020-06-22",
-    "ColPhotos": [
-      {
-        "HsStudentUrl": "https://ak.picdn.net/shutterstock/videos/1013599640/thumb/1.jpg",
-        "IsMainHs": true
-      }
-    ],
-    "HsPreps": [
-      {
-        "IsActive": true,
-        "GPA": "3",
-        "ProposedMajor": "Accounting",
-        "ExtraCurricular": "I played baseball two years and was in choir",
-        "DreamJob": "Partner at a Public Accounting firm"
-      }
-    ]
-  },
-  {
-    "ColUserName": "Sally@gmail.com",
-    "FirstName": "Sally",
-    "LastName": "Huntington",
-    "HsName": "Johnston High School",
-    "HsLocation": "Johnston, IA",
-    "ClassYear": "Senior",
-    "HsGradDate": "2022-06-28",
-    "ColUserType": "ColLead",
-    "Active": true,
-    "Created": "2019-02-12",
-    "LastActive": "2020-06-22",
-    "ColPhotos": [
-      {
-        "HsStudentUrl": "https://www.silversparrowphoto.com/uploads/2/4/8/0/24809495/littleton-colorado-senior-photographer-dakota-ridge-high-school-silver-sparrow-photography_orig.jpg",
-        "IsMainHs": true
-      }
-    ],
-    "HsPreps": [
-      {
-        "IsActive": true,
-        "GPA": "4",
-        "ProposedMajor": "Finance",
-        "ExtraCurricular": "I played girls basketball two years and was in the band",
-        "DreamJob": "CEO of a large conglomerate"
-      }
-    ]
-  },
-  {
-    "ColUserName": "Joey@gmail.com",
-    "FirstName": "Joey",
-    "LastName": "Trainor",
-    "HsName": "Pleasant Valley High School",
-    "HsLocation": "Bettendorf, IA",
-    "ClassYear": "Junior",
-    "HsGradDate": "2022-06-28",
-    "ColUserType": "ColLead",
-    "Active": true,
-    "Created": "2019-02-12",
-    "LastActive": "2020-06-22",
-    "ColPhotos": [
-      {
-        "HsStudentUrl": "https://gradsphotography.com/data/images1/02.jpg",
-        "IsMainHs": true
-      }
-    ],
-    "HsPreps": [
-      {
-        "IsActive": true,
-        "GPA": "3",
-        "ProposedMajor": "Education",
-        "ExtraCurricular": "I was President of my class",
-        "DreamJob": "Superintendent"
       }
     ]
   }

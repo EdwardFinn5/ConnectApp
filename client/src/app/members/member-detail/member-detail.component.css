@@ -2,14 +2,27 @@
     text-align: center;
 }
 
-.img-thumbnail {
+.img-studthumbnail {
     margin: 25px;
     width: 85%;
     height: 85%
 }
 
-.car-body {
-    padding: 0 25px;
+.img-hrthumbnail {
+    margin: 0px;
+    width: 15%;
+    height: 15%
+}
+
+
+.img-compthumbnail {
+    margin: 25px;
+    width: 25%;
+    height: 25%
+}
+
+.card-body {
+    padding: 0 0px;
 }
 
 card-footer {

@@ -1,4 +1,3 @@
-
 export interface Photo {
     id: number;
     studentUrl: string;
@@ -6,4 +5,6 @@ export interface Photo {
     logoUrl: string;
     isMain: boolean;
     isMainLogo: boolean;
+    isMainHr: boolean;
 }
+
