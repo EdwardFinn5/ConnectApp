@@ -18,6 +18,7 @@ export interface Member {
     gpa?: string;
     hometown?: string;
     academicPlus?: string;
+    gradDate?: Date;
     workPlus?: string;
     dreamJob?: string;
     bestEmail?: string;

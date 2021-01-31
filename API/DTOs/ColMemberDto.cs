@@ -24,7 +24,7 @@ namespace API.DTOs
         public string ExtraCurricular { get; set; }
         public string DreamJob { get; set; }
         public string GPA { get; set; }
-        public DateTime GradDate { get; set; }
+        public DateTime HsGradDate { get; set; }
         public string CollegeName { get; set; }
         public string CollegeLocation { get; set; }
         public string CollegeEnrollment { get; set; }

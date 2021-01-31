@@ -24,6 +24,7 @@ namespace API.DTOs
         public string AcademicPlus { get; set; }
         public string WorkPlus { get; set; }
         public string DreamJob { get; set; }
+        public DateTime GradDate { get; set; }
         public string GPA { get; set; }
         
         

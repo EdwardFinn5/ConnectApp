@@ -8,9 +8,15 @@
     height: 15%
 }
 
+/* .img-thumbnail {
+    margin: 10px;
+    width: 85%;
+    height: 85%
+} */
+
 
 .card-body {
-    padding: 0 0px;
+    padding: 0 10px;
 }
 
 card-footer {
