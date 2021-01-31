@@ -11,8 +11,10 @@ import { ColMembersService } from 'src/app/_services/colmembers.service';
 })
 export class ColMemberDetailComponent implements OnInit {
   colMember: ColMember;
-  galleryOptions: NgxGalleryOptions[];
-  galleryImages: NgxGalleryImage[];
+  collegeGalleryOptions: NgxGalleryOptions[];
+  collegeGalleryImages: NgxGalleryImage[];
+  hsGalleryOptions: NgxGalleryOptions[];
+  hsGalleryImages: NgxGalleryImage[];
 
   constructor(private colMemberService: ColMembersService,
               private route: ActivatedRoute) { }
@@ -20,20 +22,27 @@ export class ColMemberDetailComponent implements OnInit {
   ngOnInit(): void {
     this.loadColMember();
 
-    this.galleryOptions = [
+    this.collegeGalleryOptions = [
       {
-        width: '500px',
-        height: '500px',
+        width: '400px',
+        height: '400px',
         imagePercent: 100,
         thumbnailsColumns: 4,
         imageAnimation: NgxGalleryAnimation.Slide,
         preview: false
       }
     ]
-
-    this.galleryImages = this.getCollegeImages();
-    this.galleryImages = this.getHsStudentImages();
-
+  
+    this.hsGalleryOptions = [
+      {
+        width: '400px',
+        height: '400px',
+        imagePercent: 100,
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Slide,
+        preview: false
+      }
+    ]
   }
 
   getCollegeImages(): NgxGalleryImage[] {
@@ -48,7 +57,7 @@ export class ColMemberDetailComponent implements OnInit {
     return colImageUrls;
   }
 
-  getHsStudentImages(): NgxGalleryImage[] {
+  getHsImages(): NgxGalleryImage[] {
     const hsImageUrls = [];
     for (const colPhoto of this.colMember.colPhotos) {
       hsImageUrls.push({
@@ -64,6 +73,8 @@ export class ColMemberDetailComponent implements OnInit {
  loadColMember() {
     this.colMemberService.getColMember(this.route.snapshot.paramMap.get('colusername')).subscribe(colMember => {
       this.colMember = colMember;
+      this.collegeGalleryImages = this.getCollegeImages();
+      this.hsGalleryImages = this.getHsImages();
     });
   }
 }

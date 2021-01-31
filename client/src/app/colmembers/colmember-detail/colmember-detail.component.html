@@ -71,6 +71,12 @@
                         <tab heading='Messages'>
                             <h4>Messages</h4>
                         </tab>
+
+                        <tab heading='Photos'>
+                            <ngx-gallery [options]= "hsGalleryOptions" [images]="hsGalleryImages" 
+                                style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
+                        </tab> 
+
                     </tabset>
                 </div>
             
@@ -121,7 +127,7 @@
                         </tab>
 
                         <tab heading='Photos'>
-                            <ngx-gallery [options]= "galleryOptions" [images]="galleryImages" 
+                            <ngx-gallery [options]= "collegeGalleryOptions" [images]="collegeGalleryImages" 
                                 style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
                         </tab>
 

@@ -11,8 +11,10 @@ import { MembersService } from 'src/app/_services/members.service';
 })
 export class MemberDetailComponent implements OnInit {
   member: Member;
-  galleryOptions: NgxGalleryOptions[];
-  galleryImages: NgxGalleryImage[];
+  studentGalleryOptions: NgxGalleryOptions[];
+  studentGalleryImages: NgxGalleryImage[];
+  companyGalleryOptions: NgxGalleryOptions[];
+  companyGalleryImages: NgxGalleryImage[];
 
   constructor(
     private memberService: MembersService,
@@ -22,7 +24,7 @@ export class MemberDetailComponent implements OnInit {
   ngOnInit(): void {
     this.loadMember();
 
-    this.galleryOptions = [
+    this.studentGalleryOptions = [
       {
         width: '500px',
         height: '500px',
@@ -33,11 +35,19 @@ export class MemberDetailComponent implements OnInit {
       }
     ]
 
-    this.galleryImages = this.getColStudentImages();
-    this.galleryImages = this.getCompanyImages();
+    this.companyGalleryOptions = [
+      {
+        width: '500px',
+        height: '500px',
+        imagePercent: 100,
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Slide,
+        preview: false
+      }
+    ]    
   }
 
-  getColStudentImages(): NgxGalleryImage[] {
+  getStudentImages(): NgxGalleryImage[] {
     const colStudImageUrls = [];
     for (const photo of this.member.photos) {
       colStudImageUrls.push({
@@ -65,6 +75,8 @@ export class MemberDetailComponent implements OnInit {
   loadMember() {
     this.memberService.getMember(this.route.snapshot.paramMap.get('username')).subscribe(member => {
       this.member = member;
+      this.studentGalleryImages = this.getStudentImages();
+      this.companyGalleryImages = this.getCompanyImages();
     });
   }
 }
