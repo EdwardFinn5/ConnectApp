@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210130011058_newinitial")]
-    partial class newinitial
+    [Migration("20210214005845_newinitial2")]
+    partial class newinitial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -290,6 +290,9 @@ namespace API.Migrations
 
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Arts")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Athletics")
                         .HasColumnType("nvarchar(max)");

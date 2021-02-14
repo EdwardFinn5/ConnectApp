@@ -38,6 +38,10 @@ import { DonorCardComponent } from './donors/donor-card/donor-card.component';
 import { DonorDetailComponent } from './donors/donor-detail/donor-detail.component';
 import { DonorListComponent } from './donors/donor-list/donor-list.component';
 import { ColmemberCardComponent } from './colmembers/colmember-card/colmember-card.component';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
+import { CompanyEditComponent } from './members/company-edit/company-edit.component';
+import { CollegeEditComponent } from './colmembers/college-edit/college-edit.component';
+import { HsEditComponent } from './colmembers/hs-edit/hs-edit.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +74,10 @@ import { ColmemberCardComponent } from './colmembers/colmember-card/colmember-ca
     DonorDetailComponent,
     DonorListComponent,
     ColmemberCardComponent,
+    MemberEditComponent,
+    CompanyEditComponent,
+    CollegeEditComponent,
+    HsEditComponent,
   ],
   imports: [
     BrowserModule,

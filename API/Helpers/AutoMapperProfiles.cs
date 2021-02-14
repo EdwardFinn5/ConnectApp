@@ -24,6 +24,12 @@ namespace API.Helpers
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).WorkPlus))
                 .ForMember(dest => dest.DreamJob, opt => opt
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).DreamJob))
+                .ForMember(dest => dest.Athletics, opt => opt
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Athletics))
+                .ForMember(dest => dest.Arts, opt => opt
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Arts))
+                .ForMember(dest => dest.ExtraCurricular, opt => opt
+                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).ExtraCurricular))
                 .ForMember(dest => dest.BestEmail, opt => opt
                     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).BestEmail))
                 .ForMember(dest => dest.BestPhone, opt => opt
@@ -41,8 +47,8 @@ namespace API.Helpers
                 .ForMember(dest => dest.PositionDescription, opt => opt
                     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).PositionDescription))
                 .ForMember(dest => dest.ContactTitle, opt => opt
-                    .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).ContactTitle));
-
+                .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).ContactTitle));
+                    
 
             CreateMap<ColUser, ColMemberDto>()
                 .ForMember(dest => dest.ColUrl, opt => opt
@@ -80,13 +86,22 @@ namespace API.Helpers
                 .ForMember(dest => dest.AdminTitle, opt => opt
                     .MapFrom(src => src.Colleges.FirstOrDefault(x => x.IsActive).AdminTitle));
 
+            // CreateMap<MemberColUpdateDto, AppUser>();
+
+            CreateMap<AppUser, MemberColUpdateDto>().ReverseMap();
+            //   .ForMember(dest => dest.Athletics, opt => opt
+            //         .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Athletics)).ReverseMap();
+            //    .ForMember(dest => dest.StudentUrl, opt => opt
+            //         .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMain).StudentUrl)).ReverseMap();
+
+             
+               
             CreateMap<Photo, PhotoDto>();
             CreateMap<CollegePrep, CollegePrepDto>();
             CreateMap<EmpOpp, EmpOppDto>();
             CreateMap<ColPhoto, ColPhotoDto>();
             CreateMap<College, CollegeDto>();
             CreateMap<HsPrep, HsPrepDto>();
-
         }
     }
 }

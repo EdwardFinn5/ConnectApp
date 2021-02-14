@@ -11,6 +11,7 @@ namespace API.Entities
         public string BestEmail { get; set; }
         public string BestPhone { get; set; }
         public string Athletics { get; set; }
+        public string Arts { get; set; }
         public string ExtraCurricular { get; set; }
         public bool IsActive { get; set; } = true;
         public string AcademicPlus { get; set; }

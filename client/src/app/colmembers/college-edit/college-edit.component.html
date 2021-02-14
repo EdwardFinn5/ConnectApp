@@ -1,0 +1,116 @@
+<div class="row shadow" style="margin-left: 25px" *ngIf="colMember">
+    <div class="col-4">
+        <h2>Your profile for editing:</h2> 
+    </div>
+       <div class="col-8">
+        <div class="alert alert-info" *ngIf="editForm.dirty">
+            <p> <strong>Information: </strong>You have made changes. Any unsaved changes will be lost. </p>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+                    <img src="{{colMember.colUrl || '../../assets/images/school.jpg'}}" alt="{{colMember.collegeName}}" 
+                class="card-img-top img-thumbnail">
+            <div class="card-body text-center">
+                
+                <div>
+                    <u><strong>-- {{colMember.collegeName}} --</strong></u>
+                </div>
+                <div>
+                    <strong>Location: </strong> {{colMember.collegeLocation}}
+                </div>    
+                <div>
+                    <strong>Enrollment: </strong> {{colMember.collegeEnrollment}}
+                </div>    
+                <hr>
+                <div>
+                    <strong>Profile Last Edited: </strong> {{colMember.created | date: "MM/dd/yyyy"}}
+                </div>
+                <div>
+                    <strong>Last Active: </strong> {{colMember.lastActive | date: "MM/dd/yyyy"}}
+                </div>   
+            </div>
+
+            <div class="card-footer">
+                <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading='Card Info'>
+                <form #editForm="ngForm" id="editForm" (ngSubmit)="updateColMember()">
+                    <label for="classYear"><strong>Location: </strong></label>
+                    <input [(ngModel)]="colMember.collegeLocation" type="text" name="collegeLocation" class="form-control mb-2">
+                    <label for="hsName"><strong>Enrollment: </strong></label>
+                    <input [(ngModel)]="colMember.collegeEnrollment" type="text" name="collegeEnrollment" class="form-control mb-2">
+                    <label for="created"><strong>Last edited: </strong></label>
+                    <input [(ngModel)]="colMember.created" type="text" name="created" class="form-control mb-2">
+                    <label for="lastActive"><strong>Last Active: </strong></label>
+                    <input [(ngModel)]="colMember.lastActive" type="text" name="lastActive" class="form-control mb-2">
+                 </form>           
+            </tab>
+            
+            <tab heading='About'>
+                <form>
+                    <h4>College/University Description</h4>
+                    <textarea [(ngModel)]="colMember.collegeDescription"  name="dreamJob" rows="6"></textarea><br>
+                    <h4 class="mt-2">Special Facts and Features</h4>
+                    <p>
+                        * yada yada yada<br>
+                        * yada yada yada<br>
+                        * yada yada yada
+                    </p>
+                </form>
+            </tab>
+
+            <tab heading='Address and Cost/Aid'>
+                <form>
+                    <h4>{{colMember.collegeName}}'s address</h4>
+                        <label for="collegeStreet"><strong>Street: </strong></label>
+                        <input [(ngModel)]="colMember.collegeStreet" type="text" name="collegeStreet" class="form-control mb-2">
+                        <label for="collegeCity"><strong>City: </strong></label>
+                        <input [(ngModel)]="colMember.collegeCity" type="text" name="collegeCity" class="form-control mb-2">
+                        <label for="collegeState"><strong>State: </strong></label>
+                        <input [(ngModel)]="colMember.collegeState" type="text" name="collegeState" class="form-control mb-2">
+                        <label for="collegeZip"><strong>Zip: </strong></label>
+                        <input [(ngModel)]="colMember.collegeZip" type="text" name="collegeZip" class="form-control mb-2">
+                     
+                    <h4>Tuition and Financial Aid</h4>
+                    <label for="tuition"><strong>Tuition: </strong></label>
+                    <input [(ngModel)]="colMember.tuition" type="text" name="tuition" class="form-control mb-2">
+                    <label for="tuition"><strong>Average aid: </strong></label>
+                    <input [(ngModel)]="colMember.averageAid" type="text" name="averageAid" class="form-control mb-2">
+                    <label for="tuition"><strong>Average netpay: </strong></label>
+                    <input [(ngModel)]="colMember.netPay" type="text" name="netPay" class="form-control mx-2"><br>
+                </form>
+            </tab>
+
+            <tab heading='Admissions and Contact Info'>
+                <form>
+                    <h4>Who to contact in Admissions</h4>
+                    <p>Add or change photo of contact person in photo tab</p>
+                    <p>
+                        <img src="{{colMember.adminUrl || '../../assets/images/coluser.PNG'}}" alt="{{colMember.adminContact}}"
+                        class="img-hrthumbnail">
+                    </p>
+                        <label for="adminContact"><strong>Name: </strong></label>
+                        <input [(ngModel)]="colMember.adminContact" type="text" name="adminContact" class="form-control mb-2">
+                        <label for="adminTitle"><strong>Title: </strong></label>
+                        <input [(ngModel)]="colMember.adminTitle" type="text" name="adminTitle" class="form-control mb-2">
+                        <br>
+                        <label for="collegeWebsite"><strong>{{colMember.collegeName}}'s Website: </strong></label>
+                        <input [(ngModel)]="colMember.collegeWebsite" type="text" name="collegeWebsite" class="form-control mb-2"><br>
+                        <label for="collegeVirtual"><strong>Virtual tour of campus: </strong></label>
+                        <input [(ngModel)]="colMember.collegeVirtual" type="text" name="collegeVirtual" class="form-control mb-2">
+                </form>
+            </tab>  
+            <tab heading='Edit Photos'>
+                <p>Photo edit will go here</p>
+            </tab>  
+        </tabset>
+    </div>
+</div>
+

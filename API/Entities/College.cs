@@ -25,7 +25,7 @@ namespace API.Entities
         public string AdminTitle { get; set; }
         public IList<CollegeMajor> CollegeMajors { get; set; }
         public IList<FactFeature> FactFeatures { get; set; }
-        
+
         public virtual ColUser ColUser { get; set; }
         public int ColUserId { get; set; }
 

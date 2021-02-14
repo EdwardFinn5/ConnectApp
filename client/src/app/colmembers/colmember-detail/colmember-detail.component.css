@@ -1,11 +1,11 @@
 .card-body {
-    text-align: center;
+  text-align: center;
 }
 
 .img-adminthumbnail {
-    margin: 0px;
-    width: 15%;
-    height: 15%
+  margin: 0px;
+  width: 15%;
+  height: 15%;
 }
 
 /* .img-thumbnail {
@@ -14,28 +14,26 @@
     height: 85%
 } */
 
-
 .card-body {
-    padding: 0 10px;
+  padding: 0 0px;
 }
 
 card-footer {
-    padding: 10px 15px;
-    background-color: #fff;
-    border-top: none;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-top: none;
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px
-  }
-  
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}

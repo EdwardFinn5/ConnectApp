@@ -13,6 +13,7 @@ export class ColAccountService {
   baseUrl = environment.apiUrl;
   private currentColUserSource = new ReplaySubject<ColUser>(1);
   currentUser$ = this.currentColUserSource.asObservable();
+  colUserType: string;
 
   constructor(private http: HttpClient) {}
 
@@ -23,20 +24,23 @@ export class ColAccountService {
         if (colUser) {
           localStorage.setItem('colUser', JSON.stringify(colUser));
           this.currentColUserSource.next(colUser);
+          this.colUserType = colUser.colUserType;
         }
       })
     );
   }
 
   colRegister(model: any) {
-    return this.http.post(this.baseUrl + 'colaccount/registercollege', model).pipe(
-      map((colUser: ColUser) => {
-        if (colUser) {
-          localStorage.setItem('colUser', JSON.stringify(colUser));
-          this.currentColUserSource.next(colUser);
-        }
-      })
-    )
+    return this.http
+      .post(this.baseUrl + 'colaccount/registercollege', model).pipe(
+        map((colUser: ColUser) => {
+          if (colUser) {
+            localStorage.setItem('colUser', JSON.stringify(colUser));
+            this.currentColUserSource.next(colUser);
+            this.colUserType = colUser.colUserType;
+          }
+        })
+      )
   }
 
   hsRegister(model: any) {
@@ -45,6 +49,7 @@ export class ColAccountService {
         if (colUser) {
           localStorage.setItem('colUser', JSON.stringify(colUser));
           this.currentColUserSource.next(colUser);
+          this.colUserType = colUser.colUserType;
         }
       })
     )
@@ -52,6 +57,7 @@ export class ColAccountService {
 
   setCurrentUser(colUser: ColUser) {
     this.currentColUserSource.next(colUser);
+    this.colUserType = colUser.colUserType;
   }
 
   logout() {

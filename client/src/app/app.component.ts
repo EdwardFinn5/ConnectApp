@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
   // Users: any; // taking this out for now
   colUsers: any;
   users: any;
+  appUserType: string;
+  colUserType: string;
 
   // constructor(private accountService: AccountService) {}  //taking out for now
 
@@ -45,11 +47,24 @@ export class AppComponent implements OnInit {
 
   setCurrentUser() {
     const user: User = JSON.parse(localStorage.getItem('user'));
-    this.accountService.setCurrentUser(user);
-    const colUser: ColUser = JSON.parse(localStorage.getItem('colUser'));
-    this.colAccountService.setCurrentUser(colUser);
+    if (user) {
+      this.accountService.setCurrentUser(user);
+      this.appUserType = user.appUserType; 
+    }
+    const colUser: ColUser = JSON.parse(localStorage.getItem('colUser')); 
+    if (colUser) {
+      this.colAccountService.setCurrentUser(colUser);
+      this.colUserType = colUser.colUserType;
+    }
   }
-
+    
+  //   const user: User = JSON.parse(localStorage.getItem('user'));
+  //   this.accountService.setCurrentUser(user);
+  //   this.appUserType = user.appUserType;
+  //   const colUser: ColUser = JSON.parse(localStorage.getItem('colUser'));
+  //   this.colAccountService.setCurrentUser(colUser);
+  //   this.colUserType = colUser.colUserType;
+  // }
 }
 
 

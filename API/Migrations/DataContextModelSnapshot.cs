@@ -289,6 +289,9 @@ namespace API.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Arts")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Athletics")
                         .HasColumnType("nvarchar(max)");
 

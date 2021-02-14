@@ -18,7 +18,9 @@ namespace API.Entities
         public string LastName { get; set; }
         public string ClassYear { get; set; }
         public DateTime GradDate { get; set; } = DateTime.Now;
+
         public string Major { get; set; }
+
         public string Hometown { get; set; }
         public string College { get; set; }
         public string Position { get; set; }
@@ -33,6 +35,6 @@ namespace API.Entities
         public IList<CollegePrep> CollegePreps { get; set; }
         public IList<EmpOpp> EmpOpps { get; set; }
         // [ForeignKey("UserFk")]
-        public ICollection<Photo> Photos { get; set; }
+        public IList<Photo> Photos { get; set; }
     }
 }

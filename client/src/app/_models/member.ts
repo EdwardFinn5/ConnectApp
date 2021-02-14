@@ -21,6 +21,9 @@ export interface Member {
     gradDate?: Date;
     workPlus?: string;
     dreamJob?: string;
+    extraCurricular?: string;
+    athletics?: string;
+    arts?: string;
     bestEmail?: string;
     bestPhone?: string;
     company?: string;
@@ -43,7 +46,3 @@ export interface Member {
     empOpps: EmpOpp[];
     photos: Photo[];
 }
-  
-  
-  
-  

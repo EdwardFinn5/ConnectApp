@@ -37,6 +37,12 @@ namespace API
            
             services.AddApplicationServices(_config); // added this extension
             services.AddControllers();
+
+            //I added this but might need to delete
+            services.AddMvc(option => option.EnableEndpointRouting = false)
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+                .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddCors();
             services.AddSwaggerGen(c =>
             {

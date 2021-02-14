@@ -27,6 +27,14 @@ import { HsStudentComponent } from './hsstudent/hsstudent.component';
 import { DonorCardComponent } from './donors/donor-card/donor-card.component';
 import { DonorDetailComponent } from './donors/donor-detail/donor-detail.component';
 import { DonorListComponent } from './donors/donor-list/donor-list.component';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
+import { CompanyEditComponent } from './members/company-edit/company-edit.component';
+import { CollegeEditComponent } from './colmembers/college-edit/college-edit.component';
+import { HsEditComponent } from './colmembers/hs-edit/hs-edit.component';
+import { PreventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes.guard';
+import { PreventUnsavedCollegeChangesGuard } from './_guards/prevent-unsaved-college-changes.guard';
+import { PreventUnsavedCompanyChangesGuard } from './_guards/prevent-unsaved-company-changes.guard';
+import { PreventUnsavedHsChangesGuard } from './_guards/prevent-unsaved-hs-changes.guard';
 
 
 
@@ -46,6 +54,8 @@ const routes: Routes = [
     children: [
       { path: 'memberlist', component: MemberListComponent },
       { path: 'members/:username', component: MemberDetailComponent},
+      { path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
+      { path: 'company/edit', component: CompanyEditComponent,canDeactivate: [PreventUnsavedCompanyChangesGuard]}, 
       { path: 'lists', component: ListsComponent },
       { path: 'messages', component: MessagesComponent },
     ]
@@ -57,6 +67,8 @@ const routes: Routes = [
     children: [
       { path: 'colmemberlist', component: ColMemberListComponent }, 
       { path: 'colmemberdetail/:colusername', component: ColMemberDetailComponent },
+      { path: 'college/edit', component: CollegeEditComponent, canDeactivate: [PreventUnsavedCollegeChangesGuard]},
+      { path: 'hs/edit', component: HsEditComponent,canDeactivate: [PreventUnsavedHsChangesGuard]},
       { path: 'collists', component: ColListsComponent },
       { path: 'colmessages', component: ColMessagesComponent },
     ]

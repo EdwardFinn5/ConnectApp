@@ -1,0 +1,16 @@
+textarea { 
+    width: 40%;
+} 
+
+input {
+    width: 25%;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.img-hrthumbnail {
+    width: 15%;
+    height: 15%;
+}

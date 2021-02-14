@@ -10,6 +10,7 @@ export interface CollegePrep {
     classYear?: string;
     academicPlus?: string;
     workPlus?: string;
+    arts?: string;
     gpa?: string;
     major?: string;
 }

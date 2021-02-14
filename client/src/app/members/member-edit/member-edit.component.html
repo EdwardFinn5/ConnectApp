@@ -1,0 +1,108 @@
+<div class="row shadow" style="margin-left: 25px" *ngIf="member">
+    <div class="col-4">
+       <h2>Your Profile for Editing</h2> 
+    </div>
+    <div class="col-8">
+        <div class="alert alert-info" *ngIf="editForm.dirty">
+            <strong>Information: </strong>You have made changes. Any unsaved changes will be lost. 
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <img src="{{member.studentUrl || '.assets/user.png'}}" alt="{{member.firstName}}"
+                class="card-img-top img-studthumbnail">
+            <div class="card-body text-center">
+                
+                <div>
+                    <u><strong>-- {{member.firstName}} {{member.lastName}} --</strong></u>
+                </div>
+                <div>
+                    <strong>Class Year: </strong> {{member.classYear}}
+                </div>    
+                <div>
+                    <strong>Major: </strong> {{member.major}}
+                </div>    
+                <div>
+                    <strong>Hometown: </strong> {{member.hometown}}
+                </div>  
+                <div>
+                    <strong>College/University: </strong>
+                    <p>{{member.college}}</p>
+                </div>  
+                <hr>
+                <div>
+                    <strong>Profile Last Edited: </strong> {{member.created | date: "MM/dd/yyyy"}}
+                </div>
+                <div>
+                    <strong>Last Active: </strong> {{member.lastActive | date: "MM/dd/yyyy"}}
+                </div>   
+            </div>
+        
+            <div class="card-footer">
+                <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading='Card Info'>
+                <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+                    <label for="classYear"><strong>Class Year: </strong></label>
+                    <input [(ngModel)]="member.classYear" type="text" name="classYear" class="form-control mb-2">
+                    <label for="major"><strong>Major: </strong></label>
+                    <input [(ngModel)]="member.major" type="text" name="major" class="form-control mb-2">
+                    <label for="hometown"><strong>Hometown: </strong></label>
+                    <input [(ngModel)]="member.hometown" type="text" name="hometown" class="form-control mb-2">
+                    <label for="college"><strong>College: </strong></label>
+                    <input [(ngModel)]="member.college" type="text" name="college" class="form-control mb-2">
+                    <label for="created"><strong>Last edited: </strong></label>
+                    <input [(ngModel)]="member.created" type="text" name="created" class="form-control mb-2">
+                    <label for="lastActive"><strong>Last Active: </strong></label>
+                    <input [(ngModel)]="member.lastActive" type="text" name="lastActive" class="form-control mb-2">
+                 </form>           
+            </tab>
+
+            <tab heading='About {{member.firstName}}'>
+                <form>
+                    <h4>Academic Accomplishments</h4>
+                    <textarea [(ngModel)]="member.academicPlus" name="academicAccomplishments" rows="3" width="200px"></textarea>
+                    <h4 class="mt-2">Work Experiences</h4>
+                    <textarea [(ngModel)]="member.workPlus" name="workExperiences" rows="3"></textarea>
+                    <h4 class="mt-2">Describe your Dream Job</h4>
+                    <textarea [(ngModel)]="member.dreamJob"  name="dreamJob" rows="3"></textarea>
+                    <h4>Other Academic Details</h4>
+                    <div class="form-inline">
+                        <label for="gpa"><strong>GPA: </strong></label>
+                        <input [(ngModel)]="member.gpa" type="text" name="gpa" class="form-control mx-2">
+                        <label for="gradDate"><strong>Grad Date: </strong></label>
+                        <input [(ngModel)]="member.gradDate" type="text" name="gradDate" class="form-control mx-2">
+                    </div>    
+                </form>
+            </tab>
+            
+            <tab heading='Extra-Curricular'>
+                <form>
+                <h4>Involvement in Athletics </h4>
+                <textarea [(ngModel)]="member.athletics" name="athletics" rows="3"></textarea>
+                <h4>Involvement in the Arts</h4>
+                <textarea [(ngModel)]="member.arts" name="arts" rows="3"></textarea>
+                <h4>Clubs and Organizations</h4>
+                <textarea [(ngModel)]="member.extraCurricular" name="extraCurricular" rows="3"></textarea> 
+                <h4>Best way to contact {{member.firstName}}</h4>
+                <label for="bestEmail"><strong>Best Email: </strong></label>
+                <input [(ngModel)]="member.bestEmail" type="text" name="bestEmail" class="form-control mb-2">
+                <label for="bestPhone"><strong>Best Phone: </strong></label>
+                <input [(ngModel)]="member.bestPhone" type="text" name="bestPhone" class="form-control mb-2">
+                 </form>           
+            </tab>
+            <tab heading='Edit Photos'>
+                <p>Photo edit will go here</p>
+            </tab>  
+        </tabset>
+    </div>
+</div>
+
+  
+

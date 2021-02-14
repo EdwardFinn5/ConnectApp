@@ -2,8 +2,8 @@ namespace API.Entities
 {
     public class EmpOppDto
     {
-        public int EmpOppId { get; set; }
-        public bool IsActive { get; set; } = true;
+        public int Id { get; set; }
+        public bool IsActive { get; set; } 
         public string Position { get; set; }
         public string Company { get; set; }
         public string CompanyDescription { get; set; }

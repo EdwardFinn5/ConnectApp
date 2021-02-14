@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace API.Migrations
 {
-    public partial class newinitial : Migration
+    public partial class newinitial2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -195,6 +195,7 @@ namespace API.Migrations
                     BestEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BestPhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Athletics = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Arts = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ExtraCurricular = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     AcademicPlus = table.Column<string>(type: "nvarchar(max)", nullable: true),

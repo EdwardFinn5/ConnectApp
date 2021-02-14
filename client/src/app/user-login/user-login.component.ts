@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountService } from '../_services/account.service';
@@ -13,6 +13,7 @@ import { AccountService } from '../_services/account.service';
 export class UserLoginComponent implements OnInit {
   model: any = {}
   loggedIn: boolean;
+  @Output() cancelLogin = new EventEmitter();
 
   constructor(private accountService: AccountService,
               private router: Router) { }
@@ -34,5 +35,10 @@ export class UserLoginComponent implements OnInit {
 
   logout() {
     this.loggedIn = false;
+  }
+
+  cancel() {
+    console.log('cancelled');
+    this.cancelLogin.emit(false);
   }
 }

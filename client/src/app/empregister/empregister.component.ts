@@ -23,8 +23,7 @@ export class EmpRegisterComponent implements OnInit {
 
   empRegister() {
     //  this.cancelRegister.emit(false);
-      this.accountService.empRegister(this.model).subscribe(
-        (response) => {
+      this.accountService.empRegister(this.model).subscribe(response => {
           console.log(response);
           this.cancel();
           this.router.navigateByUrl('/memberlist');
@@ -37,7 +36,7 @@ export class EmpRegisterComponent implements OnInit {
     }
 
     cancel() {
-      console.log('cancelled')
+      console.log('cancelled in log')
       this.cancelEmpRegister.emit(false);
     }
 
