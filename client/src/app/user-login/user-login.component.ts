@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AccountService } from '../_services/account.service';
 // import { AlertifyService } from 'src/app/services/alertify.service';
 // import { AuthService } from 'src/app/services/auth.service';
@@ -16,7 +17,8 @@ export class UserLoginComponent implements OnInit {
   @Output() cancelLogin = new EventEmitter();
 
   constructor(private accountService: AccountService,
-              private router: Router) { }
+              private router: Router,
+              private toastr: ToastrService) { }
   
   ngOnInit(): void {
   
@@ -30,6 +32,7 @@ export class UserLoginComponent implements OnInit {
       this.router.navigateByUrl('/memberlist');
     }, error => {
       console.log(error);
+      this.toastr.error(error.error);
     })
   }
 
