@@ -13,55 +13,64 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    // [Authorize]
+    [Authorize]
     public class NewUsersController : BaseApiController
     {
-        private readonly DataContext _context;
-
-        public NewUsersController(DataContext context)
+        private readonly INewUserRepository _newUserRepository;
+        private readonly IMapper _mapper;
+        public NewUsersController(INewUserRepository newUserRepository,
+        
+        IMapper mapper)
         {
-            _context = context;
+            _mapper = mapper;
+            _newUserRepository = newUserRepository;
         }
 
-        [HttpGet]
-        // [AllowAnonymous]
-        public async Task<ActionResult<List<AppUser>>> NewGetUsers() 
-        {
-            var users = await _context.Users.ToListAsync(); 
+    [HttpGet]
+    // [AllowAnonymous]
+    public async Task<ActionResult<List<MemberDto>>> NewGetUsers()
+    {
+        var users = await _newUserRepository.GetNewMembersAsync();
 
-            return users;
-        }
-
-        [HttpGet("{id}")]
-        // [AllowAnonymous]
-        public async Task<ActionResult<AppUser>> NewGetUser(int id) 
-        {
-            return await _context.Users.FindAsync(id); 
-
-        }
+        return Ok(users);
     }
 
-        // [Authorize]
-        // [HttpGet("{username}")]
-        // public async Task<ActionResult<MemberDto>> GetUser(string username)
-        // {
-        //     var user = await _userRepository.GetMemberAsync(username);
+    [HttpGet("{username}")]
+    // [AllowAnonymous]
+    public async Task<ActionResult<MemberDto>> NewGetUser(string username)
+    {
+        return await _newUserRepository.GetNewMemberAsync(username);
+    }
 
-        //     return Ok(user);
-        // }
+    // [HttpGet("{id}")]
+    // // [AllowAnonymous]
+    // public async Task<ActionResult<AppUser>> NewGetUser(int id)
+    // {
+    //     return await _newUserRepository.GetNewUserByIdAsync(id);
+    // }
+}
 
-        // [HttpPut]
-        // public async Task<ActionResult> UpdateUser(MemberColUpdateDto memberColUpdateDto)
-        // {
-        //     var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        //     var user = await _userRepository.GetUserByUsernameAsync(username);
+    // [Authorize]
+    // [HttpGet("{username}")]
+    // public async Task<ActionResult<MemberDto>> GetUser(string username)
+    // {
+    //     var user = await _userRepository.GetMemberAsync(username);
 
-        //     _mapper.Map(memberColUpdateDto, user);
+    //     return Ok(user);
+    // }
 
-        //     _userRepository.Update(user);
+    // [HttpPut]
+    // public async Task<ActionResult> UpdateUser(MemberColUpdateDto memberColUpdateDto)
+    // {
+    //     var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+    //     var user = await _userRepository.GetUserByUsernameAsync(username);
 
-        //     if (await _userRepository.SaveAllAsync()) return NoContent();
+    //     _mapper.Map(memberColUpdateDto, user);
 
-        //     return BadRequest("Failed to update user");
-        // }
+    //     _userRepository.Update(user);
+
+    //     if (await _userRepository.SaveAllAsync()) return NoContent();
+
+    //     return BadRequest("Failed to update user");
+    // }
 }

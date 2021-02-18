@@ -88,7 +88,7 @@ namespace API.Helpers
 
             // CreateMap<MemberColUpdateDto, AppUser>();
 
-            CreateMap<AppUser, MemberColUpdateDto>().ReverseMap();
+            // CreateMap<AppUser, MemberColUpdateDto>().ReverseMap();
             //   .ForMember(dest => dest.Athletics, opt => opt
             //         .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Athletics)).ReverseMap();
             //    .ForMember(dest => dest.StudentUrl, opt => opt
