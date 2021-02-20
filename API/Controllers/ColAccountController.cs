@@ -37,7 +37,7 @@ namespace API.Controllers
                 ColUserName = registerHsDto.ColUserName.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerHsDto.Password)),
                 PasswordSalt = hmac.Key,
-                ColUserType = "ColLead"
+                ColUserType = registerHsDto.ColUserType
             };
 
             _context.ColUsers.Add(colUser);
@@ -67,7 +67,7 @@ namespace API.Controllers
                 ColUserName = registerCollegeDto.ColUserName.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerCollegeDto.Password)),
                 PasswordSalt = hmac.Key,
-                ColUserType = "College"
+                ColUserType = registerCollegeDto.ColUserType
             };
 
             _context.ColUsers.Add(colUser);

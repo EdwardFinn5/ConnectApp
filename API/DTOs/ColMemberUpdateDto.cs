@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace API.DTOs
 {
-    public class MemberColUpdateDto
+    public class ColMemberColUpdateDto
     {
         public string AcademicPlus { get; set; }
         public string WorkPlus { get; set; }

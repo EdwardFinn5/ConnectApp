@@ -45,12 +45,12 @@ namespace API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> UpdateUser(MemberColUpdateDto memberColUpdateDto)
+        public async Task<ActionResult> UpdateUser(MemberUpdateDto memberUpdateDto)
         {
             var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var user = await _userRepository.GetUserByUsernameAsync(username);
 
-            _mapper.Map(memberColUpdateDto, user);
+            _mapper.Map(memberUpdateDto, user);
 
             _userRepository.Update(user);
 

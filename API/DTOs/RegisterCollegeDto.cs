@@ -10,6 +10,6 @@ namespace API.DTOs
         [Required]
         [StringLength(8, MinimumLength = 4)]
         public string Password { get; set; }
-        public string AppUserType { get; set; } = "College";
+        public string ColUserType { get; set; } = "College";
     }
 }

@@ -95,7 +95,7 @@ namespace API.Helpers
             //         .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMain).StudentUrl)).ReverseMap();
 
              
-               
+            CreateMap<MemberUpdateDto, AppUser>();
             CreateMap<Photo, PhotoDto>();
             CreateMap<CollegePrep, CollegePrepDto>();
             CreateMap<EmpOpp, EmpOppDto>();

@@ -26,12 +26,6 @@ namespace API.Data
         return await _context.Users
             .Where(x => x.UserName == username)
             .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
-            // .Select(user => new MemberDto
-            // {
-            //     Id = user.Id,
-            //     Username = user.UserName,
-
-            // })
             .SingleOrDefaultAsync();
     }
 
@@ -41,6 +35,7 @@ namespace API.Data
             .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
             .ToListAsync();
     }
+
 
     public Task<AppUser> GetNewUserByIdAsync(int id)
     {

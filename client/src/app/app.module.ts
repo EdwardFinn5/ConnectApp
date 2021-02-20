@@ -42,6 +42,8 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { CompanyEditComponent } from './members/company-edit/company-edit.component';
 import { CollegeEditComponent } from './colmembers/college-edit/college-edit.component';
 import { HsEditComponent } from './colmembers/hs-edit/hs-edit.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -86,11 +88,13 @@ import { HsEditComponent } from './colmembers/hs-edit/hs-edit.component';
     BrowserAnimationsModule,
     FormsModule,
     SharedModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
-    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

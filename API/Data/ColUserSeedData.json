@@ -139,6 +139,7 @@
     "RoomAndBoard": 5000,
     "AverageAid": 20000,
     "NetPay": 10000,
+    "ColUserType": "College",
     "Active": true,
     "Created": "2019-02-12",
     "LastActive": "2020-06-22",

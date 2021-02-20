@@ -38,7 +38,8 @@ namespace API.Controllers
                 UserName = registerColPrepDto.UserName.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerColPrepDto.Password)),
                 PasswordSalt = hmac.Key,
-                AppUserType = "ColStudent"
+                // AppUserType = "ColStudent"
+                AppUserType = registerColPrepDto.AppUserType
             };
 
             _context.Users.Add(user);
@@ -67,7 +68,7 @@ namespace API.Controllers
                 UserName = registerEmpDto.UserName.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerEmpDto.Password)),
                 PasswordSalt = hmac.Key,
-                AppUserType = "EmpHr"
+                AppUserType = registerEmpDto.AppUserType
             };
 
             _context.Users.Add(user);
