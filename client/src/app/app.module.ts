@@ -44,6 +44,7 @@ import { CollegeEditComponent } from './colmembers/college-edit/college-edit.com
 import { HsEditComponent } from './colmembers/hs-edit/hs-edit.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     CompanyEditComponent,
     CollegeEditComponent,
     HsEditComponent,
+    PhotoEditorComponent,
   ],
   imports: [
     BrowserModule,

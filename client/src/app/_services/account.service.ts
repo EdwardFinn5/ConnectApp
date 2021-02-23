@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 import { User } from '../_models/user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AccountService {
   baseUrl = environment.apiUrl;
@@ -16,49 +16,53 @@ export class AccountService {
   currentUser$ = this.currentUserSource.asObservable();
   appUserType: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   login(model: any) {
     return this.http.post(this.baseUrl + 'account/login', model).pipe(
       map((response: User) => {
         const user = response;
         if (user) {
-          localStorage.setItem('user', JSON.stringify(user));
-          this.currentUserSource.next(user);
-          this.appUserType = user.appUserType;
+          this.setCurrentUser(user); //added this line when we moved the one below to setCurrentUser
+          // localStorage.setItem('user', JSON.stringify(user));
+          // this.currentUserSource.next(user);
+          // this.appUserType = user.appUserType;
         }
       })
-    )
+    );
   }
 
   register(model: any) {
     return this.http.post(this.baseUrl + 'account/registercolprep', model).pipe(
       map((user: User) => {
         if (user) {
-          localStorage.setItem('user', JSON.stringify(user));
-          this.currentUserSource.next(user);
-          this.appUserType = user.appUserType;
+          this.setCurrentUser(user); //added this line when we moved the one below to setCurrentUser
+          // localStorage.setItem('user', JSON.stringify(user));
+          // this.currentUserSource.next(user);
+          // this.appUserType = user.appUserType;
         }
       })
-    )
+    );
   }
 
   empRegister(model: any) {
     return this.http.post(this.baseUrl + 'account/registeremp', model).pipe(
       map((user: User) => {
         if (user) {
-          localStorage.setItem('user', JSON.stringify(user));
-          this.currentUserSource.next(user);
-          this.appUserType = user.appUserType;
+          this.setCurrentUser(user); //added this line when we moved the one below to setCurrentUser
+          // localStorage.setItem('user', JSON.stringify(user));
+          // this.currentUserSource.next(user);
+          // this.appUserType = user.appUserType;
         }
         return user;
       })
-    )
+    );
   }
 
   setCurrentUser(user: User) {
-  this.currentUserSource.next(user);
-  this.appUserType = user.appUserType;
+    localStorage.setItem('user', JSON.stringify(user)); //added this line here from above register methods
+    this.currentUserSource.next(user);
+    this.appUserType = user.appUserType;
   }
 
   logout() {

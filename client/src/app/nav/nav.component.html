@@ -58,28 +58,26 @@
 
     <div *ngIf="accountService.appUserType == 'EmpHr'">
       <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-        <div class="dropdown" style="font-size: 1.3em" dropdown>
-          <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.userName | titlecase}}</a>
-          <div class="dropdown-menu mt-3" *dropdownMenu>
+        <img src="{{user.logoUrl}}" alt="{{user.userName}}" class="logo">
+        <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.firstName | titlecase}}</a>
+          <div class="dropdown-menu mt-2" *dropdownMenu>
             <a routerLink='/company/edit' class="dropdown-item">Edit Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" (click)="logout()">Logout user</a>
             </div>
-          </div>
         </div>
       </div>
     
   
     <div *ngIf="accountService.appUserType == 'ColStudent'">
       <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-        <div class="dropdown" style="font-size: 1.3em" dropdown>
-          <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.userName | titlecase}}</a>
-          <div class="dropdown-menu mt-3" *dropdownMenu>
+        <img src="{{user.studentUrl}}" alt="{{user.userName}}">
+          <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.firstName | titlecase}}</a>
+          <div class="dropdown-menu mt-2" *dropdownMenu>
             <a routerLink='/member/edit' class="dropdown-item">Edit Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" (click)="logout()">Logout user</a>
             </div>
-          </div>
         </div>
       </div>
 
