@@ -54,9 +54,25 @@ export class PhotoEditorComponent implements OnInit {
     });
   }
 
+  setMainCompanyPhoto(photo: Photo) {
+    this.memberService.setMainPhoto(photo.id).subscribe(() => {
+      this.user.logoUrl = photo.logoUrl;
+      this.accountService.setCurrentUser(this.user);
+      this.member.logoUrl = photo.logoUrl;
+      this.member.photos.forEach((p) => {
+        if (p.isMainLogo) {
+          p.isMainLogo = false;
+        }
+        if (p.id === photo.id) {
+          p.isMainLogo = true;
+        }
+      });
+    });
+  }
+
   deletePhoto(photoId: number) {
     this.memberService.deletePhoto(photoId).subscribe(() => {
-      this.member.photos = this.member.photos.filter(x => x.id !== photoId);
+      this.member.photos = this.member.photos.filter((x) => x.id !== photoId);
     });
   }
 
@@ -77,8 +93,13 @@ export class PhotoEditorComponent implements OnInit {
 
     this.uploader.onSuccessItem = (item, response, status, headers) => {
       if (response) {
-        const photo = JSON.parse(response);
+        const photo: Photo = JSON.parse(response);
         this.member.photos.push(photo);
+        if (photo.isMain) {
+          this.user.studentUrl = photo.studentUrl;
+          this.member.studentUrl = photo.studentUrl;
+          this.accountService.setCurrentUser(this.user);
+        }
       }
     };
   }

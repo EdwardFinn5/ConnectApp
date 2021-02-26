@@ -48,7 +48,7 @@ namespace API.Helpers
                     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).PositionDescription))
                 .ForMember(dest => dest.ContactTitle, opt => opt
                 .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).ContactTitle));
-                    
+
 
             CreateMap<ColUser, ColMemberDto>()
                 .ForMember(dest => dest.ColUrl, opt => opt
@@ -94,7 +94,7 @@ namespace API.Helpers
             //    .ForMember(dest => dest.StudentUrl, opt => opt
             //         .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMain).StudentUrl)).ReverseMap();
 
-             
+
             CreateMap<MemberUpdateDto, AppUser>();
             CreateMap<Photo, PhotoDto>();
             CreateMap<CollegePrep, CollegePrepDto>();
@@ -102,6 +102,7 @@ namespace API.Helpers
             CreateMap<ColPhoto, ColPhotoDto>();
             CreateMap<College, CollegeDto>();
             CreateMap<HsPrep, HsPrepDto>();
+            CreateMap<RegisterColPrepDto, AppUser>();
         }
     }
 }

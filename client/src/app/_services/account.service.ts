@@ -54,7 +54,6 @@ export class AccountService {
           // this.currentUserSource.next(user);
           // this.appUserType = user.appUserType;
         }
-        return user;
       })
     );
   }

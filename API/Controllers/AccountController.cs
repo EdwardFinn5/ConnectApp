@@ -6,6 +6,7 @@ using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Interfaces;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,8 +16,12 @@ namespace API.Controllers
     {
         private readonly DataContext _context;
         private readonly ITokenService _tokenService;
-        public AccountController(DataContext context, ITokenService tokenService)
+        private readonly IMapper _mapper;
+        public AccountController(DataContext context,
+                                ITokenService tokenService,
+                                IMapper mapper)
         {
+            _mapper = mapper;
             _tokenService = tokenService;
             _context = context;
         }
@@ -30,18 +35,14 @@ namespace API.Controllers
                 return BadRequest("Username is taken");
             }
 
-
+            var user = _mapper.Map<AppUser>(registerColPrepDto);
 
             using var hmac = new HMACSHA512();
 
-            var user = new AppUser
-            {
-                UserName = registerColPrepDto.UserName.ToLower(),
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerColPrepDto.Password)),
-                PasswordSalt = hmac.Key,
-                // AppUserType = "ColStudent"
-                AppUserType = registerColPrepDto.AppUserType
-            };
+            user.UserName = registerColPrepDto.UserName.ToLower();
+            user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerColPrepDto.Password));
+            user.PasswordSalt = hmac.Key;
+            user.AppUserType = registerColPrepDto.AppUserType;
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();

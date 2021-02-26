@@ -9,31 +9,33 @@ import { AccountService } from '../_services/account.service';
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
-  styleUrls: ['./user-login.component.css']
+  styleUrls: ['./user-login.component.css'],
 })
 export class UserLoginComponent implements OnInit {
-  model: any = {}
+  model: any = {};
   loggedIn: boolean;
   @Output() cancelLogin = new EventEmitter();
 
-  constructor(private accountService: AccountService,
-              private router: Router,
-              private toastr: ToastrService) { }
-  
-  ngOnInit(): void {
-  
+  constructor(
+    private accountService: AccountService,
+    private router: Router,
+    private toastr: ToastrService
+  ) {}
 
-  }
+  ngOnInit(): void {}
 
   login() {
-    this.accountService.login(this.model).subscribe(response => {
-      console.log(response);
-      this.loggedIn = true;
-      this.router.navigateByUrl('/memberlist');
-    }, error => {
-      console.log(error);
-      this.toastr.error(error.error);
-    })
+    this.accountService.login(this.model).subscribe(
+      (response) => {
+        console.log(response);
+        this.loggedIn = true;
+        this.router.navigateByUrl('/memberlist');
+      },
+      (error) => {
+        console.log(error);
+        this.toastr.error(error.error);
+      }
+    );
   }
 
   logout() {
@@ -43,5 +45,6 @@ export class UserLoginComponent implements OnInit {
   cancel() {
     console.log('cancelled');
     this.cancelLogin.emit(false);
+    this.router.navigateByUrl('/');
   }
 }

@@ -10,7 +10,7 @@
 
     <div class="col-4">
         <div class="card">
-            <img src="{{member.studentUrl || '.assets/user.png'}}" alt="{{member.firstName}}"
+            <img src="{{member.studentUrl || '../../assets/images/coluser.PNG'}}" alt="{{member.firstName}}"
                 class="card-img-top img-studthumbnail">
             <div class="card-body text-center">
                 
@@ -99,7 +99,7 @@
                 <input [(ngModel)]="member.bestPhone" type="text" name="bestPhone" class="form-control mb-2">
                  </form>           
             </tab>
-            <tab heading='Edit Photos'>
+            <tab heading='Edit Photo'>
                <app-photo-editor [member]="member"></app-photo-editor>
             </tab>  
         </tabset>
