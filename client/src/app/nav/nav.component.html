@@ -58,7 +58,7 @@
 
     <div *ngIf="accountService.appUserType == 'EmpHr'">
       <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-        <img src="{{user.logoUrl}}" alt="{{user.userName}}" class="logo">
+        <img src="{{user.logoUrl || '../../assets/images/logo.PNG' }}" alt="{{user.userName}}" class="logo">
         <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.firstName | titlecase}}</a>
           <div class="dropdown-menu mt-2" *dropdownMenu>
             <a routerLink='/company/edit' class="dropdown-item">Edit Profile</a>

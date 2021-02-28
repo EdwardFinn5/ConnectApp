@@ -1,38 +1,62 @@
+<div class="row">
+    <div class="col-10 m-auto shadow-lg p-0 bg-white">
+        <div class="card m-auto">
+            <div class="card-header">
+                <h3>Sign Up</h3>
+            </div>
+            <div class="card-body">
 
-<h2>Login Form</h2> 
-  
-<form #EmpRegisterForm='ngForm'(ngSubmit)="empRegister()" autocomplete="off">
-    <div class="imgcontainer"> 
-        <img src= '../../assets/ICF_Logo.jpg' alt="Avatar" class="avatar"> 
-<!-- "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"  -->
+                <form [formGroup]='registerForm' (ngSubmit)="registerForm.valid && empRegister()" autocomplete="off">
 
-    </div> 
+                    <app-text-input [formControl]='registerForm.controls["username"]' 
+                        [label]='"Username"'>
+                    </app-text-input>
+                    <app-text-input [formControl]='registerForm.controls["firstName"]' 
+                        [label]='"First Name"'>
+                    </app-text-input>
+                    <app-text-input [formControl]='registerForm.controls["position"]' 
+                        [label]='"Position"'>
+                    </app-text-input>
 
-    <div class="form-group"> 
-        <label><b>Username</b></label> 
-        <input 
-            type="text" 
-            class="form-control"
-            placeholder="Enter Username" 
-            name="userName" 
-            [(ngModel)]="model.UserName"
-            > 
+                    <div class="form-group">
+                        <label class="control-label" style="margin-right: 10px;">Position Type: </label>
+                        <label class="radio-inline">
+                            <input type="radio" value='Fulltime' formControlName="positionType"> Fulltime
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value='Part-Time' formControlName="positionType" class="ml-2"> Part-Time
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value='Internship' formControlName="positionType" class="ml-2"> Internship
+                        </label>
+                    </div>  
+                    <app-date-input [formControl]='registerForm.controls["startDate"]' 
+                        [label]='"Start Date"'>
+                    </app-date-input>
 
-        <label><b>Password</b></label> 
-        <input 
-            type="password" 
-            class="form-control"
-            placeholder="Enter Password" 
-            name="password" 
-            [(ngModel)]="model.Password"
-            > 
+                    <app-text-input [formControl]='registerForm.controls["positionLocation"]'
+                        [label]='"Position Location"'>
+                    </app-text-input>
+                    <app-text-input [formControl]='registerForm.controls["company"]' 
+                        [label]='"Company"'>
+                    </app-text-input>
+                    <app-text-input [formControl]='registerForm.controls["password"]' [label]='"Password"'
+                        [type]='"password"'>
+                    </app-text-input>
+                    <app-text-input [formControl]='registerForm.controls["confirmPassword"]'
+                        [label]='"Confirm Password"' [type]='"password"'>
+                    </app-text-input>
 
-        <button type="submit" style="font-size: 1.5em">Sign up</button> 
-        <input type="checkbox" checked="checked"> Remember me 
-    </div> 
+                    <div class="row" *ngIf="validationErrors.length > 0">
+                        <ul class="text-danger">
+                            <li *ngFor="let error of validationErrors">
+                                {{error}}
+                            </li>
+                        </ul>
+                    </div>
 
-    <div class="container" style="background-color:#f1f1f1"> 
-        <button type="button" class="btn btn-secondary ml-1" (click)="cancel()">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span> 
-    </div> 
-</form> 
+                    <div class="form-group">
+                        <button [disabled]='!registerForm.valid' type="submit" class="btn btn-primary mr-3">Register</button>
+                        <button type="button" class="btn btn-secondary ml-1" (click)="cancel()">Cancel</button>
+                    </div>
+                </form>

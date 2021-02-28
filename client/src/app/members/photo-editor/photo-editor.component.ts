@@ -100,6 +100,11 @@ export class PhotoEditorComponent implements OnInit {
           this.member.studentUrl = photo.studentUrl;
           this.accountService.setCurrentUser(this.user);
         }
+        // if (photo.isMainLogo) {
+        //   this.user.logoUrl = photo.logoUrl;
+        //   this.member.logoUrl = photo.logoUrl;
+        //   this.accountService.setCurrentUser(this.user);
+        // }
       }
     };
   }

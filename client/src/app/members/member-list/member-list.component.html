@@ -1,13 +1,73 @@
-<!-- <div class="row">
-    <div  *ngFor="let member of members" class="col-2 ml-5">
-        <app-member-card [member]="member"></app-member-card>
-    </div>
-</div> -->
+<div class="text-center mt-1" *ngIf="userParams.appUserType == 'ColStudent'">
+    <h2>Total talent profiles: {{pagination?.totalItems}}</h2>
+</div>
+
+<div class="text-center mt-1" *ngIf="userParams.appUserType == 'EmpHr'">
+    <h2>Total position listings: {{pagination?.totalItems}}</h2>
+</div>
+
+<div class="container mt-3">
+    <form #form="ngForm" class="form-inline mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
+        <div class="form-group">
+            <label>Display: </label>
+            <select name="appUserType" style="width: 130px" [(ngModel)]="userParams.appUserType"  class="form-control ml-2">
+                <option *ngFor="let appUserType of appUserType" [value]="appUserType.value">
+                    {{appUserType.display}}
+                </option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary ml-1" type="submit">Apply Filter</button>
+        <button (click)="resetFilters()" class="btn btn-info ml-1" type="submit">Reset Filter</button>
+
+        <div class="column">
+            <div class="btn-group float-right ml-4">
+                <label class="mr-2">Order By:</label>
+                <button 
+                    type="button"
+                    class="btn btn-primary mr-2" 
+                    name='orderBy' 
+                    (click)="loadMembers()"
+                    btnRadio='created'
+                    [(ngModel)]="userParams.orderBy">Profile Created
+                </button>
+    
+                <button 
+                    type="button"
+                    class="btn btn-info" 
+                    name='orderBy' 
+                    (click)="loadMembers()"
+                    btnRadio='lastActive'
+                    [(ngModel)]="userParams.orderBy">Last Active
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="text-center mt-3 ">
+<label class="mr-2">Filter Major: </label>
+<input [(ngModel)]='major'>
+</div>
 
 <div class="container">
     <div class="row">
-                 <div *ngFor="let member of members$ | async" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
+                 <div *ngFor="let member of members |filter: major: 'major'" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
                 <app-member-card [member]="member"></app-member-card>
             </div> 
         </div>
 </div>
+
+<!-- <div class="d-flex justify-content-center mt-2" *ngIf="pagination">
+    <pagination 
+        [boundaryLinks]="true" 
+        [totalItems]="pagination.totalItems"
+        [itemsPerPage]="pagination.itemsPerPage"
+        [(ngModel)]="pagination.currentPage"
+        (pageChanged)="pageChanged($event)"
+        previousText="&lsaquo;" 
+        nextText="&rsaquo;" 
+        firstText="&laquo;" 
+        lastText="&raquo;">
+    </pagination>
+</div> -->

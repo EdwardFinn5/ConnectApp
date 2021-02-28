@@ -31,10 +31,10 @@
                     <hr>
                 </div> 
                 <div>
-                    <strong>Profile Last Edited: </strong> {{member.created | date: "MM/dd/yyyy"}}
+                    <strong>Profile Created: </strong> {{member.created | date: "MMM dd yyyy"}}
                 </div>
                 <div>
-                    <strong>Last Active: </strong> {{member.lastActive | date: "MM/dd/yyyy"}}
+                    <strong>Last Active: </strong> {{member.lastActive | timeago }}
                 </div>   
             </div>
 

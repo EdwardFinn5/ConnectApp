@@ -103,6 +103,8 @@ namespace API.Helpers
             CreateMap<College, CollegeDto>();
             CreateMap<HsPrep, HsPrepDto>();
             CreateMap<RegisterColPrepDto, AppUser>();
+            CreateMap<RegisterEmpDto, AppUser>();
+
         }
     }
 }

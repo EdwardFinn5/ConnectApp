@@ -64,8 +64,6 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    // console.log(this.registerForm.value);
-    //  this.cancelRegister.emit(false);
     this.accountService.register(this.registerForm.value).subscribe(
       (response) => {
         console.log(response);

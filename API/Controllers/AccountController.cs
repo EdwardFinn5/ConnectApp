@@ -64,15 +64,14 @@ namespace API.Controllers
                 return BadRequest("Username is taken");
             }
 
+            var user = _mapper.Map<AppUser>(registerEmpDto);
+
             using var hmac = new HMACSHA512();
 
-            var user = new AppUser
-            {
-                UserName = registerEmpDto.UserName.ToLower(),
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerEmpDto.Password)),
-                PasswordSalt = hmac.Key,
-                AppUserType = registerEmpDto.AppUserType
-            };
+            user.UserName = registerEmpDto.UserName.ToLower();
+            user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerEmpDto.Password));
+            user.PasswordSalt = hmac.Key;
+            user.AppUserType = registerEmpDto.AppUserType;
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
@@ -81,7 +80,8 @@ namespace API.Controllers
             {
                 UserName = user.UserName,
                 Token = _tokenService.CreateToken(user),
-                AppUserType = "EmpHr"
+                AppUserType = "EmpHr",
+                FirstName = user.FirstName
             };
         }
 
