@@ -45,18 +45,38 @@
     </form>
 </div>
 
+<ng-container *ngIf="userParams.appUserType == 'ColStudent'">
 <div class="text-center mt-3 ">
 <label class="mr-2">Filter Major: </label>
 <input [(ngModel)]='major'>
+<button type="button" class="btn btn-info ml-2" (click)="onMajorFilter()">Search</button>
 </div>
 
 <div class="container">
     <div class="row">
-                 <div *ngFor="let member of members |filter: major: 'major'" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
+                 <div *ngFor="let member of members |filter: searchMajor: 'major'" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
                 <app-member-card [member]="member"></app-member-card>
             </div> 
         </div>
 </div>
+</ng-container>
+
+<ng-container *ngIf="userParams.appUserType == 'EmpHr'">
+    <div class="text-center mt-3 ">
+    <label class="mr-2">Filter Position: </label>
+    <input [(ngModel)]='position'>
+    <button type="button" class="btn btn-info ml-2" (click)="onPositionFilter()">Search</button>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+                     <div *ngFor="let member of members |filter: searchPosition: 'position'" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
+                    <app-member-card [member]="member"></app-member-card>
+                </div> 
+            </div>
+    </div>
+    </ng-container>
+
 
 <!-- <div class="d-flex justify-content-center mt-2" *ngIf="pagination">
     <pagination 

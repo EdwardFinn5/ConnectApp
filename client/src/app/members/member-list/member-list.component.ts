@@ -19,6 +19,9 @@ export class MemberListComponent implements OnInit {
   userParams: UserParams;
   user: User;
   major = '';
+  position = '';
+  searchMajor = '';
+  searchPosition = '';
   appUserType = [
     { value: 'ColStudent', display: 'Talent' },
     { value: 'EmpHr', display: 'Jobs' },
@@ -57,5 +60,13 @@ export class MemberListComponent implements OnInit {
   pageChanged(event: any) {
     this.userParams.pageNumber = event.page;
     this.loadMembers();
+  }
+
+  onMajorFilter() {
+    this.searchMajor = this.major;
+  }
+
+  onPositionFilter() {
+    this.searchPosition = this.position;
   }
 }
