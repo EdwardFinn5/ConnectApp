@@ -47,14 +47,29 @@
 
 <ng-container *ngIf="userParams.appUserType == 'ColStudent'">
 <div class="text-center mt-3 ">
-<label class="mr-2">Filter Major: </label>
-<input [(ngModel)]='major'>
-<button type="button" class="btn btn-info ml-2" (click)="onMajorFilter()">Search</button>
+<label class="mr-2">Filter by major: </label>
+<select [(ngModel)]='searchMajors'>
+    <option value="Accounting">Accounting</option>
+    <option value="Art">Art</option>
+</select>
+
+<!-- <input [(ngModel)]='major'> -->
+<!-- <button type="button" class="btn btn-primary ml-2" (click)="onMajorFilter()">Search</button> -->
+<button type="button" class="btn btn-info ml-2 mr-2" (click)="onMajorFilterClear()">Clear</button>
+
+<label class="mr-2">Filter by hometown: </label>
+<select [(ngModel)]='searchHometowns'>
+    <option value="Cedar Rapids">Cedar Rapids</option>
+    <option value="Des Moines">Des Moines</option>
+</select>
+
+<!-- <button type="button" class="btn btn-primary ml-2" (click)="onHometownFilter()">Search</button> -->
+<button type="button" class="btn btn-info ml-2" (click)="onHometownFilterClear()">Clear</button>
 </div>
 
 <div class="container">
     <div class="row">
-                 <div *ngFor="let member of members |filter: searchMajor: 'major'" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
+                 <div *ngFor="let member of members |filter: searchMajors: 'major' | filter: searchHometowns: 'hometown'" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
                 <app-member-card [member]="member"></app-member-card>
             </div> 
         </div>
@@ -63,14 +78,21 @@
 
 <ng-container *ngIf="userParams.appUserType == 'EmpHr'">
     <div class="text-center mt-3 ">
-    <label class="mr-2">Filter Position: </label>
-    <input [(ngModel)]='position'>
-    <button type="button" class="btn btn-info ml-2" (click)="onPositionFilter()">Search</button>
+    <label class="mr-2">Filter by position: </label>
+    <select [(ngModel)]='searchPositions'>
+        <option value="Accountant">Accountant</option>
+        <option value="Finance">Finance</option>
+        <option value="Management">Management</option>
+    </select>
+    
+    
+    <!-- <button type="button" class="btn btn-primary ml-2" (click)="onPositionFilter()">Search</button> -->
+    <button type="button" class="btn btn-info ml-2" (click)="onPositionFilterClear()">Clear</button>
     </div>
     
     <div class="container">
         <div class="row">
-                     <div *ngFor="let member of members |filter: searchPosition: 'position'" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
+                     <div *ngFor="let member of members |filter: searchPositions: 'position'" class="shadow-sm col-lg-4 col-md-6 p-3 my-1">
                     <app-member-card [member]="member"></app-member-card>
                 </div> 
             </div>

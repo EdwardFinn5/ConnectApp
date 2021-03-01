@@ -20,8 +20,10 @@ export class MemberListComponent implements OnInit {
   user: User;
   major = '';
   position = '';
-  searchMajor = '';
-  searchPosition = '';
+  hometown = '';
+  searchMajors = '';
+  searchHometowns = '';
+  searchPositions = '';
   appUserType = [
     { value: 'ColStudent', display: 'Talent' },
     { value: 'EmpHr', display: 'Jobs' },
@@ -63,10 +65,29 @@ export class MemberListComponent implements OnInit {
   }
 
   onMajorFilter() {
-    this.searchMajor = this.major;
+    this.searchMajors = this.major;
+  }
+
+  onHometownFilter() {
+    this.searchHometowns = this.hometown;
   }
 
   onPositionFilter() {
-    this.searchPosition = this.position;
+    this.searchPositions = this.position;
+  }
+
+  onMajorFilterClear() {
+    this.searchMajors = '';
+    this.major = '';
+  }
+
+  onHometownFilterClear() {
+    this.searchHometowns = '';
+    this.hometown = '';
+  }
+
+  onPositionFilterClear() {
+    this.searchPositions = '';
+    this.position = '';
   }
 }
