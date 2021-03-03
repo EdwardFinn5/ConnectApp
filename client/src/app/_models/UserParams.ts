@@ -5,7 +5,7 @@ export class UserParams {
   major = 'Accounting';
   position = 'Finance';
   pageNumber = 1;
-  pageSize = 50;
+  pageSize = 100;
   orderBy = 'lastActive';
 
   constructor(user: User) {

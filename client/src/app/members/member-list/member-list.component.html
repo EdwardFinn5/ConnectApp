@@ -42,7 +42,24 @@
                 </button>
             </div>
         </div>
+    
     </form>
+       
+       
+        <!-- <div class="d-flex justify-content-center mt-2" *ngIf="pagination">
+            <pagination 
+                [boundaryLinks]="true" 
+                [totalItems]="pagination.totalItems"
+                [itemsPerPage]="pagination.itemsPerPage"
+                [(ngModel)]="pagination.currentPage"
+                (pageChanged)="pageChanged($event)"
+                previousText="&lsaquo;" 
+                nextText="&rsaquo;" 
+                firstText="&laquo;" 
+                lastText="&raquo;">
+            </pagination>
+        </div> -->
+    
 </div>
 
 <ng-container *ngIf="userParams.appUserType == 'ColStudent'">
@@ -100,7 +117,7 @@
     </ng-container>
 
 
-<!-- <div class="d-flex justify-content-center mt-2" *ngIf="pagination">
+<div class="d-flex justify-content-center mt-2" *ngIf="pagination">
     <pagination 
         [boundaryLinks]="true" 
         [totalItems]="pagination.totalItems"
@@ -112,4 +129,10 @@
         firstText="&laquo;" 
         lastText="&raquo;">
     </pagination>
-</div> -->
+  
+</div>
+
+<!-- previousText="&lsaquo;" 
+        nextText="&rsaquo;" 
+        firstText="&laquo;" 
+        lastText="&raquo;"> -->
