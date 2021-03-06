@@ -32,9 +32,13 @@ namespace API.Entities
         public DateTime LastActive { get; set; } = DateTime.Now;
         public string AppUserType { get; set; }
         public bool Active { get; set; } = true;
-        public IList<CollegePrep> CollegePreps { get; set; }
-        public IList<EmpOpp> EmpOpps { get; set; }
+        public ICollection<CollegePrep> CollegePreps { get; set; }
+        public ICollection<EmpOpp> EmpOpps { get; set; }
         // [ForeignKey("UserFk")]
-        public IList<Photo> Photos { get; set; }
+        public ICollection<Photo> Photos { get; set; }
+        public ICollection<UserLike> LikedByUsers { get; set; }
+        public ICollection<UserLike> LikedUsers { get; set; }
+
+
     }
 }

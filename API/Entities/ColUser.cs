@@ -31,7 +31,7 @@ namespace API.Entities
         public string ColUserType { get; set; }
         public bool Active { get; set; } = true;
         public ICollection<ColPhoto> ColPhotos { get; set; }
-        public IList<College> Colleges { get; set; }
-        public IList<HsPrep> HsPreps { get; set; }
+        public ICollection<College> Colleges { get; set; }
+        public ICollection<HsPrep> HsPreps { get; set; }
     }
 }

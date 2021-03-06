@@ -22,10 +22,12 @@ namespace API.Data
         public DbSet<Photo> Photos { get; set; }
         public DbSet<ColPhoto> ColPhotos { get; set; }
         public DbSet<FactFeature> FactFeatures { get; set; }
-
+        public DbSet<UserLike> Likes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<CollegeMajor>()
                 .HasKey(cm => new { cm.CollegeId, cm.MajorId });
 
@@ -51,6 +53,21 @@ namespace API.Data
                 .HasOne(ff => ff.College)
                 .WithMany(c => c.FactFeatures)
                 .HasForeignKey(ff => ff.CollegeId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<UserLike>()
+                .HasKey(k => new { k.SourceUserId, k.LikedUserId });
+
+            modelBuilder.Entity<UserLike>()
+                .HasOne(s => s.SourceUser)
+                .WithMany(l => l.LikedUsers)
+                .HasForeignKey(s => s.SourceUserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<UserLike>()
+                .HasOne(s => s.LikedUser)
+                .WithMany(l => l.LikedByUsers)
+                .HasForeignKey(s => s.LikedUserId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }
