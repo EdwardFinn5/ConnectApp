@@ -48,6 +48,7 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
 import { FilterPipe } from './Pipes/filter.pipe';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +89,7 @@ import { FilterPipe } from './Pipes/filter.pipe';
     TextInputComponent,
     DateInputComponent,
     FilterPipe,
+    MemberMessagesComponent,
   ],
   imports: [
     BrowserModule,

@@ -62,10 +62,12 @@ export class MemberListComponent implements OnInit {
 
   onMajorFilter() {
     this.searchMajors = this.major;
+    console.log(this.major);
   }
 
   onHometownFilter() {
     this.searchHometowns = this.hometown;
+    console.log(this.hometown);
   }
 
   onPositionFilter() {

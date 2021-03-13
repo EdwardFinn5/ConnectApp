@@ -1,7 +1,8 @@
 <!-- <p style="margin-left: 50px">lists works!</p> -->
+<div class="container">
 
 <ng-container *ngIf="user.appUserType == 'EmpHr'">
-    <div class="text-centered mt-3" style="margin-left: 100px">
+    <div class="text-centered mt-3">
         <h2>{{predicate === 'liked' ? 'Students who might be good fit for our company' : 'Students who have indicated our Company might be a good fit' }}</h2>
     </div>
 
@@ -16,7 +17,7 @@
                 Students who might be a good fit for our company
                 </button>
 
-                <button class="btn btn-info ml-2" 
+                <button class="btn btn-success ml-2" 
                 btnRadio="likedBy" 
                 [(ngModel)]="predicate" 
                 (click)="loadLikes()">
@@ -35,7 +36,7 @@
 </ng-container>
 
 <ng-container *ngIf="user.appUserType == 'ColStudent'">
-    <div class="text-centered mt-3" style="margin-left: 100px">
+    <div class="text-centered mt-3">
         <h2>{{predicate === 'liked' ? 'Companies that might be good fit for me' : 'Companies that have indicated I might be a good fit' }}</h2>
     </div>
 
@@ -50,7 +51,7 @@
                 Companies where I believe I would be a good fit
                 </button>
 
-                <button class="btn btn-info ml-2" 
+                <button class="btn btn-success ml-2" 
                 btnRadio="likedBy" 
                 [(ngModel)]="predicate" 
                 (click)="loadLikes()">
@@ -80,6 +81,8 @@
         firstText="&laquo;" 
         lastText="&raquo;">
     </pagination>
+</div>
+
 </div>
 
 
