@@ -21,8 +21,8 @@
             </div>
             <div class="card-footer">
                 <div class="btn-group d-flex">
-                    <button class="btn btn-primary">Possible Fit</button>
-                    <button class="btn btn-success">Message</button>
+                    <button class="btn btn-primary mr-2">Possible Fit</button>
+                    <button (click)="selectTab(2)" class="btn btn-success">Message</button>
                 </div>
             </div>
         </div>
@@ -44,8 +44,8 @@
             </div>
             <div class="card-footer">
                 <div class="btn-group d-flex">
-                    <button class="btn btn-primary">Possible Fit</button>
-                    <button class="btn btn-success">Message</button>
+                    <button class="btn btn-primary mr-2">Possible Fit</button>
+                    <button (click)="selectTab(2)" class="btn btn-success">Message</button>
                 </div>
             </div>
         </div>
@@ -53,8 +53,8 @@
 
 
     <div class="col-8" *ngIf="member.appUserType == 'ColStudent'" >
-        <tabset class="member-tabset">
-            <tab heading='About {{member.firstName}}'>
+        <tabset class="member-tabset" #memberTabs>
+            <tab heading='About {{member.firstName}}' (selectTab)="onTabActivated($event)">
                 <h4>Academic Accomplishments</h4>
                 <p>{{member.academicPlus}}<br>
                 <strong>GPA: </strong>{{member.gpa}}<br>
@@ -67,7 +67,7 @@
                 <h4>Resume</h4>
                 <button>Resume</button>
             </tab>
-            <tab heading='Extra-Curricular'>
+            <tab heading='Extra-Curricular' (selectTab)="onTabActivated($event)">
                 <h4>Involement in Athletics </h4>
                 <p>Varsity basketball</p>
                 <h4>Involvement in the Arts</h4>
@@ -82,8 +82,8 @@
                 <p *ngIf="member.bestPhone">Phone:
                         {{member.bestPhone}}</p>
             </tab>
-            <tab heading='Messages'>
-                <app-member-messages [username]="member.username" ></app-member-messages>
+            <tab heading='Messages' (selectTab)="onTabActivated($event)">
+                <app-member-messages [messages]="messages" ></app-member-messages>
             </tab>
 
             <!-- <tab heading='Photos'>
@@ -95,8 +95,8 @@
     </div>
 
     <div class="col-8" *ngIf="member.appUserType == 'EmpHr'" >
-        <tabset class="member-tabset">
-            <tab heading='Position Details'>
+        <tabset class="member-tabset" #memberTabs>
+            <tab heading='Position Details' (selectTab)="onTabActivated($event)">
                 <h4>{{member.position}} {{member.positionType}}</h4>
                 <br>
                 <h4>Position Description</h4>
@@ -108,7 +108,7 @@
                 <h4>About {{member.company}}</h4>
                 <p>{{member.companyDescription}}</p>
             </tab>
-            <tab heading='Application Details'>
+            <tab heading='Application Details' (selectTab)="onTabActivated($event)">
                 <h4>How to Apply</h4>
                 <p>{{member.howToApply}}</p>
                 <p *ngIf="member.applyEmail">Click on link to apply:
@@ -126,8 +126,8 @@
                 
             </tab>
            
-            <tab heading='Messages'>
-                <app-member-messages [username]="member.username" ></app-member-messages>
+            <tab heading='Messages' (selectTab)="onTabActivated($event)">
+                <app-member-messages [messages]="messages" ></app-member-messages>
             </tab>
 
             <!-- <tab heading='Photos'>

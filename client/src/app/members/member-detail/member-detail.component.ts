@@ -1,8 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
+import {
+  NgxGalleryAnimation,
+  NgxGalleryImage,
+  NgxGalleryOptions,
+} from '@kolkov/ngx-gallery';
+import { TabDirective, TabsetComponent } from 'ngx-bootstrap/tabs';
 import { Member } from 'src/app/_models/member';
+import { Message } from 'src/app/_models/message';
 import { MembersService } from 'src/app/_services/members.service';
+import { MessageService } from 'src/app/_services/message.service';
 
 @Component({
   selector: 'app-member-detail',
@@ -10,15 +17,19 @@ import { MembersService } from 'src/app/_services/members.service';
   styleUrls: ['./member-detail.component.css'],
 })
 export class MemberDetailComponent implements OnInit {
+  @ViewChild('memberTabs') memberTabs: TabsetComponent;
   member: Member;
   studentGalleryOptions: NgxGalleryOptions[];
   studentGalleryImages: NgxGalleryImage[];
   companyGalleryOptions: NgxGalleryOptions[];
   companyGalleryImages: NgxGalleryImage[];
+  activeTab: TabDirective;
+  messages: Message[] = [];
 
   constructor(
     private memberService: MembersService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
@@ -31,9 +42,9 @@ export class MemberDetailComponent implements OnInit {
         imagePercent: 100,
         thumbnailsColumns: 4,
         imageAnimation: NgxGalleryAnimation.Slide,
-        preview: false
-      }
-    ]
+        preview: false,
+      },
+    ];
 
     this.companyGalleryOptions = [
       {
@@ -42,9 +53,9 @@ export class MemberDetailComponent implements OnInit {
         imagePercent: 100,
         thumbnailsColumns: 4,
         imageAnimation: NgxGalleryAnimation.Slide,
-        preview: false
-      }
-    ]    
+        preview: false,
+      },
+    ];
   }
 
   getStudentImages(): NgxGalleryImage[] {
@@ -53,8 +64,8 @@ export class MemberDetailComponent implements OnInit {
       colStudImageUrls.push({
         small: photo?.studentUrl,
         medium: photo?.studentUrl,
-        big: photo?.studentUrl
-      })
+        big: photo?.studentUrl,
+      });
     }
     return colStudImageUrls;
   }
@@ -65,18 +76,38 @@ export class MemberDetailComponent implements OnInit {
       logoUrls.push({
         small: photo?.logoUrl,
         medium: photo?.logoUrl,
-        big: photo?.logoUrl
-      })
+        big: photo?.logoUrl,
+      });
     }
     return logoUrls;
   }
 
-
   loadMember() {
-    this.memberService.getMember(this.route.snapshot.paramMap.get('username')).subscribe(member => {
-      this.member = member;
-      this.studentGalleryImages = this.getStudentImages();
-      this.companyGalleryImages = this.getCompanyImages();
-    });
+    this.memberService
+      .getMember(this.route.snapshot.paramMap.get('username'))
+      .subscribe((member) => {
+        this.member = member;
+        this.studentGalleryImages = this.getStudentImages();
+        this.companyGalleryImages = this.getCompanyImages();
+      });
+  }
+
+  loadMessages() {
+    this.messageService
+      .getMessageThread(this.member.username)
+      .subscribe((messages) => {
+        this.messages = messages;
+      });
+  }
+
+  selectTab(tabId: number) {
+    this.memberTabs.tabs[tabId].active = true;
+  }
+
+  onTabActivated(data: TabDirective) {
+    this.activeTab = data;
+    if (this.activeTab.heading === 'Messages' && this.messages.length === 0) {
+      this.loadMessages();
+    }
   }
 }
