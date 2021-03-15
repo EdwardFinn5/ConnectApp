@@ -49,6 +49,7 @@ import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { CompmemberDetailComponent } from './members/compmember-detail/compmember-detail.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { MemberMessagesComponent } from './members/member-messages/member-messag
     DateInputComponent,
     FilterPipe,
     MemberMessagesComponent,
+    CompmemberDetailComponent,
   ],
   imports: [
     BrowserModule,

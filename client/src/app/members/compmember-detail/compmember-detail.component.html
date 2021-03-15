@@ -3,7 +3,7 @@
         
         <!-- <div class="card" *ngIf="member.appUserType == 'ColStudent'"> -->
 
-            <div class="card">
+            <!-- <div class="card">
 
             <img src="{{member.studentUrl || '.assets/user.png'}}" alt="{{member.firstName}}"
                 class="card-img-top img-studthumbnail">
@@ -29,9 +29,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
-        <!-- <div class="card" *ngIf="member.appUserType == 'EmpHr'">
+        <!-- <div class="card" *ngIf="member.appUserType == 'EmpHr'"> -->
+           
+            <div class="card">
+           
             <img src="{{member.logoUrl || '../../assets/images/logo.PNG' }}" alt="{{member.company}}"
                 class="card-img-top img-studthumbnail">
             <div class="card-body">
@@ -53,12 +56,12 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <!-- <div class="col-8" *ngIf="member.appUserType == 'ColStudent'" > -->
 
-        <div class="col-8" >
+        <!-- <div class="col-8" >
 
         <tabset class="member-tabset" #memberTabs>
             <tab heading='About {{member.firstName}}' (selectTab)="onTabActivated($event)">
@@ -90,18 +93,21 @@
                         {{member.bestPhone}}</p>
             </tab>
             <tab heading='Messages' (selectTab)="onTabActivated($event)">
-                <app-member-messages [messages]="messages" [username]="member.username"></app-member-messages>
-            </tab>
+                <app-member-messages [messages]="messages" ></app-member-messages>
+            </tab> -->
 
             <!-- <tab heading='Photos'>
                 <ngx-gallery [options]= "studentGalleryOptions" [images]="studentGalleryImages" 
                     style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
             </tab> -->
 
-        </tabset>
-    </div>
-<!-- 
-    <div class="col-8" *ngIf="member.appUserType == 'EmpHr'" >
+        <!-- </tabset>
+    </div> -->
+
+    <!-- <div class="col-8" *ngIf="member.appUserType == 'EmpHr'" > -->
+        
+        <div class="col-8" >
+        
         <tabset class="member-tabset" #memberTabs>
             <tab heading='Position Details' (selectTab)="onTabActivated($event)">
                 <h4>{{member.position}} {{member.positionType}}</h4>
@@ -134,9 +140,10 @@
             </tab>
            
             <tab heading='Messages' (selectTab)="onTabActivated($event)">
-                <app-member-messages [messages]="messages" ></app-member-messages>
+                <app-member-messages [messages]="messages" [username]="member.username"></app-member-messages>
             </tab>
 
 
         </tabset>
-    </div> -->
+    </div>
+

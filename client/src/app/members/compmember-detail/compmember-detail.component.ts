@@ -12,15 +12,13 @@ import { MembersService } from 'src/app/_services/members.service';
 import { MessageService } from 'src/app/_services/message.service';
 
 @Component({
-  selector: 'app-member-detail',
-  templateUrl: './member-detail.component.html',
-  styleUrls: ['./member-detail.component.css'],
+  selector: 'app-compmember-detail',
+  templateUrl: './compmember-detail.component.html',
+  styleUrls: ['./compmember-detail.component.css'],
 })
-export class MemberDetailComponent implements OnInit {
+export class CompmemberDetailComponent implements OnInit {
   @ViewChild('memberTabs', { static: true }) memberTabs: TabsetComponent;
   member: Member;
-  studentGalleryOptions: NgxGalleryOptions[];
-  studentGalleryImages: NgxGalleryImage[];
   companyGalleryOptions: NgxGalleryOptions[];
   companyGalleryImages: NgxGalleryImage[];
   activeTab: TabDirective;
@@ -41,19 +39,6 @@ export class MemberDetailComponent implements OnInit {
       params.tab ? this.selectTab(params.tab) : this.selectTab(0);
     });
 
-    this.studentGalleryOptions = [
-      {
-        width: '500px',
-        height: '500px',
-        imagePercent: 100,
-        thumbnailsColumns: 4,
-        imageAnimation: NgxGalleryAnimation.Slide,
-        preview: false,
-      },
-    ];
-
-    this.studentGalleryImages = this.getStudentImages();
-
     this.companyGalleryOptions = [
       {
         width: '500px',
@@ -66,18 +51,6 @@ export class MemberDetailComponent implements OnInit {
     ];
 
     this.companyGalleryImages = this.getCompanyImages();
-  }
-
-  getStudentImages(): NgxGalleryImage[] {
-    const colStudImageUrls = [];
-    for (const photo of this.member.photos) {
-      colStudImageUrls.push({
-        small: photo?.studentUrl,
-        medium: photo?.studentUrl,
-        big: photo?.studentUrl,
-      });
-    }
-    return colStudImageUrls;
   }
 
   getCompanyImages(): NgxGalleryImage[] {

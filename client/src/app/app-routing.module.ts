@@ -6,6 +6,7 @@ import { TalentComponent } from './talent/talent.component';
 import { ListsComponent } from './lists/lists.component';
 import { ColListsComponent } from './collists/collists.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { CompmemberDetailComponent } from './members/compmember-detail/compmember-detail.component';
 import { ColMemberDetailComponent } from './colmembers/colmember-detail/colmember-detail.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { ColMemberListComponent } from './colmembers/colmember-list/colmember-list.component';
@@ -35,8 +36,7 @@ import { PreventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes.gu
 import { PreventUnsavedCollegeChangesGuard } from './_guards/prevent-unsaved-college-changes.guard';
 import { PreventUnsavedCompanyChangesGuard } from './_guards/prevent-unsaved-company-changes.guard';
 import { PreventUnsavedHsChangesGuard } from './_guards/prevent-unsaved-hs-changes.guard';
-
-
+import { MemberDetailedResolver } from './_resolvers/member-detailed.resolver';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -53,25 +53,53 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'memberlist', component: MemberListComponent },
-      { path: 'members/:username', component: MemberDetailComponent},
-      { path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
-      { path: 'company/edit', component: CompanyEditComponent,canDeactivate: [PreventUnsavedCompanyChangesGuard]}, 
+      {
+        path: 'members/:username',
+        component: MemberDetailComponent,
+        resolve: { member: MemberDetailedResolver },
+      },
+      {
+        path: 'compmembers/:username',
+        component: CompmemberDetailComponent,
+        resolve: { member: MemberDetailedResolver },
+      },
+      {
+        path: 'member/edit',
+        component: MemberEditComponent,
+        canDeactivate: [PreventUnsavedChangesGuard],
+      },
+      {
+        path: 'company/edit',
+        component: CompanyEditComponent,
+        canDeactivate: [PreventUnsavedCompanyChangesGuard],
+      },
       { path: 'lists', component: ListsComponent },
       { path: 'messages', component: MessagesComponent },
-    ]
+    ],
   },
   {
     path: '',
     runGuardsAndResolvers: 'always',
     canActivate: [ColAuthGuard],
     children: [
-      { path: 'colmemberlist', component: ColMemberListComponent }, 
-      { path: 'colmemberdetail/:colusername', component: ColMemberDetailComponent },
-      { path: 'college/edit', component: CollegeEditComponent, canDeactivate: [PreventUnsavedCollegeChangesGuard]},
-      { path: 'hs/edit', component: HsEditComponent,canDeactivate: [PreventUnsavedHsChangesGuard]},
+      { path: 'colmemberlist', component: ColMemberListComponent },
+      {
+        path: 'colmemberdetail/:colusername',
+        component: ColMemberDetailComponent,
+      },
+      {
+        path: 'college/edit',
+        component: CollegeEditComponent,
+        canDeactivate: [PreventUnsavedCollegeChangesGuard],
+      },
+      {
+        path: 'hs/edit',
+        component: HsEditComponent,
+        canDeactivate: [PreventUnsavedHsChangesGuard],
+      },
       { path: 'collists', component: ColListsComponent },
       { path: 'colmessages', component: ColMessagesComponent },
-    ]
+    ],
   },
   { path: 'userlogin', component: UserLoginComponent },
   { path: 'coluserlogin', component: ColUserLoginComponent },
