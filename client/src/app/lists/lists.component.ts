@@ -30,7 +30,7 @@ export class ListsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.user.appUserType);
-    console.log(this.user.userName);
+    console.log(this.user.username);
     this.loadLikes();
   }
 

@@ -37,6 +37,8 @@ import { PreventUnsavedCollegeChangesGuard } from './_guards/prevent-unsaved-col
 import { PreventUnsavedCompanyChangesGuard } from './_guards/prevent-unsaved-company-changes.guard';
 import { PreventUnsavedHsChangesGuard } from './_guards/prevent-unsaved-hs-changes.guard';
 import { MemberDetailedResolver } from './_resolvers/member-detailed.resolver';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { AdminGuard } from './_guards/admin.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -75,6 +77,11 @@ const routes: Routes = [
       },
       { path: 'lists', component: ListsComponent },
       { path: 'messages', component: MessagesComponent },
+      {
+        path: 'admin',
+        component: AdminPanelComponent,
+        canActivate: [AdminGuard],
+      },
     ],
   },
   {

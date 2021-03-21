@@ -10,34 +10,38 @@ import { MembersService } from 'src/app/_services/members.service';
 @Component({
   selector: 'app-company-edit',
   templateUrl: './company-edit.component.html',
-  styleUrls: ['./company-edit.component.css']
+  styleUrls: ['./company-edit.component.css'],
 })
 export class CompanyEditComponent implements OnInit {
   @ViewChild('editForm') editForm: NgForm;
   member: Member;
   user: User;
-  @HostListener('window:beforeunload', ['$event']) unloadNotification($event: any) {
+  @HostListener('window:beforeunload', ['$event']) unloadNotification(
+    $event: any
+  ) {
     if (this.editForm.dirty) {
       $event.returnValue = true;
     }
   }
 
-  constructor(private accountService: AccountService,
-              private memberService: MembersService,
-              private toastr: ToastrService) {
-      this.accountService.currentUser$.pipe(take(1))
-        .subscribe(user => this.user = user);
-     }
+  constructor(
+    private accountService: AccountService,
+    private memberService: MembersService,
+    private toastr: ToastrService
+  ) {
+    this.accountService.currentUser$
+      .pipe(take(1))
+      .subscribe((user) => (this.user = user));
+  }
 
   ngOnInit(): void {
     this.loadMember();
   }
 
   loadMember() {
-    this.memberService.getMember(this.user.userName)
-      .subscribe(member => {
-        this.member = member;
-      })
+    this.memberService.getMember(this.user.username).subscribe((member) => {
+      this.member = member;
+    });
   }
   updateMember() {
     console.log(this.member);

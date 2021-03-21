@@ -53,16 +53,27 @@
             <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/messages'>Messages</a>
           </div>
         </li>
+        <li *appHasRole='["Admin", "Moderator"]' class="nav-item">
+          <a class="nav-link" routerLink='/admin' routerLinkAcive='active'>Admin</a>
+        </li>
       </ul>
     
-
-
-
-
+      <div *ngIf="accountService.appUserType == 'Admin'">
+        <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
+          <img src="{{user.logoUrl || '../../assets/ICF_Logo.jpg' }}" alt="{{user.userName}}" class="logo">
+          <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.userName | titlecase}}</a>
+            <div class="dropdown-menu mt-2" *dropdownMenu>
+              <a routerLink='/company/edit' class="dropdown-item">Edit Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="logout()">Logout user</a>
+              </div>
+          </div>
+        </div>
+  
     <div *ngIf="accountService.appUserType == 'EmpHr'">
       <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
         <img src="{{user.logoUrl || '../../assets/images/logo.PNG' }}" alt="{{user.userName}}" class="logo">
-        <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.firstName | titlecase}}</a>
+        <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.firstName || user.username | titlecase}}</a>
           <div class="dropdown-menu mt-2" *dropdownMenu>
             <a routerLink='/company/edit' class="dropdown-item">Edit Profile</a>
             <div class="dropdown-divider"></div>
@@ -75,7 +86,7 @@
     <div *ngIf="accountService.appUserType == 'ColStudent'">
       <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
         <img src="{{user.studentUrl || '../../assets/images/coluser.PNG'}}" alt="{{user.userName}}">
-          <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.firstName | titlecase}}</a>
+          <a class="dropdown-toggle text-light ml-2" dropdownToggle>Welcome {{user.firstName || user.username | titlecase}}</a>
           <div class="dropdown-menu mt-2" *dropdownMenu>
             <a routerLink='/member/edit' class="dropdown-item">Edit Profile</a>
             <div class="dropdown-divider"></div>

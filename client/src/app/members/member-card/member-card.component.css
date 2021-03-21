@@ -61,7 +61,7 @@ p {
 }
 
 .tooltip-text {
-  width: 85px;
+  width: 100px;
   position: absolute;
   display: none;
   background: ghostwhite;
@@ -76,7 +76,7 @@ p {
 }
 
 .fa.fa-info:hover + .tooltip-text,
-.fa.fa-check:hover + .tooltip-text,
+.fa.fa-thumbs-up:hover + .tooltip-text,
 .fa.fa-envelope:hover + .tooltip-text {
   display: block;
   color: black;
