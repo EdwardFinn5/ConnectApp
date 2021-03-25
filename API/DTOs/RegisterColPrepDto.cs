@@ -6,7 +6,7 @@ namespace API.DTOs
     public class RegisterColPrepDto
     {
 
-        [Required] public string UserName { get; set; }
+        [Required] public string Username { get; set; }
         [Required] public string FirstName { get; set; }
         [Required] public string Major { get; set; }
         [Required] public string ClassYear { get; set; }

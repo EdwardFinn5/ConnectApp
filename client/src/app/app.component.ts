@@ -4,11 +4,12 @@ import { User } from './_models/user';
 import { ColUser } from './_models/colUser';
 import { AccountService } from './_services/account.service';
 import { ColAccountService } from './_services/colAccount.service';
+import { PresenceService } from './_services/presence.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
   title = 'ICF Connect';
@@ -20,14 +21,17 @@ export class AppComponent implements OnInit {
 
   // constructor(private accountService: AccountService) {}  //taking out for now
 
-  constructor(private accountService: AccountService,
-                private colAccountService: ColAccountService) {}
+  constructor(
+    private accountService: AccountService,
+    private colAccountService: ColAccountService,
+    private presence: PresenceService
+  ) {}
 
   ngOnInit() {
     // this.setCurrentUser();  // taking this out for now as I go through 2nd time
-  //  this.getColUsers();
-  //  this.getUsers();
-   this.setCurrentUser();
+    //  this.getColUsers();
+    //  this.getUsers();
+    this.setCurrentUser();
   }
   // getUsers() {
   //   this.http.get('https://localhost:5001/api/users').subscribe( response => {
@@ -49,15 +53,16 @@ export class AppComponent implements OnInit {
     const user: User = JSON.parse(localStorage.getItem('user'));
     if (user) {
       this.accountService.setCurrentUser(user);
-      this.appUserType = user.appUserType; 
+      this.appUserType = user.appUserType;
+      this.presence.createHubConnection(user);
     }
-    const colUser: ColUser = JSON.parse(localStorage.getItem('colUser')); 
+    const colUser: ColUser = JSON.parse(localStorage.getItem('colUser'));
     if (colUser) {
       this.colAccountService.setCurrentUser(colUser);
       this.colUserType = colUser.colUserType;
     }
   }
-    
+
   //   const user: User = JSON.parse(localStorage.getItem('user'));
   //   this.accountService.setCurrentUser(user);
   //   this.appUserType = user.appUserType;
@@ -66,7 +71,3 @@ export class AppComponent implements OnInit {
   //   this.colUserType = colUser.colUserType;
   // }
 }
-
-
-
-

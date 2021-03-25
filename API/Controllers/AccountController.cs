@@ -34,14 +34,14 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> RegisterColPrep(RegisterColPrepDto registerColPrepDto)
         {
 
-            if (await UserExists(registerColPrepDto.UserName))
+            if (await UserExists(registerColPrepDto.Username))
             {
                 return BadRequest("Username is taken");
             }
 
             var user = _mapper.Map<AppUser>(registerColPrepDto);
 
-            user.UserName = registerColPrepDto.UserName.ToLower();
+            user.UserName = registerColPrepDto.Username.ToLower();
             user.AppUserType = registerColPrepDto.AppUserType;
 
             var result = await _userManager.CreateAsync(user, registerColPrepDto.Password);
@@ -54,24 +54,25 @@ namespace API.Controllers
 
             return new UserDto
             {
-                UserName = user.UserName,
+                Username = user.UserName,
                 Token = await _tokenService.CreateToken(user),
                 AppUserType = "ColStudent",
-                FirstName = user.FirstName
+                FirstName = user.FirstName,
+                College = user.College
             };
         }
 
         [HttpPost("registerEmp")]
         public async Task<ActionResult<UserDto>> RegisterEmp(RegisterEmpDto registerEmpDto)
         {
-            if (await UserExists(registerEmpDto.UserName))
+            if (await UserExists(registerEmpDto.Username))
             {
                 return BadRequest("Username is taken");
             }
 
             var user = _mapper.Map<AppUser>(registerEmpDto);
 
-            user.UserName = registerEmpDto.UserName.ToLower();
+            user.UserName = registerEmpDto.Username.ToLower();
             user.AppUserType = registerEmpDto.AppUserType;
 
             var result = await _userManager.CreateAsync(user, registerEmpDto.Password);
@@ -84,10 +85,11 @@ namespace API.Controllers
 
             return new UserDto
             {
-                UserName = user.UserName,
+                Username = user.UserName,
                 Token = await _tokenService.CreateToken(user),
                 AppUserType = "EmpHr",
-                FirstName = user.FirstName
+                FirstName = user.FirstName,
+                Company = user.Company
             };
         }
 
@@ -97,7 +99,7 @@ namespace API.Controllers
         {
             var user = await _userManager.Users
                 .Include(p => p.Photos)
-                .SingleOrDefaultAsync(x => x.UserName == loginDto.UserName.ToLower());
+                .SingleOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
 
             if (user == null)
             {
@@ -111,10 +113,12 @@ namespace API.Controllers
 
             return new UserDto
             {
-                UserName = user.UserName,
+                Username = user.UserName,
                 FirstName = user.FirstName,
                 Token = await _tokenService.CreateToken(user),
                 AppUserType = user.AppUserType,
+                College = user.College,
+                Company = user.Company,
                 StudentUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.StudentUrl,
                 LogoUrl = user.Photos.FirstOrDefault(x => x.IsMainLogo)?.LogoUrl,
                 HrUrl = user.Photos.FirstOrDefault(x => x.IsMainHr)?.HrUrl

@@ -4,14 +4,16 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210324184615_GroupsAdded")]
+    partial class GroupsAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -588,9 +590,6 @@ namespace API.Migrations
                     b.Property<string>("RecipientAppUserType")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RecipientCollege")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("RecipientCompany")
                         .HasColumnType("nvarchar(max)");
 
@@ -607,9 +606,6 @@ namespace API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SenderAppUserType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SenderCollege")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SenderCompany")

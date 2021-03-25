@@ -67,11 +67,18 @@
         </ul>
     </div>   
     <div class="card-body padding p-2">
-        <h6 *ngIf="member.appUserType == 'ColStudent'" class="card-title text-center mb-1"><i class="fa fa-user mr-2"></i>
+        <h6 *ngIf="member.appUserType == 'ColStudent'" class="card-title text-center mb-1">
+            <span [class.is-online]="(presence.onlineUsers$ | async).includes(member.username)">
+                <i class="fa fa-user mr-2"></i> 
+            </span>
+           
             <u><strong>{{member.firstName}}</strong></u>
         </h6>
 
         <h6 *ngIf="member.appUserType == 'EmpHr'" class="card-title text-center mb-1">
+            <span [class.is-online]="(presence.onlineUsers$ | async).includes(member.username)">
+                <i class="fa fa-user mr-2"></i> 
+            </span>
             <u><strong>{{member.company}}</strong></u>
         </h6>
 

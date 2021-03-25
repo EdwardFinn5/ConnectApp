@@ -6,5 +6,7 @@ export interface User {
   studentUrl: string;
   logoUrl: string;
   hrUrl: string;
+  college: string;
+  company: string;
   roles: string[];
 }

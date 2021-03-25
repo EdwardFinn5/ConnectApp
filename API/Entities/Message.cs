@@ -9,7 +9,7 @@ namespace API.Entities
         public string SenderUsername { get; set; }
         public string SenderFirstName { get; set; }
         public string SenderCompany { get; set; }
-
+        public string SenderCollege { get; set; }
 
         public string SenderAppUserType { get; set; }
 
@@ -18,6 +18,7 @@ namespace API.Entities
         public string RecipientUsername { get; set; }
         public string RecipientFirstName { get; set; }
         public string RecipientCompany { get; set; }
+        public string RecipientCollege { get; set; }
 
         public string RecipientAppUserType { get; set; }
 
@@ -25,7 +26,7 @@ namespace API.Entities
         public string Content { get; set; }
 
         public DateTime? DateRead { get; set; }
-        public DateTime MessageSent { get; set; } = DateTime.Now;
+        public DateTime MessageSent { get; set; } = DateTime.UtcNow;
         public bool SenderDeleted { get; set; }
         public bool RecipientDeleted { get; set; }
 

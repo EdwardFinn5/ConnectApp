@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 import { User } from '../_models/user';
+import { PresenceService } from './presence.service';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +17,7 @@ export class AccountService {
   currentUser$ = this.currentUserSource.asObservable();
   appUserType: string;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private presence: PresenceService) {}
 
   login(model: any) {
     return this.http.post(this.baseUrl + 'account/login', model).pipe(
@@ -24,6 +25,7 @@ export class AccountService {
         const user = response;
         if (user) {
           this.setCurrentUser(user); //added this line when we moved the one below to setCurrentUser
+          this.presence.createHubConnection(user);
           // localStorage.setItem('user', JSON.stringify(user));
           // this.currentUserSource.next(user);
           // this.appUserType = user.appUserType;
@@ -37,6 +39,7 @@ export class AccountService {
       map((user: User) => {
         if (user) {
           this.setCurrentUser(user); //added this line when we moved the one below to setCurrentUser
+          this.presence.createHubConnection(user);
           // localStorage.setItem('user', JSON.stringify(user));
           // this.currentUserSource.next(user);
           // this.appUserType = user.appUserType;
@@ -50,6 +53,7 @@ export class AccountService {
       map((user: User) => {
         if (user) {
           this.setCurrentUser(user); //added this line when we moved the one below to setCurrentUser
+          this.presence.createHubConnection(user);
           // localStorage.setItem('user', JSON.stringify(user));
           // this.currentUserSource.next(user);
           // this.appUserType = user.appUserType;
@@ -71,6 +75,7 @@ export class AccountService {
     localStorage.removeItem('user');
     localStorage.removeItem('loginStatus');
     this.currentUserSource.next(null);
+    this.presence.stopHubConnection();
   }
 
   getDecodedToken(token) {

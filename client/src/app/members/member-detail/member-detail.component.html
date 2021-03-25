@@ -8,6 +8,9 @@
             <img src="{{member.studentUrl || '.assets/user.png'}}" alt="{{member.firstName}}"
                 class="card-img-top img-studthumbnail">
             <div class="card-body">
+                <div class="mb-1" *ngIf="(presence.onlineUsers$ | async).includes(member.username)">
+                    <i class="fa fa-user-circle text-success"></i> Online now
+                </div>
                 <div>
                     <p> <u><strong>-- {{member.firstName}} {{member.lastName}} --</strong></u>
                         <br><strong>{{member.classYear}} {{member.major}} Major</strong>
@@ -90,13 +93,8 @@
                         {{member.bestPhone}}</p>
             </tab>
             <tab heading='Messages' (selectTab)="onTabActivated($event)">
-                <app-member-messages [messages]="messages" [username]="member.username"></app-member-messages>
+                <app-member-messages [username]="member.username"></app-member-messages>
             </tab>
-
-            <!-- <tab heading='Photos'>
-                <ngx-gallery [options]= "studentGalleryOptions" [images]="studentGalleryImages" 
-                    style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
-            </tab> -->
 
         </tabset>
     </div>
