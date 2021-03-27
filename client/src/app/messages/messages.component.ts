@@ -4,6 +4,7 @@ import { Message } from '../_models/message';
 import { Pagination } from '../_models/pagination';
 import { User } from '../_models/user';
 import { AccountService } from '../_services/account.service';
+import { ConfirmService } from '../_services/confirm.service';
 import { MessageService } from '../_services/message.service';
 
 @Component({
@@ -22,7 +23,8 @@ export class MessagesComponent implements OnInit {
 
   constructor(
     private messageService: MessageService,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private confirmService: ConfirmService
   ) {
     this.accountService.currentUser$
       .pipe(take(1))
@@ -45,12 +47,18 @@ export class MessagesComponent implements OnInit {
   }
 
   deleteMessage(id: number) {
-    this.messageService.deleteMessage(id).subscribe(() => {
-      this.messages.splice(
-        this.messages.findIndex((m) => m.id === id),
-        1
-      );
-    });
+    this.confirmService
+      .confirm('Confirm delete message', 'This cannot be undone')
+      .subscribe((result) => {
+        if (result) {
+          this.messageService.deleteMessage(id).subscribe(() => {
+            this.messages.splice(
+              this.messages.findIndex((m) => m.id === id),
+              1
+            );
+          });
+        }
+      });
   }
 
   pageChanged(event: any) {

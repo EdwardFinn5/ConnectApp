@@ -114,7 +114,7 @@ namespace API.Helpers
                     .MapFrom(src => src.Recipient.Photos.FirstOrDefault(x => x.IsMain).StudentUrl))
                 .ForMember(dest => dest.CompanyRecipientUrl, opt => opt
                     .MapFrom(src => src.Recipient.Photos.FirstOrDefault(x => x.IsMainLogo).LogoUrl));
-            CreateMap<DateTime, DateTime>().ConvertUsing(d => DateTime.SpecifyKind(d, DateTimeKind.Utc));
+            // CreateMap<DateTime, DateTime>().ConvertUsing(d => DateTime.SpecifyKind(d, DateTimeKind.Utc)); //deleted this after doing Utc stuff in datacontext
         }
     }
 }

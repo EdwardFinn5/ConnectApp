@@ -61,6 +61,13 @@ namespace API.Data
                 );
         }
 
+        public async Task<string> GetUserAppUserType(string username)
+        {
+            return await _context.Users
+                .Where(x => x.UserName == username)
+                .Select(x => x.AppUserType).FirstOrDefaultAsync();
+        }
+
         public async Task<AppUser> GetUserByIdAsync(int id)
         {
             return await _context.Users.FindAsync(id);
@@ -83,11 +90,11 @@ namespace API.Data
                 .Include(e => e.EmpOpps)
                 .ToListAsync();
         }
-
-        public async Task<bool> SaveAllAsync()
-        {
-            return await _context.SaveChangesAsync() > 0;
-        }
+        // deleted this save method after creating unit of work
+        // public async Task<bool> SaveAllAsync()
+        // {
+        //     return await _context.SaveChangesAsync() > 0;
+        // }
 
         public void Update(AppUser user)
         {
