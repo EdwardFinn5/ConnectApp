@@ -16,39 +16,39 @@ namespace API.Helpers
                 .ForMember(dest => dest.LogoUrl, opt => opt
                     .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMainLogo).LogoUrl))
                 .ForMember(dest => dest.HrUrl, opt => opt
-                    .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMainHr).HrUrl))
-                .ForMember(dest => dest.AcademicPlus, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).AcademicPlus))
-                .ForMember(dest => dest.GPA, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).GPA))
-                .ForMember(dest => dest.WorkPlus, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).WorkPlus))
-                .ForMember(dest => dest.DreamJob, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).DreamJob))
-                .ForMember(dest => dest.Athletics, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Athletics))
-                .ForMember(dest => dest.Arts, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Arts))
-                .ForMember(dest => dest.ExtraCurricular, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).ExtraCurricular))
-                .ForMember(dest => dest.BestEmail, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).BestEmail))
-                .ForMember(dest => dest.BestPhone, opt => opt
-                    .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).BestPhone))
-                .ForMember(dest => dest.LookingFor, opt => opt
-                    .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).LookingFor))
-                .ForMember(dest => dest.HowToApply, opt => opt
-                    .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).HowToApply))
-                .ForMember(dest => dest.ApplyEmail, opt => opt
-                    .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).ApplyEmail))
-                .ForMember(dest => dest.Contact, opt => opt
-                    .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).Contact))
-                .ForMember(dest => dest.CompanyDescription, opt => opt
-                    .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).CompanyDescription))
-                .ForMember(dest => dest.PositionDescription, opt => opt
-                    .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).PositionDescription))
-                .ForMember(dest => dest.ContactTitle, opt => opt
-                .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).ContactTitle));
+                    .MapFrom(src => src.Photos.FirstOrDefault(x => x.IsMainHr).HrUrl));
+            // .ForMember(dest => dest.AcademicPlus, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).AcademicPlus))
+            // .ForMember(dest => dest.GPA, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).GPA))
+            // .ForMember(dest => dest.WorkPlus, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).WorkPlus))
+            // .ForMember(dest => dest.DreamJob, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).DreamJob))
+            // .ForMember(dest => dest.Athletics, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Athletics))
+            // .ForMember(dest => dest.Arts, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).Arts))
+            // .ForMember(dest => dest.ExtraCurricular, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).ExtraCurricular))
+            // .ForMember(dest => dest.BestEmail, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).BestEmail))
+            // .ForMember(dest => dest.BestPhone, opt => opt
+            //     .MapFrom(src => src.CollegePreps.FirstOrDefault(x => x.IsActive).BestPhone))
+            // .ForMember(dest => dest.LookingFor, opt => opt
+            //     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).LookingFor))
+            // .ForMember(dest => dest.HowToApply, opt => opt
+            //     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).HowToApply))
+            // .ForMember(dest => dest.ApplyEmail, opt => opt
+            //     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).ApplyEmail))
+            // .ForMember(dest => dest.Contact, opt => opt
+            //     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).Contact))
+            // .ForMember(dest => dest.CompanyDescription, opt => opt
+            //     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).CompanyDescription))
+            // .ForMember(dest => dest.PositionDescription, opt => opt
+            //     .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).PositionDescription))
+            // .ForMember(dest => dest.ContactTitle, opt => opt
+            // .MapFrom(src => src.EmpOpps.FirstOrDefault(x => x.IsActive).ContactTitle));
 
 
             CreateMap<ColUser, ColMemberDto>()

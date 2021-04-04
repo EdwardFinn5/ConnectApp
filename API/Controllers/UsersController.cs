@@ -67,12 +67,12 @@ namespace API.Controllers
 
             _unitOfWork.UserRepository.Update(user);
 
-            var collegePrep = new CollegePrep
-            {
-                AcademicPlus = memberUpdateDto.AcademicPlus
-            };
+            // var collegePrep = new CollegePrep
+            // {
+            //     AcademicPlus = memberUpdateDto.AcademicPlus
+            // };
 
-            user.CollegePreps.Add(collegePrep);
+            // user.CollegePreps.Add(collegePrep);
 
             // user.CollegePreps.a Entry(user.CollegePreps.AcademicPlus).State = EntityState.Modified;
 

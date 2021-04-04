@@ -65,7 +65,7 @@
 
         <tabset class="member-tabset" #memberTabs>
             <tab heading='About {{member.firstName}}' (selectTab)="onTabActivated($event)">
-                <h4>Academic Accomplishments</h4>
+                <h4>Academic Highlights</h4>
                 <p>{{member.academicPlus}}<br>
                 <strong>GPA: </strong>{{member.gpa}}<br>
                 <strong>Grad Date: </strong>{{member.gradDate | date: "MMM dd yyyy"}}
@@ -73,19 +73,17 @@
                 <h4>Work Experiences</h4>
                 <p>{{member.workPlus}}</p>
                 <h4>Dream Job</h4>
-                <p>{{member.workPlus}}</p>
+                <p>{{member.dreamJob}}</p>
                 <h4>Resume</h4>
-                <button>Resume</button>
+                <button class="btn btn-info">Resume</button>
             </tab>
             <tab heading='Extra-Curricular' (selectTab)="onTabActivated($event)">
-                <h4>Involement in Athletics </h4>
-                <p>Varsity basketball</p>
+                <h4>Athletics</h4>
+                <p>{{member.athletics}}</p>
                 <h4>Involvement in the Arts</h4>
-                <p>Dance <br>
-                Theatre</p>
+                <p>{{member.arts}}<br>
                 <h4>Clubs and Organizations</h4>
-                <p>Student Government<br>
-                Eagle Scout</p>
+                <p>{{member.extraCurricular}}</p>
                 <h4>Best way to contact {{member.firstName}}:</h4>
                 <p *ngIf="member.bestEmail">Email:
                     {{member.bestEmail}}</p>

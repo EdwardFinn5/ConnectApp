@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
   
     <div class="container">
-      <img src='../../assets/ICF_Logo.jpg' routerLink="/" class="logo" height="40" width="40" style="margin-right: 20px"/>  
-      <a class="navbar-brand" routerLink="/">ICF Connect</a>
+      <img src='../../assets/ICF_Logo.jpg' routerLink="/" class="logo" height="40" width="40" style="margin-right: 20px; margin-left: 50px"/>  
+      <a class="navbar-brand" style="margin-right: 80px" routerLink="/">ICF Connect</a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
         data-target="#navbarCollapse" aria-controls="navbarCollapse" 
@@ -14,7 +14,7 @@
       
       <ul class="navbar-nav mr-auto" style="font-size: 1.3em">
        
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown ml-5">
           <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colleges</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/college'>Search Colleges</a>
@@ -32,10 +32,10 @@
             <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/collists'>Lists</a>
             <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmessages'>Messages</a>
           </div>
-        </li> 
+        </li>  -->
       
-        <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Talent</a>
+        <li class="nav-item dropdown ml-5 mr-5">
+          <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Talent</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/talent'>Search Talent</a>
             <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>See Results</a>
@@ -45,7 +45,7 @@
         </li>   
         
         <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jobs/Internships</a>
+          <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Internships/Jobs</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink='/job'>Search Jobs/Internships</a>
             <a *ngIf="accountService.currentUser$ | async"  class="dropdown-item" routerLink='/memberlist'>See Results</a>

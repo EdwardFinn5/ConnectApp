@@ -16,7 +16,7 @@ export class ListsComponent implements OnInit {
   predicate = 'liked';
   user: User;
   pageNumber = 1;
-  pageSize = 2;
+  pageSize = 10;
   pagination: Pagination;
 
   constructor(

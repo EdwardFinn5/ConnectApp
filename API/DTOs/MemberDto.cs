@@ -29,8 +29,8 @@ namespace API.DTOs
         public string ExtraCurricular { get; set; }
         public DateTime GradDate { get; set; }
         public string GPA { get; set; }
-        
-        
+
+
         public string BestEmail { get; set; }
         public string BestPhone { get; set; }
         public string Company { get; set; }
@@ -55,9 +55,9 @@ namespace API.DTOs
 
         public bool Active { get; set; } = true;
 
-        public ICollection<CollegePrepDto> CollegePreps { get; set; }
+        // public ICollection<CollegePrepDto> CollegePreps { get; set; }
 
-        public ICollection<EmpOppDto> EmpOpps { get; set; }
+        // public ICollection<EmpOppDto> EmpOpps { get; set; }
         // [ForeignKey("UserFk")]
         public ICollection<PhotoDto> Photos { get; set; }
 

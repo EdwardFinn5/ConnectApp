@@ -49,7 +49,7 @@ namespace API.Data
                 Company = user.Company,
                 StudentUrl = user.Photos.FirstOrDefault(p => p.IsMain).StudentUrl,
                 LogoUrl = user.Photos.FirstOrDefault(p => p.IsMainLogo).LogoUrl,
-                Athletics = user.CollegePreps.FirstOrDefault(p => p.IsActive).Athletics,
+                // Athletics = user.CollegePreps.FirstOrDefault(p => p.IsActive).Athletics,
                 Id = user.Id
             });
 

@@ -23,9 +23,9 @@ namespace API.Data
         public DbSet<CollegeMajor> CollegeMajors { get; set; }
         public DbSet<ColUser> ColUsers { get; set; }
         public DbSet<MajorCat> MajorCats { get; set; }
-        public DbSet<CollegePrep> CollegePreps { get; set; }
+        // public DbSet<CollegePrep> CollegePreps { get; set; }
         public DbSet<HsPrep> HsPreps { get; set; }
-        public DbSet<EmpOpp> EmpOpps { get; set; }
+        // public DbSet<EmpOpp> EmpOpps { get; set; }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<ColPhoto> ColPhotos { get; set; }
         public DbSet<FactFeature> FactFeatures { get; set; }

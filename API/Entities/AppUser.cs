@@ -21,13 +21,35 @@ namespace API.Entities
         public string Company { get; set; }
         public string PositionType { get; set; }
         public string PositionLocation { get; set; }
-        public DateTime StartDate { get; set; } = DateTime.Now;
+        public DateTime StartDate { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
         public DateTime LastActive { get; set; } = DateTime.Now;
         public string AppUserType { get; set; }
         public bool Active { get; set; } = true;
-        public ICollection<CollegePrep> CollegePreps { get; set; }
-        public ICollection<EmpOpp> EmpOpps { get; set; }
+        public bool IsActive { get; set; } = true;
+
+        public string BestEmail { get; set; }
+        public string BestPhone { get; set; }
+        public string Athletics { get; set; }
+        public string Arts { get; set; }
+        public string ExtraCurricular { get; set; }
+        public string AcademicPlus { get; set; }
+        public string WorkPlus { get; set; }
+        public string GPA { get; set; }
+        public string Resume { get; set; }
+        public string DreamJob { get; set; }
+
+        public string CompanyDescription { get; set; }
+        public string PositionDescription { get; set; }
+        public string Contact { get; set; }
+        public string ContactTitle { get; set; }
+        public string HowToApply { get; set; }
+        public string LookingFor { get; set; }
+        [DataType(DataType.EmailAddress)]
+        public string ApplyEmail { get; set; }
+
+        // public ICollection<CollegePrep> CollegePreps { get; set; }
+        // public ICollection<EmpOpp> EmpOpps { get; set; }
         // [ForeignKey("UserFk")]
         public ICollection<Photo> Photos { get; set; }
         public ICollection<UserLike> LikedByUsers { get; set; }

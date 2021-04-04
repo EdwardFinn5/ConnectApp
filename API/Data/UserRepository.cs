@@ -77,8 +77,8 @@ namespace API.Data
         {
             return await _context.Users
                 .Include(p => p.Photos)
-                .Include(c => c.CollegePreps)
-                .Include(e => e.EmpOpps)
+                // .Include(c => c.CollegePreps)
+                // .Include(e => e.EmpOpps)
                 .SingleOrDefaultAsync(x => x.UserName == username);
         }
 
@@ -86,8 +86,8 @@ namespace API.Data
         {
             return await _context.Users
                 .Include(p => p.Photos)
-                .Include(c => c.CollegePreps)
-                .Include(e => e.EmpOpps)
+                // .Include(c => c.CollegePreps)
+                // .Include(e => e.EmpOpps)
                 .ToListAsync();
         }
         // deleted this save method after creating unit of work

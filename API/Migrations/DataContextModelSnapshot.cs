@@ -55,6 +55,9 @@ namespace API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("AcademicPlus")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
@@ -62,6 +65,21 @@ namespace API.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("AppUserType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ApplyEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Arts")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Athletics")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BestEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BestPhone")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ClassYear")
@@ -73,12 +91,24 @@ namespace API.Migrations
                     b.Property<string>("Company")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CompanyDescription")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Contact")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactTitle")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("DreamJob")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -87,7 +117,13 @@ namespace API.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ExtraCurricular")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GPA")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("GradDate")
@@ -95,6 +131,12 @@ namespace API.Migrations
 
                     b.Property<string>("Hometown")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HowToApply")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("LastActive")
                         .HasColumnType("datetime2");
@@ -107,6 +149,9 @@ namespace API.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("LookingFor")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Major")
                         .HasColumnType("nvarchar(max)");
@@ -131,10 +176,16 @@ namespace API.Migrations
                     b.Property<string>("Position")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PositionDescription")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PositionLocation")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PositionType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Resume")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
@@ -149,6 +200,9 @@ namespace API.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("WorkPlus")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -366,56 +420,6 @@ namespace API.Migrations
                     b.ToTable("CollegeMajors");
                 });
 
-            modelBuilder.Entity("API.Entities.CollegePrep", b =>
-                {
-                    b.Property<int>("CollegePrepId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("AcademicPlus")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("AppUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Arts")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Athletics")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BestEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BestPhone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DreamJob")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ExtraCurricular")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GPA")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Resume")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("WorkPlus")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CollegePrepId");
-
-                    b.HasIndex("AppUserId");
-
-                    b.ToTable("CollegePreps");
-                });
-
             modelBuilder.Entity("API.Entities.Connection", b =>
                 {
                     b.Property<string>("ConnectionId")
@@ -432,47 +436,6 @@ namespace API.Migrations
                     b.HasIndex("GroupName");
 
                     b.ToTable("Connections");
-                });
-
-            modelBuilder.Entity("API.Entities.EmpOpp", b =>
-                {
-                    b.Property<int>("EmpOppId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int>("AppUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ApplyEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Contact")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ContactTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HowToApply")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LookingFor")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PositionDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("EmpOppId");
-
-                    b.HasIndex("AppUserId");
-
-                    b.ToTable("EmpOpps");
                 });
 
             modelBuilder.Entity("API.Entities.FactFeature", b =>
@@ -841,33 +804,11 @@ namespace API.Migrations
                     b.Navigation("Major");
                 });
 
-            modelBuilder.Entity("API.Entities.CollegePrep", b =>
-                {
-                    b.HasOne("API.Entities.AppUser", "AppUser")
-                        .WithMany("CollegePreps")
-                        .HasForeignKey("AppUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AppUser");
-                });
-
             modelBuilder.Entity("API.Entities.Connection", b =>
                 {
                     b.HasOne("API.Entities.Group", null)
                         .WithMany("Connections")
                         .HasForeignKey("GroupName");
-                });
-
-            modelBuilder.Entity("API.Entities.EmpOpp", b =>
-                {
-                    b.HasOne("API.Entities.AppUser", "AppUser")
-                        .WithMany("EmpOpps")
-                        .HasForeignKey("AppUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("API.Entities.FactFeature", b =>
@@ -995,10 +936,6 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Entities.AppUser", b =>
                 {
-                    b.Navigation("CollegePreps");
-
-                    b.Navigation("EmpOpps");
-
                     b.Navigation("LikedByUsers");
 
                     b.Navigation("LikedUsers");
