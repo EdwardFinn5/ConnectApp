@@ -40,6 +40,7 @@ namespace API.DTOs
         public string PositionDescription { get; set; }
         public string PositionType { get; set; }
         public DateTime StartDate { get; set; }
+        public DateTime AppDeadline { get; set; }
         // [DataType(DataType.EmailAddress)]
         public string ApplyEmail { get; set; }
         public string LookingFor { get; set; }

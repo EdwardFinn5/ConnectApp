@@ -46,16 +46,16 @@
                         <br> Position: <strong>{{member.position}}</strong>
                         <br> Type of Position: <strong>{{member.positionType}}</strong>
                         <br> Position Location: <strong>{{member.positionLocation}}</strong>
-                        <br>Start Date: <strong>{{member.startDate | date: "MMM dd yyyy" }}</strong>
                         <br>Date Position was Posted: <strong>{{member.created | date: "MMM dd yyyy" }}</strong>
-                        <br>Application Deadline to fix: <strong>{{member.lastActive | timeago }}</strong>
+                        <br>Start Date: <strong>{{member.startDate | date: "MMM dd yyyy" }}</strong>
+                        <br>Application Deadline: <strong>{{member.appDeadline | date: "MMM dd yyyy" }}</strong>
                     </p>
                 </div>
             </div>
             <div class="card-footer">
                 <div class="btn-group d-flex">
-                    <button class="btn btn-primary mr-2">Possible Fit</button>
-                    <button (click)="selectTab(2)" class="btn btn-success">Message</button>
+                    <!-- <button class="btn btn-primary mr-2">Possible Fit</button> -->
+                    <button (click)="selectTab(2)" class="btn btn-success btn-block">Send {{member.company}} a Message</button>
                 </div>
             </div>
         </div>
@@ -113,8 +113,8 @@
         
         <tabset class="member-tabset" #memberTabs>
             <tab heading='Position Details' (selectTab)="onTabActivated($event)">
-                <h4>{{member.position}} {{member.positionType}}</h4>
-                <br>
+                <u><h4>{{member.position}} {{member.positionType}}</h4></u>
+              
                 <h4>Position Description</h4>
                 <p>{{member.positionDescription}}</p>
                 <h4>What we are looking for</h4>

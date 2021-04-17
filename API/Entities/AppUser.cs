@@ -22,6 +22,7 @@ namespace API.Entities
         public string PositionType { get; set; }
         public string PositionLocation { get; set; }
         public DateTime StartDate { get; set; }
+        public DateTime AppDeadline { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
         public DateTime LastActive { get; set; } = DateTime.Now;
         public string AppUserType { get; set; }

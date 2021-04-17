@@ -70,6 +70,22 @@ export class PhotoEditorComponent implements OnInit {
     });
   }
 
+  setMainHrPhoto(photo: Photo) {
+    this.memberService.setMainPhoto(photo.id).subscribe(() => {
+      this.user.hrUrl = photo.hrUrl;
+      this.accountService.setCurrentUser(this.user);
+      this.member.hrUrl = photo.hrUrl;
+      this.member.photos.forEach((p) => {
+        if (p.isMainHr) {
+          p.isMainHr = false;
+        }
+        if (p.id === photo.id) {
+          p.isMainHr = true;
+        }
+      });
+    });
+  }
+
   deletePhoto(photoId: number) {
     this.memberService.deletePhoto(photoId).subscribe(() => {
       this.member.photos = this.member.photos.filter((x) => x.id !== photoId);

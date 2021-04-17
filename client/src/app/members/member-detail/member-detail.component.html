@@ -25,43 +25,18 @@
                     </p>
                 </div>
             </div>
+            
             <div class="card-footer">
                 <div class="btn-group d-flex">
-                    <button class="btn btn-primary mr-2">Possible Fit</button>
-                    <button (click)="selectTab(2)" class="btn btn-success">Message</button>
+                    <!-- <button class="btn btn-primary mr-2">Possible Fit</button> -->
+                    <button (click)="selectTab(2)" class="btn btn-success btn-block">Send {{member.firstName}} a Message</button>
                 </div>
             </div>
         </div>
     </div>
     
-        <!-- <div class="card" *ngIf="member.appUserType == 'EmpHr'">
-            <img src="{{member.logoUrl || '../../assets/images/logo.PNG' }}" alt="{{member.company}}"
-                class="card-img-top img-studthumbnail">
-            <div class="card-body">
-                <div>
-                    <p> <u><strong>{{member.company}}</strong></u>
-                        <br> Position: <strong>{{member.position}}</strong>
-                        <br> Type of Position: <strong>{{member.positionType}}</strong>
-                        <br> Position Location: <strong>{{member.positionLocation}}</strong>
-                        <br>Start Date: <strong>{{member.startDate | date: "MMM dd yyyy" }}</strong>
-                        <br>Date Position was Posted: <strong>{{member.created | date: "MMM dd yyyy" }}</strong>
-                        <br>Application Deadline to fix: <strong>{{member.lastActive | timeago }}</strong>
-                    </p>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="btn-group d-flex">
-                    <button class="btn btn-primary mr-2">Possible Fit</button>
-                    <button (click)="selectTab(2)" class="btn btn-success">Message</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-    <!-- <div class="col-8" *ngIf="member.appUserType == 'ColStudent'" > -->
-
-        <div class="col-8" >
+     
+        <div class="col-8">
 
         <tabset class="member-tabset" #memberTabs>
             <tab heading='About {{member.firstName}}' (selectTab)="onTabActivated($event)">

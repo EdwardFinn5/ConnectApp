@@ -1,16 +1,22 @@
 .img-hrthumbnail {
-    height: 15%;
-    width: 15%
+  height: 15%;
+  width: 15%;
 }
+
+/* .img-logoUrl {
+  height: 400px;
+  width: 400px;
+  margin: 0;
+} */
 
 h2 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-textarea { 
-    width: 40%;
-} 
+textarea {
+  width: 90%;
+}
 
 input {
-    width: 40%;
+  width: 90%;
 }

@@ -11,7 +11,7 @@
     <div class="col-4">
         <div class="card">
             <img src="{{member.logoUrl || '../../assets/images/logo.PNG'}}" alt="{{member.company}}"
-                class="card-img-top img-studthumbnail">
+                class="card-img-top img-logoUrl">
             <div class="card-body text-center">
                 
                 <div>
@@ -28,26 +28,28 @@
                 </div> 
                 <div>
                     <strong>Position Start Date: </strong> {{member.startDate | date: "MM/dd/yyyy"}}
-                    <hr>
                 </div> 
-                <div>
-                    <strong>Profile Created: </strong> {{member.created | date: "MMM dd yyyy"}}
-                </div>
-                <div>
-                    <strong>Last Active: </strong> {{member.lastActive | timeago }}
-                </div>   
             </div>
 
             <div class="card-footer">
-                <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save Changes</button>
-            </div>
-        </div>
+                <div class="btn-group d-flex">
+                    <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success mr-2">Click to Save Changes</button>
+                    <button  [disabled]="editForm.dirty" routerLink='/compmembers/{{member.username}}' class="btn btn-primary">Click to see Profile</button>
+                </div>
+             </div>
+             </div>
     </div>
 
     <div class="col-8">
         <tabset class="member-tabset">
-            <tab heading='Card Info'>
-                <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+            <tab heading='Edit Profile Content'>
+                <form 
+                #scrolMe
+                style="overflow: scroll; height: 500px; width: 450px;"
+                [scrollTop]="scrolMe.scrollHeight" 
+                
+                #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+                    <u><strong><h5>Card Information</h5></strong></u>
                     <label for="position"><strong>Position: </strong></label>
                     <input [(ngModel)]="member.position" type="text" name="position" class="form-control mb-2">
                     <label for="positionType"><strong>Position Type: </strong></label>
@@ -56,16 +58,30 @@
                     <input [(ngModel)]="member.positionLocation" type="text" name="positionLocation" class="form-control mb-2">
                     <label for="startDate"><strong>Start Date: </strong></label>
                     <input [(ngModel)]="member.startDate" type="text" name="startDate" class="form-control mb-2">
-                    <label for="created"><strong>Last edited: </strong></label>
-                    <input [(ngModel)]="member.created" type="text" name="created" class="form-control mb-2">
-                    <label for="lastActive"><strong>Last Active: </strong></label>
-                    <input [(ngModel)]="member.lastActive" type="text" name="lastActive" class="form-control mb-2">
-                    <h4>Position description</h4>
-                    <textarea class="form-control" [(ngModel)]="member.positionDescription" name="positionDescription" rows="3"></textarea>
+                    <label for="appDeadline"><strong>Application Deadline: </strong></label>
+                    <input [(ngModel)]="member.appDeadline" type="text" name="appDeadline" class="form-control mb-2">
+                   
+                    <u><strong><h5>Position Details</h5></strong></u>
+                    <label for="positionDescription"><strong>Position Description: </strong></label>
+                    <textarea [(ngModel)]="member.positionDescription" name="positionDescription" class="form-control mb-2" rows="3" ></textarea>
+                    <label for="lookingFor"><strong>What we are looking for: </strong></label>
+                    <textarea [(ngModel)]="member.lookingFor" name="lookingFor" class="form-control mb-2" rows="3" ></textarea>
+                    <label for="lookingFor"><strong>About {{member.company}}: </strong></label>
+                    <textarea [(ngModel)]="member.companyDescription" name="companyDescription" class="form-control mb-2" rows="3" ></textarea>
+                    
+                    <u><strong><h5>Application Details</h5></strong></u>
+                    <label for="howToApply"><strong>How to apply: </strong></label>
+                    <textarea [(ngModel)]="member.howToApply" name="howToApply" class="form-control mb-2" rows="3" ></textarea>
+                    <label for="applyEmail"><strong>Link to apply: </strong></label>
+                    <input [(ngModel)]="member.applyEmail" type="text" name="applyEmail" class="form-control mb-2">
+                    <label for="contact"><strong>Contact name: </strong></label>
+                    <input [(ngModel)]="member.contact" type="text" name="contact" class="form-control mb-2">
+                    <label for="contactTitle"><strong>Contact title: </strong></label>
+                    <input [(ngModel)]="member.contactTitle" type="text" name="contactTitle" class="form-control mb-2">
                  </form>           
             </tab>
 
-            <tab heading='Position Details'>
+            <!-- <tab heading='Position Details'>
                 <form>
                     <h4>Position description</h4>
                     <textarea class="form-control" [(ngModel)]="member.positionDescription" name="positionDescription" rows="3"></textarea>
@@ -73,9 +89,11 @@
                     <textarea [(ngModel)]="member.lookingFor" name="lookingFor" rows="3"></textarea>
                     <h4 class="mt-2">About {{member.company}}</h4>
                     <textarea [(ngModel)]="member.companyDescription"  name="companyDescription" rows="3"></textarea>
+                    <h4 class="mt-2">Link to Apply: </h4>
+                    <textarea [(ngModel)]="member.companyDescription"  name="companyDescription" rows="3"></textarea>
                 </form>
-            </tab>
-   
+            </tab> -->
+<!--    
             <tab heading='Application Details'>
                 <form>
                 <h4>How to apply</h4>
@@ -93,7 +111,8 @@
                     <label for="contactTitle"><strong>Title: </strong></label>
                     <input [(ngModel)]="member.contactTitle" type="text" name="contactTitle" class="form-control mb-2">
                  </form>           
-            </tab>
+            </tab> -->
+            
             <tab heading='Edit Logo'>
                 <app-photo-editor [member]="member"></app-photo-editor>
             </tab>  

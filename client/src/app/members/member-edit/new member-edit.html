@@ -30,27 +30,25 @@
                     <strong>College/University: </strong>
                     <p>{{member.college}}</p>
                 </div>  
-            </div>
-
-            <div class="card-footer">
-                <div class="btn-group d-flex">
-                    <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success mr-2">Click to Save Changes</button>
-                    <button  [disabled]="editForm.dirty" routerLink='/members/{{member.username}}' class="btn btn-primary">Click to see Profile</button>
+                <hr>
+                <div>
+                    <strong>Profile Created: </strong> {{member.created | date: "MMM dd yyyy"}}
                 </div>
-             </div>
-             </div>
+                <div>
+                    <strong>Last Active: </strong> {{member.lastActive | timeago }}
+                </div>   
+            </div>
+        
+            <div class="card-footer">
+                <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save Changes</button>
+            </div>
+        </div>
     </div>
 
-    <div class="col-8" >
+    <div class="col-8">
         <tabset class="member-tabset">
-            <tab heading='Edit Profile Content'>
-                <form 
-                    #scrolMe
-                    style="overflow: scroll; height: 500px; width: 450px;"
-                    [scrollTop]="scrolMe.scrollHeight" 
-                
-                #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
-                    <u><strong><h5>Card Information</h5></strong></u>
+            <tab heading='Card Info'>
+                <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
                     <label for="classYear"><strong>Class Year: </strong></label>
                     <input [(ngModel)]="member.classYear" type="text" name="classYear" class="form-control mb-2">
                     <label for="major"><strong>Major: </strong></label>
@@ -59,49 +57,19 @@
                     <input [(ngModel)]="member.hometown" type="text" name="hometown" class="form-control mb-2">
                     <label for="college"><strong>College: </strong></label>
                     <input [(ngModel)]="member.college" type="text" name="college" class="form-control mb-2">
-                    
-                    <u><strong><h5>About {{member.firstName}}</h5></strong></u>
-                    <label for="academicPlus"><strong>Academic Accomplishmensts: </strong></label>
-                    <textarea [(ngModel)]="member.academicPlus" name="academicPlus" class="form-control mb-2" ></textarea>
-
-                    <div class="form-inline">
-                        <label for="gpa"><strong>GPA: </strong></label>
-                        <input [(ngModel)]=" member.gpa" type="text" name="gpa" class="form-control mb-2 ml-2">
-                    </div>
-                    <div class="form-inline">
-                        <label for="gradDate"><strong>Grad Date: </strong></label>
-                        <input [(ngModel)]=" member.gradDate" type="text" name="gradDate" class="form-control mb-2 ml-2">
-                    </div> 
-
-                    <label for="workPlus"><strong>Work/Internship Experiences:</strong></label>
-                    <textarea [(ngModel)]="member.workPlus" name="workPlus" class="form-control mb-2" ></textarea>
-                    <label for="dreamJob"><strong>Dream Job:</strong></label>
-                    <textarea [(ngModel)]="member.dreamJob" name="dreamJob" class="form-control mb-2" ></textarea>
-
-                    <u><strong><h5>Extra-Curricular</h5></strong></u>
-                    <label for="athletics"><strong>Athletics:</strong></label>
-                    <textarea [(ngModel)]="member.athletics" name="athletics" class="form-control mb-2" ></textarea>
-                    <label for="arts"><strong>Involvement in the Arts:</strong></label>
-                    <textarea [(ngModel)]="member.arts" name="arts" class="form-control mb-2" ></textarea>
-                    <label for="extraCurricular"><strong>Clubs & Organizations:</strong></label>
-                    <textarea [(ngModel)]="member.extraCurricular" name="extraCurricular" class="form-control mb-2" ></textarea>
-
-                    <u><strong><h5>Best way to contact {{member.firstName}}:</h5></strong></u>
-
-                    <div class="form-inline">
-                        <label for="bestEmail"><strong>Best Email: </strong></label>
-                        <input [(ngModel)]=" member.bestEmail" type="text" name="bestEmail" class="form-control mb-2 ml-2">
-                    </div>
-                    <div class="form-inline">
-                        <label for="bestPhone"><strong>Best Phone: </strong></label>
-                        <input [(ngModel)]=" member.bestPhone" type="text" name="bestPhone" class="form-control mb-2 ml-2 width: 100%">
-                    </div> 
-
+                    <label for="created"><strong>Last edited: </strong></label>
+                    <input [(ngModel)]="member.created" type="text" name="created" class="form-control mb-2">
+                    <label for="lastActive"><strong>Last Active: </strong></label>
+                    <input [(ngModel)]="member.lastActive" type="text" name="lastActive" class="form-control mb-2">
+                    <h4>Academic Accomplishments</h4>
+                    <textarea [(ngModel)]="member.academicPlus" name="academicAccomplishments" rows="3" width="200px"></textarea>
                  </form>           
             </tab>
 
-            <!-- <tab heading='About {{member.firstName}}'>
+            <tab heading='About {{member.firstName}}'>
                 <form>
+                    <h4>Academic Accomplishments</h4>
+                    <textarea [(ngModel)]="member.academicPlus" name="academicAccomplishments" rows="3" width="200px"></textarea>
                     <h4 class="mt-2">Work Experiences</h4>
                     <textarea [(ngModel)]="member.workPlus" name="workExperiences" rows="3"></textarea>
                     <h4 class="mt-2">Describe your Dream Job</h4>
@@ -114,9 +82,9 @@
                         <input [(ngModel)]="member.gradDate" type="text" name="gradDate" class="form-control mx-2">
                     </div>    
                 </form>
-            </tab> -->
+            </tab>
             
-            <!-- <tab heading='Extra-Curricular'>
+            <tab heading='Extra-Curricular'>
                 <form>
                 <h4>Involvement in Athletics </h4>
                 <textarea [(ngModel)]="member.athletics" name="athletics" rows="3"></textarea>
@@ -130,7 +98,7 @@
                 <label for="bestPhone"><strong>Best Phone: </strong></label>
                 <input [(ngModel)]="member.bestPhone" type="text" name="bestPhone" class="form-control mb-2">
                  </form>           
-            </tab> -->
+            </tab>
             <tab heading='Edit Photo'>
                <app-photo-editor [member]="member"></app-photo-editor>
             </tab>  
