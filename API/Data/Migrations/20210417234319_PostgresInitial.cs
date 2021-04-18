@@ -1,9 +1,10 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace API.Migrations
+namespace API.Data.Migrations
 {
-    public partial class InitialOneMoreTime : Migration
+    public partial class PostgresInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,11 +12,11 @@ namespace API.Migrations
                 name: "AspNetRoles",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
+                    NormalizedName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -26,56 +27,57 @@ namespace API.Migrations
                 name: "AspNetUsers",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClassYear = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GradDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Major = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Hometown = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    College = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Position = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Company = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PositionType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PositionLocation = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastActive = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    AppUserType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Active = table.Column<bool>(type: "bit", nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false),
-                    BestEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BestPhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Athletics = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Arts = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ExtraCurricular = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AcademicPlus = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    WorkPlus = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GPA = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Resume = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DreamJob = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CompanyDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PositionDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Contact = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ContactTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HowToApply = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LookingFor = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ApplyEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    NormalizedEmail = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(type: "bit", nullable: false),
-                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SecurityStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(type: "bit", nullable: false),
-                    TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false),
-                    LockoutEnd = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
-                    LockoutEnabled = table.Column<bool>(type: "bit", nullable: false),
-                    AccessFailedCount = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    FirstName = table.Column<string>(type: "text", nullable: true),
+                    LastName = table.Column<string>(type: "text", nullable: true),
+                    ClassYear = table.Column<string>(type: "text", nullable: true),
+                    GradDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    Major = table.Column<string>(type: "text", nullable: true),
+                    Hometown = table.Column<string>(type: "text", nullable: true),
+                    College = table.Column<string>(type: "text", nullable: true),
+                    Position = table.Column<string>(type: "text", nullable: true),
+                    Company = table.Column<string>(type: "text", nullable: true),
+                    PositionType = table.Column<string>(type: "text", nullable: true),
+                    PositionLocation = table.Column<string>(type: "text", nullable: true),
+                    StartDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    AppDeadline = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    Created = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    LastActive = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    AppUserType = table.Column<string>(type: "text", nullable: true),
+                    Active = table.Column<bool>(type: "boolean", nullable: false),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false),
+                    BestEmail = table.Column<string>(type: "text", nullable: true),
+                    BestPhone = table.Column<string>(type: "text", nullable: true),
+                    Athletics = table.Column<string>(type: "text", nullable: true),
+                    Arts = table.Column<string>(type: "text", nullable: true),
+                    ExtraCurricular = table.Column<string>(type: "text", nullable: true),
+                    AcademicPlus = table.Column<string>(type: "text", nullable: true),
+                    WorkPlus = table.Column<string>(type: "text", nullable: true),
+                    GPA = table.Column<string>(type: "text", nullable: true),
+                    Resume = table.Column<string>(type: "text", nullable: true),
+                    DreamJob = table.Column<string>(type: "text", nullable: true),
+                    CompanyDescription = table.Column<string>(type: "text", nullable: true),
+                    PositionDescription = table.Column<string>(type: "text", nullable: true),
+                    Contact = table.Column<string>(type: "text", nullable: true),
+                    ContactTitle = table.Column<string>(type: "text", nullable: true),
+                    HowToApply = table.Column<string>(type: "text", nullable: true),
+                    LookingFor = table.Column<string>(type: "text", nullable: true),
+                    ApplyEmail = table.Column<string>(type: "text", nullable: true),
+                    UserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
+                    NormalizedUserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
+                    Email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
+                    EmailConfirmed = table.Column<bool>(type: "boolean", nullable: false),
+                    PasswordHash = table.Column<string>(type: "text", nullable: true),
+                    SecurityStamp = table.Column<string>(type: "text", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "text", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "text", nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(type: "boolean", nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(type: "boolean", nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: true),
+                    LockoutEnabled = table.Column<bool>(type: "boolean", nullable: false),
+                    AccessFailedCount = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -86,28 +88,28 @@ namespace API.Migrations
                 name: "ColUsers",
                 columns: table => new
                 {
-                    ColUserId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ColUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HsName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HsLocation = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClassYear = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HsGradDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CollegeName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeLocation = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeEnrollment = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Tuition = table.Column<int>(type: "int", nullable: false),
-                    RoomAndBoard = table.Column<int>(type: "int", nullable: false),
-                    AverageAid = table.Column<int>(type: "int", nullable: false),
-                    NetPay = table.Column<int>(type: "int", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastActive = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ColUserType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Active = table.Column<bool>(type: "bit", nullable: false)
+                    ColUserId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ColUserName = table.Column<string>(type: "text", nullable: true),
+                    PasswordHash = table.Column<byte[]>(type: "bytea", nullable: true),
+                    PasswordSalt = table.Column<byte[]>(type: "bytea", nullable: true),
+                    FirstName = table.Column<string>(type: "text", nullable: true),
+                    LastName = table.Column<string>(type: "text", nullable: true),
+                    HsName = table.Column<string>(type: "text", nullable: true),
+                    HsLocation = table.Column<string>(type: "text", nullable: true),
+                    ClassYear = table.Column<string>(type: "text", nullable: true),
+                    HsGradDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    CollegeName = table.Column<string>(type: "text", nullable: true),
+                    CollegeLocation = table.Column<string>(type: "text", nullable: true),
+                    CollegeEnrollment = table.Column<string>(type: "text", nullable: true),
+                    Tuition = table.Column<int>(type: "integer", nullable: false),
+                    RoomAndBoard = table.Column<int>(type: "integer", nullable: false),
+                    AverageAid = table.Column<int>(type: "integer", nullable: false),
+                    NetPay = table.Column<int>(type: "integer", nullable: false),
+                    Created = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    LastActive = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    ColUserType = table.Column<string>(type: "text", nullable: true),
+                    Active = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -118,7 +120,7 @@ namespace API.Migrations
                 name: "Groups",
                 columns: table => new
                 {
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Name = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -129,8 +131,8 @@ namespace API.Migrations
                 name: "MajorCats",
                 columns: table => new
                 {
-                    MajorCatId = table.Column<int>(type: "int", nullable: false),
-                    MajorCatName = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    MajorCatId = table.Column<int>(type: "integer", nullable: false),
+                    MajorCatName = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -141,11 +143,11 @@ namespace API.Migrations
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    RoleId = table.Column<int>(type: "int", nullable: false),
-                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    RoleId = table.Column<int>(type: "integer", nullable: false),
+                    ClaimType = table.Column<string>(type: "text", nullable: true),
+                    ClaimValue = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -162,11 +164,11 @@ namespace API.Migrations
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    ClaimType = table.Column<string>(type: "text", nullable: true),
+                    ClaimValue = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -183,10 +185,10 @@ namespace API.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ProviderKey = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    LoginProvider = table.Column<string>(type: "text", nullable: false),
+                    ProviderKey = table.Column<string>(type: "text", nullable: false),
+                    ProviderDisplayName = table.Column<string>(type: "text", nullable: true),
+                    UserId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -203,8 +205,8 @@ namespace API.Migrations
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    RoleId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    RoleId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -227,10 +229,10 @@ namespace API.Migrations
                 name: "AspNetUserTokens",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    LoginProvider = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Value = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -247,8 +249,8 @@ namespace API.Migrations
                 name: "Likes",
                 columns: table => new
                 {
-                    SourceUserId = table.Column<int>(type: "int", nullable: false),
-                    LikedUserId = table.Column<int>(type: "int", nullable: false)
+                    SourceUserId = table.Column<int>(type: "integer", nullable: false),
+                    LikedUserId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -269,25 +271,25 @@ namespace API.Migrations
                 name: "Messages",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    SenderId = table.Column<int>(type: "int", nullable: false),
-                    SenderUsername = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SenderFirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SenderCompany = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SenderCollege = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SenderAppUserType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipientId = table.Column<int>(type: "int", nullable: false),
-                    RecipientUsername = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipientFirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipientCompany = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipientCollege = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipientAppUserType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DateRead = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    MessageSent = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    SenderDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    RecipientDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    SenderId = table.Column<int>(type: "integer", nullable: false),
+                    SenderUsername = table.Column<string>(type: "text", nullable: true),
+                    SenderFirstName = table.Column<string>(type: "text", nullable: true),
+                    SenderCompany = table.Column<string>(type: "text", nullable: true),
+                    SenderCollege = table.Column<string>(type: "text", nullable: true),
+                    SenderAppUserType = table.Column<string>(type: "text", nullable: true),
+                    RecipientId = table.Column<int>(type: "integer", nullable: false),
+                    RecipientUsername = table.Column<string>(type: "text", nullable: true),
+                    RecipientFirstName = table.Column<string>(type: "text", nullable: true),
+                    RecipientCompany = table.Column<string>(type: "text", nullable: true),
+                    RecipientCollege = table.Column<string>(type: "text", nullable: true),
+                    RecipientAppUserType = table.Column<string>(type: "text", nullable: true),
+                    Content = table.Column<string>(type: "text", nullable: true),
+                    DateRead = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    MessageSent = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    SenderDeleted = table.Column<bool>(type: "boolean", nullable: false),
+                    RecipientDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -310,18 +312,18 @@ namespace API.Migrations
                 name: "Photos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LogoUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HrUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IsMain = table.Column<bool>(type: "bit", nullable: false),
-                    IsMainLogo = table.Column<bool>(type: "bit", nullable: false),
-                    IsMainHr = table.Column<bool>(type: "bit", nullable: false),
-                    PublicId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AppUserId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    StudentUrl = table.Column<string>(type: "text", nullable: true),
+                    LogoUrl = table.Column<string>(type: "text", nullable: true),
+                    HrUrl = table.Column<string>(type: "text", nullable: true),
+                    Description = table.Column<string>(type: "text", nullable: true),
+                    DateAdded = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    IsMain = table.Column<bool>(type: "boolean", nullable: false),
+                    IsMainLogo = table.Column<bool>(type: "boolean", nullable: false),
+                    IsMainHr = table.Column<bool>(type: "boolean", nullable: false),
+                    PublicId = table.Column<string>(type: "text", nullable: true),
+                    AppUserId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -338,22 +340,22 @@ namespace API.Migrations
                 name: "Colleges",
                 columns: table => new
                 {
-                    CollegeId = table.Column<int>(type: "int", nullable: false),
-                    CollegeDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false),
-                    CollegeStreet = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeState = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeZip = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegePhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeWebsite = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeVirtual = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeYearFounded = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegePresident = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AdminContact = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AdminTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ColUserId = table.Column<int>(type: "int", nullable: false)
+                    CollegeId = table.Column<int>(type: "integer", nullable: false),
+                    CollegeDescription = table.Column<string>(type: "text", nullable: true),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false),
+                    CollegeStreet = table.Column<string>(type: "text", nullable: true),
+                    CollegeCity = table.Column<string>(type: "text", nullable: true),
+                    CollegeState = table.Column<string>(type: "text", nullable: true),
+                    CollegeZip = table.Column<string>(type: "text", nullable: true),
+                    CollegePhone = table.Column<string>(type: "text", nullable: true),
+                    CollegeEmail = table.Column<string>(type: "text", nullable: true),
+                    CollegeWebsite = table.Column<string>(type: "text", nullable: true),
+                    CollegeVirtual = table.Column<string>(type: "text", nullable: true),
+                    CollegeYearFounded = table.Column<string>(type: "text", nullable: true),
+                    CollegePresident = table.Column<string>(type: "text", nullable: true),
+                    AdminContact = table.Column<string>(type: "text", nullable: true),
+                    AdminTitle = table.Column<string>(type: "text", nullable: true),
+                    ColUserId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -370,18 +372,18 @@ namespace API.Migrations
                 name: "ColPhotos",
                 columns: table => new
                 {
-                    ColPhotoId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ColUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HsStudentUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AdminUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IsMainCol = table.Column<bool>(type: "bit", nullable: false),
-                    IsMainHs = table.Column<bool>(type: "bit", nullable: false),
-                    IsMainAdmin = table.Column<bool>(type: "bit", nullable: false),
-                    PublicId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ColUserId = table.Column<int>(type: "int", nullable: false)
+                    ColPhotoId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ColUrl = table.Column<string>(type: "text", nullable: true),
+                    HsStudentUrl = table.Column<string>(type: "text", nullable: true),
+                    AdminUrl = table.Column<string>(type: "text", nullable: true),
+                    Description = table.Column<string>(type: "text", nullable: true),
+                    DateAdded = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    IsMainCol = table.Column<bool>(type: "boolean", nullable: false),
+                    IsMainHs = table.Column<bool>(type: "boolean", nullable: false),
+                    IsMainAdmin = table.Column<bool>(type: "boolean", nullable: false),
+                    PublicId = table.Column<string>(type: "text", nullable: true),
+                    ColUserId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -398,15 +400,15 @@ namespace API.Migrations
                 name: "HsPreps",
                 columns: table => new
                 {
-                    HsPrepId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false),
-                    GradDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    GPA = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProposedMajor = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ExtraCurricular = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DreamJob = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ColUserId = table.Column<int>(type: "int", nullable: false)
+                    HsPrepId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false),
+                    GradDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    GPA = table.Column<string>(type: "text", nullable: true),
+                    ProposedMajor = table.Column<string>(type: "text", nullable: true),
+                    ExtraCurricular = table.Column<string>(type: "text", nullable: true),
+                    DreamJob = table.Column<string>(type: "text", nullable: true),
+                    ColUserId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -423,9 +425,9 @@ namespace API.Migrations
                 name: "Connections",
                 columns: table => new
                 {
-                    ConnectionId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GroupName = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    ConnectionId = table.Column<string>(type: "text", nullable: false),
+                    Username = table.Column<string>(type: "text", nullable: true),
+                    GroupName = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -442,9 +444,9 @@ namespace API.Migrations
                 name: "Majors",
                 columns: table => new
                 {
-                    MajorId = table.Column<int>(type: "int", nullable: false),
-                    MajorName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MajorCatId = table.Column<int>(type: "int", nullable: false)
+                    MajorId = table.Column<int>(type: "integer", nullable: false),
+                    MajorName = table.Column<string>(type: "text", nullable: true),
+                    MajorCatId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -461,9 +463,9 @@ namespace API.Migrations
                 name: "FactFeatures",
                 columns: table => new
                 {
-                    FactId = table.Column<int>(type: "int", nullable: false),
-                    FactBullet = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CollegeId = table.Column<int>(type: "int", nullable: false)
+                    FactId = table.Column<int>(type: "integer", nullable: false),
+                    FactBullet = table.Column<string>(type: "text", nullable: true),
+                    CollegeId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -480,8 +482,8 @@ namespace API.Migrations
                 name: "CollegeMajors",
                 columns: table => new
                 {
-                    CollegeId = table.Column<int>(type: "int", nullable: false),
-                    MajorId = table.Column<int>(type: "int", nullable: false)
+                    CollegeId = table.Column<int>(type: "integer", nullable: false),
+                    MajorId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -509,8 +511,7 @@ namespace API.Migrations
                 name: "RoleNameIndex",
                 table: "AspNetRoles",
                 column: "NormalizedName",
-                unique: true,
-                filter: "[NormalizedName] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUserClaims_UserId",
@@ -536,8 +537,7 @@ namespace API.Migrations
                 name: "UserNameIndex",
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
-                unique: true,
-                filter: "[NormalizedUserName] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_CollegeMajors_MajorId",
