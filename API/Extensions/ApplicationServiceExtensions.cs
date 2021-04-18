@@ -60,6 +60,8 @@ namespace API.Extensions
 
                 // Whether the connection string came from the local development configuration file
                 // or from the environment variable from Heroku, use it to set up your DbContext.
+                // adding one more line
+
                 options.UseNpgsql(connStr);
             });
             return services;
