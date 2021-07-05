@@ -7,19 +7,20 @@ import { AccountService } from '../_services/account.service';
 @Component({
   selector: 'app-talent',
   templateUrl: './talent.component.html',
-  styleUrls: ['./talent.component.css']
+  styleUrls: ['./talent.component.css'],
 })
 export class TalentComponent implements OnInit {
   empRegisterMode = false;
   model: any = {};
   loggedIn: boolean;
 
-  constructor(public accountService: AccountService,
-              private router: Router,
-              private toastr: ToastrService) { }
+  constructor(
+    public accountService: AccountService,
+    private router: Router,
+    private toastr: ToastrService
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   registerToggle() {
     this.empRegisterMode = !this.empRegisterMode;
@@ -30,9 +31,9 @@ export class TalentComponent implements OnInit {
   }
 
   login() {
-    this.accountService.login(this.model).subscribe(response => {
+    this.accountService.login(this.model).subscribe((response) => {
       this.router.navigateByUrl('/memberlist');
-    })
+    });
   }
 
   logout() {
@@ -46,5 +47,10 @@ export class TalentComponent implements OnInit {
 
   onRegisterBtn() {
     this.router.navigate(['/empregister']);
+  }
+
+  cancel() {
+    console.log('cancelled');
+    this.router.navigateByUrl('/');
   }
 }

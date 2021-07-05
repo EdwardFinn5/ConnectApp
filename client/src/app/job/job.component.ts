@@ -11,14 +11,14 @@ import { AccountService } from '../_services/account.service';
 })
 export class JobComponent implements OnInit {
   registerMode = false;
-  // users: any;
-
   model: any = {};
   loggedIn: boolean;
 
-  constructor(public accountService: AccountService, 
-              private router: Router,
-              private toastr: ToastrService) {}
+  constructor(
+    public accountService: AccountService,
+    private router: Router,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {
     // this.getUsers();
@@ -35,13 +35,13 @@ export class JobComponent implements OnInit {
   // getUsers() {
   //   this.http.get('https://localhost:5001/api/users')
   //     .subscribe(users => this.users = users);
-      
+
   // }
 
   login() {
     this.accountService.login(this.model).subscribe((response) => {
       this.router.navigateByUrl('/memberlist');
-    })
+    });
   }
 
   logout() {
@@ -55,5 +55,10 @@ export class JobComponent implements OnInit {
 
   onRegisterBtn() {
     this.router.navigate(['/register']);
+  }
+
+  cancel() {
+    console.log('cancelled');
+    this.router.navigateByUrl('/');
   }
 }

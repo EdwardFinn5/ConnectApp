@@ -1174,7 +1174,7 @@
     "ApplyEmail": "apply@neocent.com",
     "Photos": [
       {
-        "LogoUrl": "https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fi.forbesimg.com%2Fmedia%2Flists%2Fcompanies%2Famerican-equity-investment_416x416.jpg",
+        "LogoUrl": "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/desmoines/American-Equity-1--5a9f96755056a36_5a9f97f2-5056-a36a-06c7202ee6b35cbd.jpg",
         "IsMainLogo": true,
         "HrUrl": "https://www.rudymeyers.com/koken/storage/cache/images/000/442/HI-RES-FIN-MG-6487,medium_large.2x.1446779897.jpg",
         "IsMainHr": true
@@ -1487,7 +1487,39 @@
       {
         "LogoUrl": "https://res.cloudinary.com/icf/image/upload/v1618146182/vwjdaner7aa1clouqlt5.png",
         "IsMainLogo": true,
-        "HrUrl": "http://www.las.iastate.edu/wp-content/images/person_ralston-hansen-judy.jpg",
+        "HrUrl": "https://connectingdirectors.com/wp-content/uploads/2020/12/Judy_Ralston-Hansen.jpeg",
+        "IsMainHr": true
+      }
+    ]
+  },
+
+  {
+    "UserName": "Steph@firm.com",
+    "FirstName": "Stephanie",
+    "LastName": "Rohrer",
+    "Position": "Accounting",
+    "Company": "Fareway",
+    "PositionType": "Internship",
+    "StartDate": "2021-06-01",
+    "AppDeadline": "2021-05-30",
+    "PositionLocation": "Boone, IA",
+    "AppUserType": "EmpHr",
+    "Active": true,
+    "Created": "2019-12-24",
+    "LastActive": "2020-06-23",
+    "IsActive": true,
+    "CompanyDescription": "Fareway is a growing Midwest grocery company currently operating 124 grocery store locations in Iowa, Illinois, Minnesota, Missouri, Nebraska, and South Dakota. Fareway holds family values in the highest regard, demonstrating integrity, fairness, and honesty in relationships with customers, employees, vendors, and suppliers.\r\n",
+    "PositionDescription": "Provides financial information to management by researching and analyzing accounting data; preparing reports. Prepares asset, liability, and capital account entries by compiling and analyzing account information. Documents financial transactions by entering account information.\r\n",
+    "Contact": "Stephanie Rohrer",
+    "LookingFor": "Someone who is a self-starter and who can begin to add value to our company on day one. Good communication skills - both verbal and written - are also a plus.",
+    "ContactTitle": "Corporate Recruiter",
+    "HowToApply": "Click on this link to our website: Jobs@Fareway.com",
+    "ApplyEmail": "HumanResources@Fareway.com",
+    "Photos": [
+      {
+        "LogoUrl": "https://www.fareway.com/media/cms/farewayshieldicon1C_no_background_89E90152ACEE6.jpg",
+        "IsMainLogo": true,
+        "HrUrl": "https://cdn.andnowuknow.com/headshots/rohrer.png",
         "IsMainHr": true
       }
     ]
