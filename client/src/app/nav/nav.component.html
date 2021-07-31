@@ -13,27 +13,7 @@
       <div class="navbar-collapse collapse show" id="navbarCollapse" style>
       
       <ul class="navbar-nav mr-auto" style="font-size: 1.3em">
-       
-        <!-- <li class="nav-item dropdown ml-5">
-          <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colleges</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" routerLink='/college'>Search Colleges</a>
-            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmemberlist'>See Results</a>
-            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/collists'>Lists</a>
-            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmessages'>Messages</a>
-          </div>
-        </li>     
-
-        <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HS Students</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" routerLink='/hsstudent'>Search HS Students</a>
-            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmemberlist'>See Results</a>
-            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/collists'>Lists</a>
-            <a *ngIf="colAccountService.currentUser$ | async"  class="dropdown-item" routerLink='/colmessages'>Messages</a>
-          </div>
-        </li>  -->
-      
+           
         <li class="nav-item dropdown ml-3 mr-3">
           <a class="nav-link active dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Talent</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -95,7 +75,7 @@
         </div>
       </div>
 
-      <div *ngIf="colAccountService.colUserType == 'College'">
+      <!-- <div *ngIf="colAccountService.colUserType == 'College'">
           <div class="dropdown" *ngIf="(colAccountService.currentUser$ | async) as colUser" dropdown>
             <div class="dropdown" style="font-size: 1.3em" dropdown>
               <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{colUser.colUserName | titlecase}} </a>
@@ -119,7 +99,7 @@
             </div>
           </div> 
         </div>
-    </div>
+    </div> -->
       
 </div>
 </div>
